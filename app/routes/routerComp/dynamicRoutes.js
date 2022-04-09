@@ -52,17 +52,17 @@ export const playgroundRoutes = {
       path: '/configTable/add',
       name: '添加用户',
       hideMenu: true,
-      component: () => import('@app/views/demo/list/add'),
+      component: () => import('@app/views/demo/configList/add'),
     },
     {
       path: '/configTable/edit/:id',
       name: '编辑用户',
-      component: () => import('@app/views/demo/list/add'),
+      component: () => import('@app/views/demo/configList/add'),
     },
     {
       path: '/configTable/auth/:id',
       name: '路由权限设置',
-      component: () => import('@app/views/demo/list/auth'),
+      component: () => import('@app/views/demo/configList/auth'),
     },
   ],
 };
