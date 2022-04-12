@@ -115,11 +115,11 @@
     "workbox-webpack-plugin": "^6.5.2"
   },
   "dependencies": {
-    "@huxy/components": "^1.0.10",
-    "@huxy/layout": "^1.0.10",
-    "@huxy/router": "^1.0.10",
-    "@huxy/use": "^1.0.10",
-    "@huxy/utils": "^1.0.10",
+    "@huxy/components": "^1.1.0",
+    "@huxy/layout": "^1.1.0",
+    "@huxy/router": "^1.1.0",
+    "@huxy/use": "^1.1.0",
+    "@huxy/utils": "^1.1.0",
     "antd": "^4.19.5",
     "core-js": "^3.21.1",
     "echarts": "^5.3.2",
