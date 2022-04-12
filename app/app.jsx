@@ -40,16 +40,16 @@ const ConfigProvider = ({i18ns={}, language, profile={}, permission, routerList}
 
 const AuthedApp = (props) => {
   const [{profile, permission, routerList}] = useGetProfile();
-  if (!permission) {
+  if (!profile) {
     return <Spinner global />;
   }
   return <ConfigProvider {...props} profile={profile} permission={permission} routerList={routerList} />;
 };
 
 const App = () => {
-  // const [apis] = useGetApis();
+  const [apis] = useGetApis();
   const [i18ns] = useGetI18ns();
-  if (/* !apis || */ !i18ns) {
+  if (!apis || !i18ns) {
     return <Spinner global />;
   }
   return isAuthed() ? <AuthedApp {...i18ns} /> : <ConfigProvider {...i18ns} />;

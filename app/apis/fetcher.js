@@ -3,7 +3,9 @@ import {fetcher} from '@huxy/utils/src/baseFetch';
 import storage from '@huxy/utils/src/storage';
 import wrapPromise from '@huxy/utils/src/wrapPromise';
 
-const {TARGET} = require('@configs');
+const {PROXY} = require('@configs');
+
+const TARGET = PROXY?.prefix ?? '/api';
 
 import {logout} from '@app/utils/utils';
 

@@ -21,8 +21,7 @@ module.exports={
   moduleNameMapper:{
     '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':'<rootDir>/__mocks__/fileMock.js',
     '\\.(css|less)$':'<rootDir>/__mocks__/styleMock.js',
-    '@common(.*)$':'<rootDir>/commons/$1',
-    '@src(.*)$':'<rootDir>/playground/src/$1',
+    '@common(.*)$':['<rootDir>/commons/images/$1','<rootDir>/commons/layout/$1','<rootDir>/commons/styles/$1'],
   },
   transform:{
     // '^.+\\.vue$': 'vue-jest',

@@ -1,13 +1,20 @@
 import {useState, useEffect, useMemo} from 'react';
 import Settings from '@app/components/settings';
 import usePrevious from '@huxy/use/src/usePrevious';
-// import sleep from '@huxy/utils/src/sleep';
+import {sleep,clone} from '@huxy/utils';
 // import Bugua from './bagua';
 import './index.less';
 
 const Index = (props) => {
   const [state, setState]=useState(0);
   const prevState=usePrevious(state);
+  useEffect(()=>{
+    const fakeFetch=async ()=>{
+      await sleep();
+      return {};
+    };
+    fakeFetch();
+  },[]);
   return (
     <div className="demo-container">
       prev: {prevState}

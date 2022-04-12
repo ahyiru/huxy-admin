@@ -41,7 +41,6 @@ const config=api=>{
       {
         libraryName: '@huxy/utils',
         libraryDirectory: 'src',
-        style: true,
       },
       'ihuxy-utils',
     ],
@@ -50,7 +49,6 @@ const config=api=>{
       {
         libraryName: '@huxy/use',
         libraryDirectory: 'src',
-        style: true,
       },
       'ihuxy-use',
     ],
@@ -59,7 +57,6 @@ const config=api=>{
       {
         libraryName: '@huxy/components',
         libraryDirectory: 'src',
-        style: true,
       },
       'ihuxy-components',
     ],
