@@ -1,5 +1,25 @@
 import {browserRouter} from '@app/configs';
 
+export const dashboardRoutes = {
+  path: '/dashboard',
+  name: '仪表盘',
+  icon: 'HomeOutlined',
+  children: [
+    {
+      path: '/screen1',
+      name: 'screen1',
+      icon: 'DashboardOutlined',
+      component: () => import('@app/views/dashboard/screen1'),
+    },
+    {
+      path: '/screen2',
+      name: 'screen2',
+      icon: 'DashboardOutlined',
+      component: () => import('@app/views/dashboard/screen2'),
+    },
+  ],
+};
+
 export const playgroundRoutes = {
   path: '/playground',
   name: ' Playground',
@@ -66,3 +86,4 @@ export const playgroundRoutes = {
     },
   ],
 };
+

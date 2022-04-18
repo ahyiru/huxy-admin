@@ -22,7 +22,7 @@ const Index = ({result, actionList, formList, columns, RenderItem, searchList, p
             actionList?.length?<div style={{float: 'left'}}>
               <Space size="small">
                 {
-                  actionList.map(({key, type, label, icon, action, disabled})=><Button key={key} loading={result.isPending} onClick={action} type={type} icon={icon} disabled={disabled}>
+                  actionList.map(({key, type, label, icon, action, disabled})=><Button key={key} loading={result.isPending} onClick={e=>action?.()} type={type} icon={icon} disabled={disabled}>
                     {label}
                   </Button>)
                 }

@@ -181,7 +181,7 @@ export const rightNav = ({store, useStore}) => {
       title: right?.github ?? 'Github',
       icon: 'GithubOutlined',
       type: 'link',
-      link: 'https://github.com/ahyiru/web-design',
+      link: 'https://github.com/ahyiru/huxy-admin',
     },
     {
       key: 'notify',
