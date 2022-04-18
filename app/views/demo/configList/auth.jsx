@@ -87,7 +87,7 @@ const Index = (props) => {
     });
     if (code === 200) {
       message.success(`${msg} ${authFormText.auth_msg}`);
-      props.router.push(`/users`);
+      props.router.push(`/playground/configTable`);
     }
   };
 

@@ -23,7 +23,7 @@ const Index = (props) => {
       const {code, message: msg} = await handler({...values, projectName});
       if (code === 200) {
         message.success(msg);
-        props.router.push(`/users`);
+        props.router.push(`/playground/configTable`);
       }
     } catch (err) {
       console.log(err);

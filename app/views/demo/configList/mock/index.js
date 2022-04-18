@@ -25,7 +25,7 @@ export const editUserFn = async (data) => {
   const users = store.getState('users');
   let user = users.find((item) => item._id === data._id);
   if (user) {
-    user = {...data};
+    user = {...user, ...data};
     store.setState({users});
   }
   return {
@@ -47,7 +47,7 @@ export const deleteUserFn = async ({ids}) => {
 };
 
 export const allUserFn = async ({active, current, size, name, role}) => {
-  console.log('params: ',active, current, size, name, role);
+  // console.log('params: ',active, current, size, name, role);
   const res = await fakeFetch();
   const users = store.getState('users');
   const index = size * (current - 1);
@@ -57,15 +57,14 @@ export const allUserFn = async ({active, current, size, name, role}) => {
   } else {
     temp = [...users];
   }
-  let list = [...temp];
   if (role) {
-    list = list.filter((item) => item.role === role);
+    temp = temp.filter((item) => item.role === role);
   }
   if (name) {
     const reg = new RegExp(name, 'gi');
-    list = list.filter((item) => item.name.toString().match(reg));
+    temp = temp.filter((item) => item.name.toString().match(reg));
   }
-  list = list.slice(index, index + size);
+  const list = temp.slice(index, index + size);
   return {
     ...res,
     result: {
