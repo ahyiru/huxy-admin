@@ -3,7 +3,7 @@ import {fakeFetch} from './utils';
 import {fakeData} from './data';
 import {store} from '../components/useStore';
 
-import {uuidv4,randItem} from '@huxy/utils';
+import {uuidv4, randItem} from '@huxy/utils';
 
 const userInfo = [];
 

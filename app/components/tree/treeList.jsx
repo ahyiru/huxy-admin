@@ -1,7 +1,7 @@
 import {useState, useCallback} from 'react';
 
 import {useSearch} from '@huxy/use';
-import {traverItem,arr2TreeByPath,isValidArr} from '@huxy/utils';
+import {traverItem, arr2TreeByPath, isValidArr} from '@huxy/utils';
 
 import {Tree, Modal, Form, Dropdown, Menu, message, Input, Spin} from 'antd';
 

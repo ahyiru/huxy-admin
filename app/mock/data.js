@@ -1,4 +1,4 @@
-import {uuidv4,randTrue} from '@huxy/utils';
+import {uuidv4, randTrue} from '@huxy/utils';
 
 export const fakeList = (type, num = 10) =>
   [...Array(num)].map((item, index) => ({

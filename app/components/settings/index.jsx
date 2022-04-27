@@ -7,7 +7,7 @@ import {Row, Col} from '@app/components/row';
 import {sizeRules} from '@app/utils/sizeRules';
 import {TabHeader} from '@huxy/components';
 import {useDebounce} from '@huxy/use';
-import {storage,copyToClipboard} from '@huxy/utils';
+import {storage, copyToClipboard} from '@huxy/utils';
 import getThemeList from '@app/configs/theme';
 
 const {Option} = Select;

@@ -1,6 +1,6 @@
 import {useState, useEffect, useRef} from 'react';
 import {useEleResize} from '@huxy/use';
-import {getTextSize,getPosition} from '@huxy/utils';
+import {getTextSize, getPosition} from '@huxy/utils';
 import {Tooltip} from 'antd';
 
 const style = {

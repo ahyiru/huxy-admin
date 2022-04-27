@@ -1,7 +1,7 @@
 import {fakeFetch} from './utils';
 import {users, routers} from './data';
 
-import {createStore,uuidv4} from '@huxy/utils';
+import {createStore, uuidv4} from '@huxy/utils';
 
 const store = createStore();
 
