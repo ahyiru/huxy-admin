@@ -1,6 +1,4 @@
-import traverItem from '@huxy/utils/src/traverItem';
-import {arr2TreeByPath} from '@huxy/utils/src/arr2Tree';
-import isValidArr from '@huxy/utils/src/isValidArr';
+import {traverItem,arr2TreeByPath,isValidArr} from '@huxy/utils';
 import fixIcons from './fixIcons';
 
 const fixIcon = (router) =>

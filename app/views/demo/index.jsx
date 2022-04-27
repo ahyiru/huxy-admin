@@ -1,7 +1,7 @@
 import {useState, useEffect, useMemo} from 'react';
-import Settings from '@app/components/settings';
-import usePrevious from '@huxy/use/src/usePrevious';
+import {usePrevious} from '@huxy/use';
 import {sleep,clone} from '@huxy/utils';
+import Settings from '@app/components/settings';
 // import Bugua from './bagua';
 import './index.less';
 

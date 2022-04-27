@@ -1,4 +1,4 @@
-import emitter from '@huxy/utils/src/emitter';
+import {emitter} from '@huxy/utils';
 
 export const emit = emitter();
 

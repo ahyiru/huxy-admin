@@ -1,8 +1,8 @@
 import {useState} from 'react';
 import {Table, Space, Button, Modal, message} from 'antd';
 
-import Row,{Col} from '@huxy/components/src/grid';
-import validObj from '@huxy/utils/src/validObj';
+import {Row,Col} from '@huxy/components';
+import {validObj} from '@huxy/utils';
 
 import apiList from '@app/utils/getApis';
 import useHandleList from '@app/hooks/useHandleList';

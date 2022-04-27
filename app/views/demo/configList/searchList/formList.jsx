@@ -1,6 +1,5 @@
 import {Space, Button, Form, Input, Select, Radio, Checkbox} from 'antd';
-import validObj from '@huxy/utils/src/validObj';
-import firstUpper from '@huxy/utils/src/firstUpper';
+import {validObj,firstUpper} from '@huxy/utils';
 
 const defComp = {Input, Select, Radio, Checkbox};
 

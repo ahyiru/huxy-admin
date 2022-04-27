@@ -1,4 +1,4 @@
-import storage from '@huxy/utils/src/storage';
+import {storage} from '@huxy/utils';
 
 import {designReg, confirmDesignPage} from '@app/utils/confirmDesignPage';
 

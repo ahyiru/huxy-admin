@@ -1,4 +1,4 @@
-import getValue from '@huxy/utils/src/getValue';
+import {getValue} from '@huxy/utils';
 import getLang from './getLang';
 
 const getI18n = async () => {

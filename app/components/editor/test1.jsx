@@ -5,7 +5,7 @@ import {CodeElement, DefaultElement} from './comps';
 
 import {withHistory} from 'slate-history';
 
-import firstUpper from '@huxy/utils/src/firstUpper';
+import {firstUpper} from '@huxy/utils';
 
 import * as elements from './types/components/text';
 

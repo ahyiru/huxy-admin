@@ -1,9 +1,9 @@
-import traverItem from '@huxy/utils/src/traverItem';
+import {traverItem} from '@huxy/utils';
 
 import staticRoutes from './routerComp/staticRoutes';
-import {dashboardRoutes,playgroundRoutes} from './routerComp/dynamicRoutes';
+import {dashboardRoutes,playgroundRoutes,commonRoutes} from './routerComp/dynamicRoutes';
 
-const dynamicRoutes = [dashboardRoutes,playgroundRoutes];
+const dynamicRoutes = [dashboardRoutes,playgroundRoutes,...commonRoutes];
 
 const allRoutes = [
   {

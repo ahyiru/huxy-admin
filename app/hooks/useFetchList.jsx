@@ -1,5 +1,5 @@
 import {useCallback, useEffect} from 'react';
-import useAsync from '@huxy/use/src/useAsync';
+import {useAsync} from '@huxy/use';
 
 const useFetchList = (fetchList, initParams = null, handleResult, commonParams = null) => {
   const [result, updateResult] = useAsync({});

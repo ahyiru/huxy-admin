@@ -1,4 +1,5 @@
-// const appName=require('./configs/appName');
+const {dash2camel}=require('@huxy/utils');
+
 const config=api=>{
   api.cache.using(() => process.env.NODE_ENV === 'development');
 
@@ -41,6 +42,7 @@ const config=api=>{
       {
         libraryName: '@huxy/utils',
         libraryDirectory: 'src',
+        camel2DashComponentName: false,
       },
       'ihuxy-utils',
     ],
@@ -49,6 +51,7 @@ const config=api=>{
       {
         libraryName: '@huxy/use',
         libraryDirectory: 'src',
+        camel2DashComponentName: false,
       },
       'ihuxy-use',
     ],
@@ -56,7 +59,9 @@ const config=api=>{
       'import',
       {
         libraryName: '@huxy/components',
-        libraryDirectory: 'src',
+        // libraryDirectory: 'src',
+        // camel2DashComponentName: false,
+        customName: name => `@huxy/components/src/${dash2camel(name)}`,
       },
       'ihuxy-components',
     ],

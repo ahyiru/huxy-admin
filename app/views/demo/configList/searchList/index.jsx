@@ -1,5 +1,5 @@
 import {Space, Button} from 'antd';
-import Row,{Col} from '@huxy/components/src/grid';
+import {Row,Col} from '@huxy/components';
 import Panel from '@app/components/panel';
 import SearchForm from './formList';
 

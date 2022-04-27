@@ -1,11 +1,8 @@
 import {useState, useCallback, useEffect} from 'react';
 
-import Row,{Col} from '@huxy/components/src/grid';
-import {arr2TreeByPath} from '@huxy/utils/src/arr2Tree';
-import isValidArr from '@huxy/utils/src/isValidArr';
-import traverItem from '@huxy/utils/src/traverItem';
-import useSearch from '@huxy/use/src/useSearch';
-import useDebounce from '@huxy/use/src/useDebounce';
+import {Row,Col} from '@huxy/components';
+import {arr2TreeByPath,isValidArr,traverItem} from '@huxy/utils';
+import {useSearch,useDebounce} from '@huxy/use';
 
 import {Tree, Button, message, Input, Spin} from 'antd';
 

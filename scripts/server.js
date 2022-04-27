@@ -10,7 +10,7 @@ const compression=require('compression');
 
 const app = express();
 
-const {appName,HOST,PRO_PORT,PROXY_URL,BUILD_DIR,PRD_ROOT_DIR}=require('../configs');
+const {appName,HOST,PRO_PORT,PROXY,BUILD_DIR,PRD_ROOT_DIR}=require('../configs');
 
 const {createProxyMiddleware}=require('http-proxy-middleware');
 

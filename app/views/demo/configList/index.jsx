@@ -1,7 +1,7 @@
 import {useState} from 'react';
 import {Modal, message} from 'antd';
 import {ExclamationCircleOutlined,TableOutlined,BarsOutlined} from '@ant-design/icons';
-import TabHeader from '@huxy/components/src/tabHeader';
+import {TabHeader} from '@huxy/components';
 import useHandleList from '@app/hooks/useHandleList';
 import * as apiList from './mock';
 import getColumns,{RenderItem} from './getColumns';

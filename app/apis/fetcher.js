@@ -1,7 +1,5 @@
 import {message} from 'antd';
-import {fetcher} from '@huxy/utils/src/baseFetch';
-import storage from '@huxy/utils/src/storage';
-import wrapPromise from '@huxy/utils/src/wrapPromise';
+import {fetcher,storage,wrapPromise} from '@huxy/utils';
 
 const {PROXY} = require('@configs');
 

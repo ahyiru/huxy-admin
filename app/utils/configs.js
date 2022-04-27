@@ -1,8 +1,10 @@
-import {formatTime} from '@huxy/utils/src/formatTime';
+import {formatTime} from '@huxy/utils';
 
 import * as configs from './config';
 
-window.utils={formatTime};
-window.configs = configs;
+const setGlobalConfigs=()=>{
+  window.utils={formatTime};
+  window.configs = configs;
+};
 
-export default configs;
+export default setGlobalConfigs;

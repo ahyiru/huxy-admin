@@ -1,4 +1,4 @@
-import setStyle from '@huxy/utils/src/setStyle';
+import {setStyle} from '@huxy/utils';
 
 const setGlobalVar = (theme) => {
   const globalVar = {...theme?.list?.colors, ...theme?.list?.sizes};

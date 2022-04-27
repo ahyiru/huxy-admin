@@ -1,7 +1,6 @@
 import {useEffect, useState} from 'react';
 import {Form, Modal, message} from 'antd';
-import traverItem from '@huxy/utils/src/traverItem';
-import clone from '@huxy/utils/src/clone';
+import {traverItem,clone} from '@huxy/utils';
 import apiList from '@app/utils/getApis';
 import customRender from '@app/utils/render';
 import * as rules from '@app/utils/rules';

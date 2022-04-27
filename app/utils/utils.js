@@ -1,4 +1,4 @@
-import storage from '@huxy/utils/src/storage';
+import {storage} from '@huxy/utils';
 
 import apiList from '@app/utils/getApis';
 

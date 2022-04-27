@@ -1,4 +1,4 @@
-import traverItem from '@huxy/utils/src/traverItem';
+import {traverItem} from '@huxy/utils';
 import staticRoutes from './staticRoutes';
 
 const whiteList = [];

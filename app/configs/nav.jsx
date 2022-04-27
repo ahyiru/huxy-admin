@@ -1,4 +1,5 @@
-import {message} from 'antd';
+// import {message} from 'antd';
+// import {dlfile} from '@huxy/utils';
 import Settings from '@app/components/settings';
 // import getThemeList from './theme';
 import getLang from '@app/utils/getLang';
@@ -17,8 +18,6 @@ import Notify from '@app/components/notify';
 import Search from '@app/components/search';
 
 // import html2canvas from 'html2canvas';
-
-import dlfile from '@huxy/utils/src/dlfile';
 
 const langIcons = {zh_icon, en_icon, jp_icon};
 
@@ -68,7 +67,7 @@ export const leftNav = ({store, useStore}) => {
       arrowDir: 'lt',
       ChildRender: (item) => (
         <div className="follow-me">
-          <img src={wx} />
+          <img src={wx} alt="wechat" />
           <p>{left?.followMe ?? 'followMe'}：yiru_js</p>
         </div>
       ),
@@ -105,7 +104,7 @@ export const rightNav = ({store, useStore}) => {
           name: right?.settings ?? '设置',
           type: 'setting',
           icon: 'SettingOutlined',
-          path: '/settings',
+          path: '/profile',
         },
         {
           divider: true,
@@ -125,7 +124,7 @@ export const rightNav = ({store, useStore}) => {
       Custom: () => (
         <a>
           <div className="icon">
-            <img src={`${langIcons[language + '_icon']}`} />
+            <img src={`${langIcons[language + '_icon']}`} alt={language} />
           </div>
         </a>
       ),
@@ -137,7 +136,7 @@ export const rightNav = ({store, useStore}) => {
           active: language === 'zh',
           icon: (
             <div key="zh" className="img">
-              <img src={`${langIcons['zh_icon']}`} />
+              <img src={`${langIcons['zh_icon']}`} alt="zh" />
             </div>
           ),
         },
@@ -148,7 +147,7 @@ export const rightNav = ({store, useStore}) => {
           active: language === 'en',
           icon: (
             <div key="en" className="img">
-              <img src={`${langIcons['en_icon']}`} />
+              <img src={`${langIcons['en_icon']}`} alt="en" />
             </div>
           ),
         },
@@ -159,7 +158,7 @@ export const rightNav = ({store, useStore}) => {
           active: language === 'jp',
           icon: (
             <div key="jp" className="img">
-              <img src={`${langIcons['jp_icon']}`} />
+              <img src={`${langIcons['jp_icon']}`} alt="jp" />
             </div>
           ),
         },

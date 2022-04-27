@@ -36,7 +36,6 @@ npm start ---dirname=app
 
 ```
 
-
 ### 配置
 
 `configs/app.js`

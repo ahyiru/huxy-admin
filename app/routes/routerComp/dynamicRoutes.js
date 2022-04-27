@@ -20,6 +20,29 @@ export const dashboardRoutes = {
   ],
 };
 
+export const commonRoutes = [
+  {
+    path: '/commons',
+    name: ' Common',
+    icon: 'ShopOutlined',
+    children: [
+      {
+        path: '/canvas',
+        name: '图形绘制',
+        icon: 'AreaChartOutlined',
+        component: () => import('@app/views/commons/canvas'),
+      },
+    ],
+  },
+  {
+    path: '/profile',
+    name: '个人中心',
+    title: '个人中心',
+    hideMenu: true,
+    component: () => import('@app/user/profile'),
+  },
+];
+
 export const playgroundRoutes = {
   path: '/playground',
   name: ' Playground',

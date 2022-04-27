@@ -1,8 +1,8 @@
 import {useEffect, useState} from 'react';
 import {Form, Input, Button, message} from 'antd';
 import {UserOutlined, LockOutlined, GithubOutlined} from '@ant-design/icons';
-import Spinner from '@huxy/components/src/spinner';
-import storage from '@huxy/utils/src/storage';
+import {Spinner} from '@huxy/components';
+import {storage} from '@huxy/utils';
 
 import apiList from '@app/utils/getApis';
 

@@ -1,12 +1,8 @@
 import {useState, useRef} from 'react';
 import {Button,Space} from 'antd';
-import Spinner from '@huxy/components/src/spinner';
-import Anico from '@huxy/components/src/anico';
-import loadError from '@huxy/components/src/loadError';
-import {HandleError} from '@huxy/components/src/errorBoundary';
-import traverItem from '@huxy/utils/src/traverItem';
-import useClickAway from '@huxy/use/src/useClickAway';
-import useUpdate from '@huxy/use/src/useUpdate';
+import {Spinner,Anico,loadError,HandleError} from '@huxy/components';
+import {traverItem} from '@huxy/utils';
+import {useClickAway,useUpdate} from '@huxy/use';
 import {Row, Col} from '@app/components/row';
 import Panel from '@app/components/panel';
 import Ellipsis from '@app/components/ellipsis';

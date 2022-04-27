@@ -1,4 +1,4 @@
-import Row,{Col} from '@huxy/components/src/grid';
+import {Row,Col} from '@huxy/components';
 
 import './index.less';
 

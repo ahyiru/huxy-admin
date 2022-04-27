@@ -5,10 +5,9 @@ import {SettingOutlined} from '@ant-design/icons';
 import {Row, Col} from '@app/components/row';
 // import Panel from '@app/components/panel';
 import {sizeRules} from '@app/utils/sizeRules';
-import TabHeader from '@huxy/components/src/tabHeader';
-import useDebounce from '@huxy/use/src/useDebounce';
-import storage from '@huxy/utils/src/storage';
-import copyToClipboard from '@huxy/utils/src/copyToClipboard';
+import {TabHeader} from '@huxy/components';
+import {useDebounce} from '@huxy/use';
+import {storage,copyToClipboard} from '@huxy/utils';
 import getThemeList from '@app/configs/theme';
 
 const {Option} = Select;
