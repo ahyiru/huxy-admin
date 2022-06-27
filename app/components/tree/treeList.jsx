@@ -1,25 +1,24 @@
-import {useState, useCallback} from 'react';
+import {useState} from 'react';
 
 import {useSearch} from '@huxy/use';
 import {traverItem, arr2TreeByPath, isValidArr} from '@huxy/utils';
 
-import {Tree, Modal, Form, Dropdown, Menu, message, Input, Spin} from 'antd';
+import {Tree, Modal, Dropdown, Menu, message, Input, Spin} from 'antd';
 
-import {DownOutlined, PlusOutlined, EditOutlined, DeleteOutlined, ExclamationCircleOutlined, EyeInvisibleOutlined, LayoutOutlined} from '@ant-design/icons';
-
-import * as Icons from '@ant-design/icons';
-
-import HandleModal from './modal';
+import {DownOutlined, PlusOutlined, EditOutlined, DeleteOutlined, ExclamationCircleOutlined, EyeInvisibleOutlined} from '@ant-design/icons';
 
 import apiList from '@app/utils/getApis';
 
 import useFetchList from '@app/utils/useFetchList';
 
+import Icons from '@app/utils/icons';
+
+import HandleModal from './modal';
+
 const {listRouterFn, addRouterFn, editRouterFn, deleteRouterFn} = apiList;
 
 const {TreeNode} = Tree;
 const {Search} = Input;
-const {confirm} = Modal;
 
 const nodeStyle = {
   overflow: 'hidden',

@@ -8,8 +8,6 @@ import {Tree, Button, message, Input, Spin} from 'antd';
 
 import {DownOutlined, EyeInvisibleOutlined} from '@ant-design/icons';
 
-import * as Icons from '@ant-design/icons';
-
 import defProject from '@app/configs/projects';
 
 import useFetchList from '@app/hooks/useFetchList';
@@ -17,6 +15,8 @@ import useFetchList from '@app/hooks/useFetchList';
 import Back from '@app/components/goBack';
 
 import Panel from '@app/components/panel';
+
+import Icons from '@app/utils/icons';
 
 import {getRouter, getAuthedRouter, setAuthedRouter} from '../mock';
 

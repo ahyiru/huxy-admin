@@ -2,6 +2,7 @@ const webpack = require('webpack');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const SimpleProgressWebpackPlugin = require('simple-progress-webpack-plugin');
+const NodePolyfillPlugin = require('node-polyfill-webpack-plugin');
 
 // const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPlugin');
 
@@ -57,6 +58,7 @@ const plugins=[
   new SimpleProgressWebpackPlugin({
     format: 'compact',
   }),
+  new NodePolyfillPlugin(),
 ];
 
 const rules=[
@@ -192,7 +194,7 @@ module.exports={
       '@configs':path.resolve(__dirname, '../configs'),
       '@common':path.resolve(__dirname, '../commons'),
     },
-    extensions:['.jsx','.js','.less','.css','.scss','.json','.ts','.tsx','.vue','.mjs'],
+    extensions:['.jsx','.js','.less','.css','.scss','.json','.ts','.tsx','.vue','.cjs'],
     fallback: {
       path: false,//require.resolve('path-browserify'),
       process: false,
