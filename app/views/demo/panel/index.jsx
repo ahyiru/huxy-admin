@@ -1,18 +1,18 @@
 import {useState, useEffect} from 'react';
-import {DatePicker, Button, Input, Space} from 'antd';
+import Button from '@app/components/base/button';
+import Input from '@app/components/base/input';
 import {timeGap, ten2Base, base2Ten, rgba2hex, hex2rgba, cacheData} from '@huxy/utils';
 import {useTime} from '@huxy/use';
 import {Row, Col} from '@app/components/row';
 import Panel from '@app/components/panel';
 import FullPage from '@app/components/fullScreen';
 import MaxSize from '@app/components/maxSize';
-const {RangePicker} = DatePicker;
 import './index.less';
 
 const {record, undo, redo, clean} = cacheData();
 
 const plugins = [({panel}) => <FullPage panel={panel} />, ({panel}) => <MaxSize panel={panel} />];
-const Index = (props) => {
+const Index = props => {
   const [beforeTime, setBeforeTime] = useState('');
   const [afterTime, setAfterTime] = useState('');
   const [customTime, setCustomTime] = useState([]);
@@ -51,7 +51,7 @@ const Index = (props) => {
     const val = base2Ten(value, base);
     setHexValue(val);
   };
-  const colorPicker = (e) => {
+  const colorPicker = e => {
     let {value} = e.target;
     if (value.includes('rgb')) {
       value = rgba2hex(value);
@@ -62,11 +62,11 @@ const Index = (props) => {
 
   return (
     <Row className="demo-panel-container">
-      <Col>
+      {/* <Col>
         <Panel plugins={[...plugins, () => <div style={{padding: '0.3rem 2rem', fontSize: '1.2rem', color: 'var(--appColor)'}}>{time}</div>]} title="时间转换">
           <Row>
             <Col span={2}>
-              <DatePicker showTime onChange={afterChange} disabledDate={(current) => current && current > +new Date()} />
+              <DatePicker showTime onChange={afterChange} disabledDate={current => current && current > +new Date()} />
             </Col>
             <Col span={2}>
               <span style={{textAlign: 'left'}}> ～ 此刻</span>
@@ -80,7 +80,7 @@ const Index = (props) => {
               <span>此刻 ～ </span>
             </Col>
             <Col span={2}>
-              <DatePicker showTime onChange={beforeChange} disabledDate={(current) => current && current < +new Date()} />
+              <DatePicker showTime onChange={beforeChange} disabledDate={current => current && current < +new Date()} />
             </Col>
             <Col span={2}>
               <i>{timeGap(beforeTime)}</i>
@@ -95,7 +95,7 @@ const Index = (props) => {
             </Col>
           </Row>
         </Panel>
-      </Col>
+      </Col> */}
       <Col span={6}>
         <Panel plugins={plugins} title="进制转换">
           <Row>
@@ -103,7 +103,7 @@ const Index = (props) => {
               <span>二进制</span>
             </Col>
             <Col span={5}>
-              <Input value={ten2Base(hexValue, 2)} onChange={(e) => hexChange(e, 2)} />
+              <Input value={ten2Base(hexValue, 2)} onChange={e => hexChange(e, 2)} />
             </Col>
           </Row>
           <Row>
@@ -111,7 +111,7 @@ const Index = (props) => {
               <span>八进制</span>
             </Col>
             <Col span={5}>
-              <Input value={ten2Base(hexValue, 8)} onChange={(e) => hexChange(e, 8)} />
+              <Input value={ten2Base(hexValue, 8)} onChange={e => hexChange(e, 8)} />
             </Col>
           </Row>
           <Row>
@@ -119,7 +119,7 @@ const Index = (props) => {
               <span>十进制</span>
             </Col>
             <Col span={5}>
-              <Input value={hexValue} onChange={(e) => hexChange(e, 10)} />
+              <Input value={hexValue} onChange={e => hexChange(e, 10)} />
             </Col>
           </Row>
           <Row>
@@ -127,21 +127,19 @@ const Index = (props) => {
               <span>十六进制</span>
             </Col>
             <Col span={5}>
-              <Input value={ten2Base(hexValue, 16)} onChange={(e) => hexChange(e, 16)} />
+              <Input value={ten2Base(hexValue, 16)} onChange={e => hexChange(e, 16)} />
             </Col>
           </Row>
         </Panel>
       </Col>
       <Col span={6}>
         <Panel plugins={plugins} title="色值转换">
-          <Space>
-            <Button onClick={(e) => prev()} disabled={!currentItem.length || currentItem.index === 0}>
-              撤回
-            </Button>
-            <Button onClick={(e) => next()} disabled={!currentItem.length || currentItem.index === currentItem.length - 1}>
-              重做
-            </Button>
-          </Space>
+          <Button onClick={e => prev()} disabled={!currentItem.length || currentItem.index === 0} style={{marginRight: 10}}>
+            撤回
+          </Button>
+          <Button onClick={e => next()} disabled={!currentItem.length || currentItem.index === currentItem.length - 1}>
+            重做
+          </Button>
           <Row>
             <Col span={3}>
               <span>hex</span>

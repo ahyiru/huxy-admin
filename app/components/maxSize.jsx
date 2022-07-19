@@ -1,6 +1,5 @@
-import {PlusSquareOutlined, MinusSquareOutlined} from '@ant-design/icons';
 import {MaxSize} from '@huxy/components';
 
-const Index = ({panel}) => <MaxSize panel={panel} target="page-container" fullIcon={PlusSquareOutlined} exitIcon={MinusSquareOutlined} />;
+const Index = ({panel}) => <a><MaxSize panel={panel} target="page-container" /></a>;
 
 export default Index;

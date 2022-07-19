@@ -1,16 +1,17 @@
 {
   "name": "template",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "main": "scripts/index.js",
-  "description": "react use router",
+  "description": "react template",
   "keywords": [
     "react",
     "useRouter",
+    "useStore",
     "layout",
     "low-code",
     "hooks",
     "webpack",
-    "eslint",
+    "template",
     "dashboard",
     "admin"
   ],
@@ -28,15 +29,13 @@
     "eslint": "eslint 'app/**/*.{js,jsx}'",
     "stylelint": "stylelint 'app/**/*.{css,less}'",
     "prettier": "prettier 'app/**/*' --write --ignore-unknown",
-    "prettier-md": "prettier 'app/**/*.md' --write --ignore-unknown",
-    "stylelintLayout": "stylelint 'commons/styles/*.{css,less}'",
     "lint": "npm run eslint && npm run stylelint",
     "lint-fix": "eslint --fix 'app/**/*.{js,jsx}' && stylelint --fix 'app/**/*.{css,less}'",
     "release": "standard-version"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ahyiru/web-design"
+    "url": "https://github.com/ahyiru/huxy-admin"
   },
   "license": "MIT",
   "devDependencies": {
@@ -106,11 +105,16 @@
     "stylelint": "^14.9.1",
     "stylelint-config-recommended": "^8.0.0",
     "stylelint-order": "^5.0.0",
+    "tailwindcss": "^3.1.6",
     "terser-webpack-plugin": "^5.3.3",
+    "ts-jest": "^28.0.7",
+    "ts-loader": "^9.3.1",
+    "typescript": "^4.7.4",
     "url-loader": "^4.1.1",
     "webpack": "^5.73.0",
     "webpack-bundle-analyzer": "^4.5.0",
     "webpack-cli": "^4.10.0",
+    "webpack-deadcode-plugin": "^0.1.17",
     "webpack-dev-middleware": "^5.3.3",
     "webpack-hot-middleware": "^2.25.1",
     "webpack-merge": "^5.8.0",
@@ -122,10 +126,7 @@
     "@huxy/router": "^1.2.1",
     "@huxy/use": "^1.2.1",
     "@huxy/utils": "^1.2.1",
-    "antd": "^4.21.7",
     "core-js": "^3.23.5",
-    "echarts": "^5.3.3",
-    "echarts-for-react": "^3.0.2",
     "enzyme": "^3.11.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"

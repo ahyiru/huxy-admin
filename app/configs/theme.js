@@ -1,6 +1,6 @@
 import {dark, dark1, light, light1, portal, lightPortal, gradient} from './themes';
 
-const themeList = (nameList) => [
+const themeList = nameList => [
   {
     name: nameList?.['dark'] ?? 'dark',
     key: 'dark',

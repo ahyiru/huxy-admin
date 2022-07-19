@@ -1,0 +1,8 @@
+{
+  "unusedFiles": [
+    "/Users/huyong/Desktop/huxy-admin/app/hooks/useFetchList.jsx",
+    "/Users/huyong/Desktop/huxy-admin/app/hooks/useGetRouter.jsx",
+    "/Users/huyong/Desktop/huxy-admin/app/hooks/useHandleList.jsx"
+  ],
+  "unusedExports": {}
+}

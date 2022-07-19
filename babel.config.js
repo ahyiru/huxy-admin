@@ -31,20 +31,11 @@ const config=api=>{
     [
       'import',
       {
-        libraryName: 'antd',
-        libraryDirectory: 'es',
-        style: 'css',//'css',
-      },
-      'antd',
-    ],
-    [
-      'import',
-      {
         libraryName: '@huxy/utils',
         libraryDirectory: 'src',
         camel2DashComponentName: false,
       },
-      'ihuxy-utils',
+      '@huxy/utils',
     ],
     [
       'import',
@@ -53,17 +44,15 @@ const config=api=>{
         libraryDirectory: 'src',
         camel2DashComponentName: false,
       },
-      'ihuxy-use',
+      '@huxy/use',
     ],
     [
       'import',
       {
         libraryName: '@huxy/components',
-        // libraryDirectory: 'src',
-        // camel2DashComponentName: false,
         customName: name => `@huxy/components/src/${dash2camel(name)}`,
       },
-      'ihuxy-components',
+      '@huxy/components',
     ],
     [
       '@babel/plugin-proposal-decorators',
@@ -93,10 +82,6 @@ const config=api=>{
     ],
   ];
 
-  /* if(appName==='vue'){
-    plugins.push('@vue/babel-plugin-jsx');
-  } */
-
   const env={
     development: {
       presets: [
@@ -117,10 +102,6 @@ const config=api=>{
   };
 
   return {
-    /* babelrcRoots: [
-      '.',
-      'playground/publish/*',
-    ], */
     assumptions:{
       noDocumentAll:true,
       noClassCalls:true,

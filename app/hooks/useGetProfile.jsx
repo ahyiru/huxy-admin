@@ -16,7 +16,7 @@ const useGetProfile = () => {
         getAuths(result);
       }
     };
-    const getAuths = async (profile) => {
+    const getAuths = async profile => {
       const {code, result} = (await listAuthFn({uid: profile?._id})) || {};
       if (code === 200) {
         // setProfile({profile,permission:result});

@@ -1,6 +1,6 @@
 import {useState, useRef} from 'react';
-import {Button, Space} from 'antd';
-import {Spinner, Anico, loadError, HandleError} from '@huxy/components';
+import Button from '@app/components/base/button';
+import {Spinner, Anico, LoadError, HandleError} from '@huxy/components';
 import {traverItem} from '@huxy/utils';
 import {useClickAway, useUpdate} from '@huxy/use';
 import {Row, Col} from '@app/components/row';
@@ -11,14 +11,14 @@ import './index.less';
 
 const ErrorComp = ({state, name}) => <div>{state[name]}</div>;
 
-const Index = (props) => {
+const Index = props => {
   const [type, setType] = useState('');
   const [demoError, setDemoError] = useState({});
 
   const rerender = useUpdate();
   const itemClick = (e, item) => {
     e.stopPropagation();
-    traverItem((v) => {
+    traverItem(v => {
       if (item.value === v.value) {
         if (item.list?.length) {
           v.open = !item.open;
@@ -54,13 +54,11 @@ const Index = (props) => {
             <Anico type={type} />
           </div>
           <div>
-            <Space>
-              {typeList.map(({key, name}) => (
-                <Button key={key} type={key === type ? 'primary' : ''} onClick={(e) => setType(key)}>
-                  {name}
-                </Button>
-              ))}
-            </Space>
+            {typeList.map(({key, name}, i) => (
+              <Button key={key} type={key === type ? 'primary' : ''} onClick={e => setType(key)} style={{marginLeft: i === 0 ? 0 : 10}}>
+                {name}
+              </Button>
+            ))}
           </div>
         </Panel>
       </Col>
@@ -71,11 +69,11 @@ const Index = (props) => {
       </Col>
       <Col span={6}>
         <Panel>
-          <div>{loadError({error: 'load error demo'})}</div>
+          <div>{LoadError({error: 'load error demo'})}</div>
           <HandleError>
             <ErrorComp state={demoError} name="eb" />
           </HandleError>
-          {demoError && <Button onClick={(e) => setDemoError(null)}>load</Button>}
+          {demoError && <Button onClick={e => setDemoError(null)}>load</Button>}
         </Panel>
       </Col>
       <Col>
@@ -93,16 +91,16 @@ const Index = (props) => {
 
 const LiItem = ({li, itemClick}) => {
   const liRef = useRef();
-  useClickAway(liRef, (e) => li.open && itemClick(e, li));
+  useClickAway(liRef, e => li.open && itemClick(e, li));
   return (
-    <li ref={liRef} className={`${li.open ? 'open' : ''}`} onClick={(e) => itemClick(e, li)}>
+    <li ref={liRef} className={`${li.open ? 'open' : ''}`} onClick={e => itemClick(e, li)}>
       <a className={`demo-follow${li.active ? ' active' : ''}`}>
         <span>{li.name}</span>
         {li.list?.length ? <i className={`demo-angle-${li.open ? 'top' : 'bt'}`} /> : null}
       </a>
       {li.list?.length ? (
         <ul className="demo-arrow-rt">
-          {li.list.map((item) => (
+          {li.list.map(item => (
             <li key={item.value}>
               <a className="demo-tooltip" tooltips={item.name}>
                 {item.name}

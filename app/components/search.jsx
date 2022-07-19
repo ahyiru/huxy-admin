@@ -1,12 +1,11 @@
-import {Input} from 'antd';
-import {SearchOutlined} from '@ant-design/icons';
-const GlobalSearch = (props) => {
-  const onChange = (value) => {
+import Input from '@app/components/base/input';
+const GlobalSearch = props => {
+  const onChange = value => {
     console.log(value);
   };
   return (
     <a className="global-search">
-      <Input placeholder="search..." suffix={<SearchOutlined />} onChange={onChange} />
+      <Input placeholder="search..." onChange={onChange} />
     </a>
   );
 };

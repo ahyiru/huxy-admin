@@ -1,6 +1,6 @@
 const permRouter = (routers, permList, permKey = 'path', prefix = '') => {
   prefix = prefix === '/' ? '' : prefix;
-  return routers.map((router) => {
+  return routers.map(router => {
     const path = prefix + router[permKey];
     const isRouterDenied = router.denied != null && path !== '/';
     if (!isRouterDenied && router.children?.length) {

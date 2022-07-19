@@ -1,12 +1,16 @@
-// import {message} from 'antd';
+// import message from '@app/components/base/message';
+// import html2canvas from 'html2canvas';
 // import {dlfile} from '@huxy/utils';
-import Settings from '@app/components/settings';
+
+// import Settings from '@app/components/settings';
 // import getThemeList from './theme';
 import getLang from '@app/utils/getLang';
 import {logout} from '@app/utils/utils';
 
 import defUser from '@app/assets/images/user/2.png';
-import wx from '@app/assets/images/wx.jpg/';
+import wx from '@app/assets/images/wx.jpg';
+
+// import metamask from '@app/assets/images/metamask.svg';
 
 import zh_icon from '@app/assets/icons/zh.png';
 import en_icon from '@app/assets/icons/en.png';
@@ -14,10 +18,10 @@ import jp_icon from '@app/assets/icons/jp.png';
 
 import FullPage from '@app/components/fullScreen';
 import CustomCollapse from '@app/components/customCollapse';
-import Notify from '@app/components/notify';
+// import Notify from '@app/components/notify';
 import Search from '@app/components/search';
 
-// import html2canvas from 'html2canvas';
+// import getWeb3 from '@app/web3/getWeb3';
 
 const langIcons = {zh_icon, en_icon, jp_icon};
 
@@ -65,19 +69,19 @@ export const leftNav = ({store, useStore}) => {
       key: 'wechat',
       icon: 'WechatOutlined',
       arrowDir: 'lt',
-      ChildRender: (item) => (
+      ChildRender: item => (
         <div className="follow-me">
           <img src={wx} alt="wechat" />
           <p>{left?.followMe ?? 'followMe'}：yiru_js</p>
         </div>
       ),
     },
-    {
+    /* {
       key: 'configs',
       icon: 'ToolOutlined',
       type: 'configs',
       Custom: () => <Settings store={store} useStore={useStore} />,
-    },
+    }, */
   ];
 };
 export const rightNav = ({store, useStore}) => {
@@ -112,7 +116,7 @@ export const rightNav = ({store, useStore}) => {
           name: right?.logout ?? '退出',
           type: 'logout',
           icon: 'PoweroffOutlined',
-          handle: (item) => {
+          handle: item => {
             logout();
           },
         },
@@ -165,6 +169,30 @@ export const rightNav = ({store, useStore}) => {
       ],
     },
     /* {
+      key: 'MetaMask',
+      title: right?.metamask ?? 'MetaMask',
+      Custom: () => {
+        const hanlder = async () => {
+          try {
+            const result = await getWeb3();
+            const addr = result.accounts?.[0];
+            if (addr) {
+              message.success(`已连接${addr}`);
+            }
+          } catch (error) {
+            message.error('未检测到MetaMask插件！');
+          }
+        };
+        return (
+          <a onClick={e => hanlder()}>
+            <div className="icon">
+              <img src={metamask} alt="metamask" />
+            </div>
+          </a>
+        );
+      },
+    }, */
+    /* {
       key:'themeList',
       title:right?.themeList??'主题设置',
       icon:'SettingOutlined',
@@ -178,40 +206,41 @@ export const rightNav = ({store, useStore}) => {
     {
       key: 'github',
       title: right?.github ?? 'Github',
-      icon: 'GithubOutlined',
+      name: 'github',
+      // icon: 'GithubOutlined',
       type: 'link',
-      link: 'https://github.com/ahyiru/huxy-admin',
+      link: 'https://github.com/ahyiru/web-design',
     },
-    {
+    /* {
       key: 'notify',
       title: right?.notify ?? '消息',
       Custom: () => <Notify />,
-    },
+    }, */
     {
       key: 'fullscreen',
       Custom: () => <FullPage />,
     },
-    {
+    /* {
       title: right?.screenshot ?? '截屏',
       key: 'screencapture',
       icon: 'CameraOutlined',
-      handle: (item) => {
+      handle: item => {
         // const ele=document. getElementsByClassName('page-content')[0];
-        /* html2canvas(document.body, {
+        html2canvas(document.getElementById('app'), {
           useCORS: true,
           foreignObjectRendering: true,
           allowTaint: true,
           logging: false,
         })
-          .then((canvas) => {
+          .then(canvas => {
             dlfile(canvas.toDataURL());
             message.success(right?.screencapture_msg ?? '下载成功！');
           })
-          .catch((error) => {
+          .catch(error => {
             message.error(error);
-          }); */
+          });
       },
-    },
+    }, */
     // {
     //   name:right['clean_cookie'],
     //   icon:<RestOutlined />,

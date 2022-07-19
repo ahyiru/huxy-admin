@@ -1,8 +1,8 @@
-import {storage} from '@huxy/utils';
-
-import {designReg, confirmDesignPage} from '@app/utils/confirmDesignPage';
-
-import whiteList from '../routes/whiteList';
+// import {storage} from '@huxy/utils';
+// 
+// import {designReg, confirmDesignPage} from '@app/utils/confirmDesignPage';
+// 
+// import whiteList from '../routes/whiteList';
 
 export const browserRouter = !process.env.isDev;
 
@@ -12,13 +12,13 @@ export const basepath = browserRouter ? PRD_ROOT_DIR : DEV_ROOT_DIR;
 
 const initPath = `${browserRouter ? '' : '#'}/`;
 
-const whiteRoutes = browserRouter ? whiteList : whiteList.map((path) => `#${path}`);
+// const whiteRoutes = browserRouter ? whiteList : whiteList.map(path => `#${path}`);
+// 
+// const token = storage.get('token');
+// 
+// const demoBackReg = /\/playground\/utils\/list\/auth\/[0-9a-z]+/;
 
 const routerListen = {};
-
-const token = storage.get('token');
-
-const demoBackReg = /\/playground\/utils\/list\/auth\/[0-9a-z]+/;
 
 const routerListenFn = (path, prevPath) => {
   if (!routerListen[path]) {
@@ -45,13 +45,13 @@ const beforeRender = (input, next) => {
   }
   /* if (!token && !whiteRoutes.includes(validPath)) {
     return next({path: '/user/signin'});
-  } */
+  }
   if (path !== prevPath && demoBackReg.test(prevPath)) {
     // designReg
     return confirmDesignPage(next);
-  }
+  } */
   next();
-  // routerListenFn(path,prevPath);
+  routerListenFn(path,prevPath);
 };
 
 export default {

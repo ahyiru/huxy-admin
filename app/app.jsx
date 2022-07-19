@@ -11,7 +11,6 @@ import useGetProfile from '@app/hooks/useGetProfile';
 import {isAuthed} from '@app/utils/utils';
 import getRoutes from '@app/utils/getRoutes';
 import setGlobalVar from '@app/utils/setGlobalVar';
-// import SkeletonContent from '@app/components/skeletonContent';
 
 const getRouterCfgs = ({profile, permission, routerList, i18ns}) => ({...configs, routers: getRoutes({profile, i18ns, permission, routerList}), title: i18ns.title});
 
@@ -21,7 +20,7 @@ const ConfigProvider = ({i18ns = {}, language, profile = {}, permission, routerL
     const {setState, subscribe} = store;
     const cancelTheme = subscribe('huxy-theme', setGlobalVar);
     setState({permission, profile, i18ns, 'huxy-theme': getTheme(i18ns), 'huxy-language': language});
-    const cancelLang = subscribe('huxy-language', async (lang) => {
+    const cancelLang = subscribe('huxy-language', async lang => {
       storage.set('language', lang);
       const {i18ns} = await getI18n();
       setState({i18ns, 'huxy-theme': getTheme(i18ns)});
@@ -40,7 +39,7 @@ const ConfigProvider = ({i18ns = {}, language, profile = {}, permission, routerL
   );
 };
 
-const AuthedApp = (props) => {
+const AuthedApp = props => {
   const [{profile, permission, routerList}] = useGetProfile();
   if (!profile) {
     return <Spinner global />;

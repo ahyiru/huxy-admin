@@ -13,13 +13,14 @@ const compression=require('compression');
 
 const webpackDevMiddleware=require('webpack-dev-middleware');
 const webpackHotMiddleware=require('webpack-hot-middleware');
-const {createProxyMiddleware}=require('http-proxy-middleware');
 
 const webpackConfig=require('./webpack.development');
 
 const {appName,HOST,PORT,PROXY,MOCK}=require('../configs');
 
 const getIPs=require('./getIPs');
+
+const {createProxyMiddleware}=require('http-proxy-middleware');
 
 const app = express();
 
@@ -92,9 +93,11 @@ app.listen(app.get('port'),err=>{
     return false;
   }
   const ips=getIPs().map(ip=>`${ip}:${app.get('port')}`).join('\n');
+  // open(`http://${app.get('host')}:${app.get('port')}`);
   console.log('\n'+appName.magenta+': 服务已启动! '.cyan+'✓'.green);
   console.log(`\n监听端口: ${app.get('port')} ,正在构建,请稍后...`.cyan);
   console.log('-----------------------------------'.blue);
+  // console.log(` 本地地址: http://${app.get('host')}:${app.get('port')}`.magenta);
   console.log(`运行地址: \n`.magenta);
   console.log(`${ips} \n`.magenta);
   console.log(`如需打包部署到生产环境，请运行 `.cyan+`npm run build`.green);
@@ -105,6 +108,15 @@ app.listen(app.get('port'),err=>{
 if(appName==='demo'){
   mocks();
 }
+/* app.get('test',(req,res)=>{
+  return res.send({id:'test'});
+});
+
+app.get('/users/test1',(req,res)=>{
+  console.log(req.originalUrl);
+  res.send({users:'huy'});
+}); */
+
 
 
 

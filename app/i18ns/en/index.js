@@ -4,7 +4,7 @@ import theme from './theme';
 import main from './main';
 import login from './login';
 
-const title = 'huxyAdmin';
+const title = 'low-code platform';
 
 export default {
   title,

@@ -34,7 +34,7 @@ const postcssOptions={
   // autoprefixer: { grid: true }
   browsers: 'last 2 versions',
   importFrom:[
-    // './playground/src/layoutOpt/global.css',
+    // './commons/global.css',
     // './configs/themeCfg.js',
     ()=>{
       const environmentVariables={
@@ -72,7 +72,7 @@ const plugins=[
       isDev:false,
     },
     EMAIL:JSON.stringify('ah.yiru@gmail.com'),
-    VERSION:JSON.stringify('1.1.x'),
+    VERSION:JSON.stringify('1.2.x'),
   }),
   new GenerateSW({
     // importWorkboxFrom: 'local',

@@ -3,6 +3,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const SimpleProgressWebpackPlugin = require('simple-progress-webpack-plugin');
 const NodePolyfillPlugin = require('node-polyfill-webpack-plugin');
+const DeadCodePlugin = require('webpack-deadcode-plugin');
 
 // const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPlugin');
 
@@ -10,6 +11,8 @@ const {appName,projectName,PUBLIC_DIR,BUILD_DIR,DEV_ROOT_DIR}=require('../config
 
 const publics=path.resolve(__dirname,PUBLIC_DIR);
 const app=path.resolve(__dirname,`../${appName}`);
+
+// const rootDir=DEV_ROOT_DIR==='/'?DEV_ROOT_DIR:`${DEV_ROOT_DIR}/`;
 
 const frame=appName==='vue'?{uiframe:['vue']}:{uiframe:['react','react-dom']};
 
@@ -55,10 +58,43 @@ const plugins=[
     minChunkSize: 30000,
   }),
   new webpack.optimize.ModuleConcatenationPlugin(),
+  // new BundleAnalyzerPlugin(),
+  /* new ModuleFederationPlugin({
+    name:'reactApp',
+    // library:{ type:'var',name:'reactApp'},
+    // filename:'remoteEntry.js',
+    remotes:{
+      useVueApp:'useVueApp',
+    },
+    // exposes:{
+    //   ReactApp:path.resolve(__dirname, '../app'),
+    //   // VueApp:path.resolve(__dirname, '../vue'),
+    // },
+    // shared:['react','react-dom'],
+  }), */
+  /* new webpack.ProgressPlugin({
+    activeModules:false,
+    entries:true,
+    handler:(percentage,message,...args)=>{
+      // console.log(percentage,message,...args);
+    },
+    modules:true,
+    modulesCount:5000,
+    profile:false,
+    dependencies:true,
+    dependenciesCount:10000,
+    percentBy:null,
+  }), */
   new SimpleProgressWebpackPlugin({
     format: 'compact',
   }),
   new NodePolyfillPlugin(),
+  new DeadCodePlugin({
+    patterns: [`${app}/**/*.(js|jsx|css|less)`],
+    exclude: ['**/node_modules/**', '**/build/**', '**/draft/**'],
+    log: 'none',
+    exportJSON: app,
+  }),
 ];
 
 const rules=[
@@ -67,6 +103,14 @@ const rules=[
     resolve:{
       fullySpecified:false,
     },
+  },
+  {
+    test:/\.tsx?$/,
+    use:[
+      {loader:'babel-loader'},
+      {loader:'ts-loader'},
+    ],
+    exclude:[/node_modules/,/draft/],
   },
   {
     test:/\.jsx?$/,
@@ -194,7 +238,7 @@ module.exports={
       '@configs':path.resolve(__dirname, '../configs'),
       '@common':path.resolve(__dirname, '../commons'),
     },
-    extensions:['.jsx','.js','.less','.css','.scss','.json','.ts','.tsx','.vue','.cjs'],
+    extensions:['.jsx','.js','.less','.css','.scss','.json','.ts','.tsx','.vue','.mjs'],
     fallback: {
       path: false,//require.resolve('path-browserify'),
       process: false,

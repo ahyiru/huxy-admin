@@ -1,4 +1,4 @@
-const fixEle = (list) => (Value) => {
+const fixEle = list => Value => {
   if (typeof Value === 'function' || typeof Value?.render === 'function') {
     return <Value />;
   }

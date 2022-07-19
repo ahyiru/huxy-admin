@@ -1,6 +1,5 @@
-import {FullscreenOutlined, FullscreenExitOutlined} from '@ant-design/icons';
 import {FullPage} from '@huxy/components';
 
-const Index = ({panel}) => <FullPage panel={panel} fullIcon={FullscreenOutlined} exitIcon={FullscreenExitOutlined} />;
+const Index = ({panel}) => <a><FullPage panel={panel} /></a>;
 
 export default Index;

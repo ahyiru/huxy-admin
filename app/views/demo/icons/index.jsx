@@ -1,4 +1,4 @@
-import {message} from 'antd';
+import message from '@app/components/base/message';
 import {Row, Col} from '@huxy/components';
 import {copyToClipboard} from '@huxy/utils';
 
@@ -70,8 +70,8 @@ const icons = [
   'border-outer',
 ];
 
-const Index = (props) => {
-  const copyText = (v) => {
+const Index = props => {
+  const copyText = v => {
     copyToClipboard(v);
     message.success('拷贝成功！');
   };

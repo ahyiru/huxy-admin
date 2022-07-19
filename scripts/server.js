@@ -5,8 +5,8 @@ const cors=require('cors');
 const logger=require('morgan');
 const bodyParser=require('body-parser');
 const compression=require('compression');
-// const https=require('https');
-// const fs=require('fs');
+const https=require('https');
+const fs=require('fs');
 
 const app = express();
 
@@ -41,18 +41,21 @@ const build=path.resolve(appName,BUILD_DIR);
 
 app.use(PRD_ROOT_DIR,express.static(build));
 
+// app.use(PRD_ROOT_DIR1,express.static(build1));
+// app.use(PRD_ROOT_DIR2,express.static(build2));
+
 app.get('*',function(request,response){
   response.sendFile(path.resolve(build,'index.html'));
 });
 
 /* https */
-/* const cert=path.resolve(__dirname,'../cert');
+const cert=path.resolve(__dirname,'../cert');
 const options={
   key:fs.readFileSync(`${cert}/server.key`),
   cert:fs.readFileSync(`${cert}/server.cert`),
   // passphrase: 'YOUR PASSPHRASE HERE',
 };
-const httpsServer=https.createServer(options,app); */
+const httpsServer=https.createServer(options,app);
 /* https */
 
 app.listen(app.get('port'),(err)=>{
