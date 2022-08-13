@@ -2,29 +2,26 @@ const routes = [
   {
     path: '/user',
     title: '登录注册',
-    icon: 'TeamOutlined',
     hideMenu: true,
-    component: props => <div>login</div>,
+    component: () => import('@app/views/user'),
     children: [
       {
         path: '/signin',
         name: '登录',
-        component: props => <h1>登录</h1>,
+        component: () => import('@app/views/user/login'),
+      },
+      {
+        path: '/signup',
+        name: '注册',
+        component: () => import('@app/views/user/signup'),
       },
     ],
   },
   {
     path: '/404',
     name: '404',
-    component: import('@app/404'),
+    component: import('@app/views/404'),
     hideMenu: true,
-  },
-  {
-    path: '/profile',
-    name: '个人中心',
-    title: '个人中心',
-    hideMenu: true,
-    component: <h1>个人中心</h1>,
   },
 ];
 

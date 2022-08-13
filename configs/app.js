@@ -1,18 +1,18 @@
-const play={
-  HOST:process.env.IP||'http://localhost',
-  PORT:process.env.PORT||6300,
-  PRO_PORT:process.env.PRO_PORT||6301,
-  BUILD_DIR:'./build',
-  PUBLIC_DIR:'../public',
-  DEV_ROOT_DIR:'/',
-  PRD_ROOT_DIR:'/',
-  PROXY:'http://47.105.94.51:9202',
-  TARGET:'/api',
-  MOCK:'http://localhost:6302',
-  SERVER_PORT:6303,
-  basepath:'/',
-  platform:'pc',
-  projectName:'...',
+const app = {
+  HOST: process.env.IP || 'http://localhost',
+  PORT: process.env.PORT || 3100,
+  PRO_PORT: process.env.PRO_PORT || 3101,
+  BUILD_DIR: './build', //'build',
+  PUBLIC_DIR: '../public',
+  DEV_ROOT_DIR: '/',
+  PRD_ROOT_DIR: '/',
+  PROXY: {
+    url: 'http://47.105.94.51:9202',
+    prefix: '/api',
+  },
+  MOCK: 'http://localhost:3102',
+  SERVER_PORT: 3103,
+  projectName: '...',
 };
 
-module.exports=play;
+module.exports = app;

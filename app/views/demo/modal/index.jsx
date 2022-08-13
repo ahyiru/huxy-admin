@@ -1,7 +1,8 @@
 import {useState} from 'react';
-import Button from '@app/components/base/button';
 import {Portal, Mask, Modal} from '@huxy/components';
+import {message} from '@huxy/utils';
 import {Row, Col} from '@app/components/row';
+import Button from '@app/components/base/button';
 import Panel from '@app/components/panel';
 
 const Index = props => {
@@ -11,9 +12,9 @@ const Index = props => {
     <Row>
       <Col>
         <Panel>
-          <div>portal demo</div>
+          <div id="portal-test">portal demo</div>
           <Portal>
-            <div style={{zIndex: 100, position: 'fixed', top: '40%', right: 0, color: 'red'}}>mounted at body</div>
+            <div style={{zIndex: 100, position: 'fixed', top: '40%', right: 0, color: 'var(--red2)'}}>mounted at body</div>
           </Portal>
         </Panel>
       </Col>
@@ -31,6 +32,14 @@ const Index = props => {
           <Modal open={modalOpen} cancel={() => setModalOpen(false)} delay={250}>
             <div>modal test</div>
           </Modal>
+        </Panel>
+      </Col>
+      <Col>
+        <Panel>
+          <Button onClick={e => message.success('message success')}>success</Button>
+          <Button onClick={e => message.warn('message warn')}>warn</Button>
+          <Button onClick={e => message.error('message error')}>error</Button>
+          <Button onClick={e => message.info('message info')}>info</Button>
         </Panel>
       </Col>
     </Row>

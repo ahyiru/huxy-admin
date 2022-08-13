@@ -1,15 +1,22 @@
 import Page from '@app/views/page';
 
-export const appRoutes = {
-  path: '/apps',
-  name: ' App',
-  component: props => <h1>首页</h1>,
+export const configRoutes = {
+  path: '/layout',
+  name: '框架配置',
+  icon: 'ico-layout',
+  component: () => import('@app/views/layout'),
 };
-
+export const profileRoutes = {
+  path: '/profile',
+  name: '个人中心',
+  title: '个人中心',
+  hideMenu: true,
+  component: props => <h1>{<h1>{props.inputPath} is comming...</h1>}</h1>,
+};
 export const pageRoutes = {
   path: '/page1',
   name: '一级菜单',
-  icon: 'FileTextOutlined',
+  icon: 'ico-loop',
   children: [
     {
       path: '/page1-1',
@@ -58,7 +65,7 @@ export const pageRoutes = {
     {
       path: '/page1-3',
       name: '二级菜单3',
-      icon: 'RobotOutlined',
+      icon: 'ico-time',
       component: Page,
     },
   ],
@@ -66,12 +73,12 @@ export const pageRoutes = {
 export const playgroundRoutes = {
   path: '/playground',
   name: ' Playground',
-  icon: 'ConsoleSqlOutlined',
+  icon: 'ico-knot',
   children: [
     {
       path: '/icons',
       name: 'icons',
-      icon: 'PictureOutlined',
+      icon: 'ico-music',
       component: () => import('@app/views/demo/icons'),
     },
     {

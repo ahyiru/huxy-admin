@@ -1,4 +1,5 @@
 import Input from '@app/components/base/input';
+
 const GlobalSearch = props => {
   const onChange = value => {
     console.log(value);

@@ -1,16 +1,14 @@
 import Layout from '@huxy/layout';
-import useNavList from './components/useNavList';
+import {i18nsStore} from '@app/store/stores';
+import {leftNav, rightNav} from '@app/configs/nav';
 import useFormatMenu from './components/useFormatMenu';
 
 import * as configs from './configs';
 
 const Index = props => {
-  const {store,useStore}=props;
-  const i18ns=store.getState('i18ns');
-  const [leftList,rightList]=useNavList({store,useStore});
-  const menus=useFormatMenu();
-  return <Layout title={i18ns?.title} {...props} {...menus} leftList={leftList} rightList={rightList} {...configs} />;
+  const i18ns = i18nsStore.getState();
+  const menus = useFormatMenu();
+  return <Layout title={i18ns?.title} {...props} {...menus} leftList={leftNav()} rightList={rightNav()} {...configs} />;
 };
 
 export default Index;
-

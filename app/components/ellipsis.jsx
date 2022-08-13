@@ -1,7 +1,7 @@
 import {useState, useEffect, useRef} from 'react';
-import Tooltip from '@app/components/base/tooltip';
 import {useEleResize} from '@huxy/use';
 import {getTextSize, getPosition} from '@huxy/utils';
+import Tooltip from '@app/components/base/tooltip';
 
 const style = {
   overflow: 'hidden',

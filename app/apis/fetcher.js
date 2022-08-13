@@ -1,14 +1,23 @@
-import message from '@app/components/base/message';
-import {fetcher, storage, wrapPromise} from '@huxy/utils';
-import {logout} from '@app/utils/utils';
+import {fetcher, storage, wrapPromise, message} from '@huxy/utils';
 
 const {PROXY} = require('@configs');
 
 const TARGET = PROXY?.prefix ?? '/api';
 
-const success_code = [200];
+import {logout} from '@app/utils/utils';
+
+const success_code = [200, 10000];
 
 const handler = response => {
+  /* if(response.status===401){
+    message.error(response.statusText);
+    logout(true);
+    return;
+  }
+  if(!success_code.includes(response.status)){
+    message.error(response.statusText);
+    throw response.statusText;
+  } */
   return response
     .json()
     .then(result => {
@@ -37,6 +46,7 @@ const dlHandler = response => {
     throw {message: response.statusText};
   }
   const disposition = response.headers.get('Content-Disposition');
+  // const filename=decodeURIComponent(disposition.split(';')[1].split('=')[1]);
   const fileInfo = decodeURIComponent(disposition);
   return response
     .blob()

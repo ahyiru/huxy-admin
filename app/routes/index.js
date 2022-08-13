@@ -3,13 +3,15 @@ import {traverItem} from '@huxy/utils';
 import staticRoutes from './routerComp/staticRoutes';
 import * as dynamicRoutes from './routerComp/dynamicRoutes';
 
-const routers = Object.keys(dynamicRoutes).map(key=>dynamicRoutes[key]);
+const {configRoutes, ...restRoutes} = dynamicRoutes;
+
+const routers = Object.keys(restRoutes).map(key => restRoutes[key]);
 
 const allRoutes = [
   {
     path: '/',
     component: () => import('@common/layout/layout'),
-    children: routers,
+    children: [configRoutes, ...routers],
   },
   ...staticRoutes,
 ];

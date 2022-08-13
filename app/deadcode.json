@@ -1,8 +1,26 @@
 {
   "unusedFiles": [
-    "/Users/huyong/Desktop/huxy-admin/app/hooks/useFetchList.jsx",
-    "/Users/huyong/Desktop/huxy-admin/app/hooks/useGetRouter.jsx",
-    "/Users/huyong/Desktop/huxy-admin/app/hooks/useHandleList.jsx"
+    "/Users/huyong/Desktop/huxy-admin/app/components/icon.jsx",
+    "/Users/huyong/Desktop/huxy-admin/app/configs/reportInfo.js",
+    "/Users/huyong/Desktop/huxy-admin/app/utils/fixEle.jsx",
+    "/Users/huyong/Desktop/huxy-admin/app/utils/fixIcons.js",
+    "/Users/huyong/Desktop/huxy-admin/app/assets/images/user/1.png",
+    "/Users/huyong/Desktop/huxy-admin/app/assets/images/user/3.png",
+    "/Users/huyong/Desktop/huxy-admin/app/assets/images/user/4.png",
+    "/Users/huyong/Desktop/huxy-admin/app/assets/images/user/5.png",
+    "/Users/huyong/Desktop/huxy-admin/app/assets/images/user/6.png",
+    "/Users/huyong/Desktop/huxy-admin/app/assets/images/user/7.png",
+    "/Users/huyong/Desktop/huxy-admin/app/assets/images/user/8.png",
+    "/Users/huyong/Desktop/huxy-admin/app/doc/apis/images/1.png",
+    "/Users/huyong/Desktop/huxy-admin/app/doc/apis/images/2.png",
+    "/Users/huyong/Desktop/huxy-admin/app/doc/apis/images/3.png",
+    "/Users/huyong/Desktop/huxy-admin/app/doc/apis/images/4.png",
+    "/Users/huyong/Desktop/huxy-admin/app/doc/apis/images/5.png",
+    "/Users/huyong/Desktop/huxy-admin/app/doc/apis/images/6.png",
+    "/Users/huyong/Desktop/huxy-admin/app/doc/apis/images/7.png",
+    "/Users/huyong/Desktop/huxy-admin/app/doc/use/images/1.jpeg",
+    "/Users/huyong/Desktop/huxy-admin/app/doc/use/images/s1.jpeg",
+    "/Users/huyong/Desktop/huxy-admin/app/doc/use/images/s2.jpeg"
   ],
   "unusedExports": {}
 }

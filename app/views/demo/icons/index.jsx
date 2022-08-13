@@ -1,6 +1,5 @@
-import message from '@app/components/base/message';
 import {Row, Col} from '@huxy/components';
-import {copyToClipboard} from '@huxy/utils';
+import {copyToClipboard, message} from '@huxy/utils';
 
 import './index.less';
 const icons = [

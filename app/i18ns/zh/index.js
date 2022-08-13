@@ -4,7 +4,7 @@ import theme from './theme';
 import main from './main';
 import login from './login';
 
-const title = '定制化服务平台';
+const title = '项目模板';
 
 export default {
   title,
