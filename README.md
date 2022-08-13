@@ -648,7 +648,7 @@ export const getIntls = (keys, def) => (keys && i18nsStore.getState()?.getValue(
 const fixIcon = router =>
   router.map(item => {
     item.key = item.key || item.path;
-    item.icon = fixIcons(item.iconKey || 'EyeInvisibleOutlined');
+    item.icon = <Icon icon={item.iconKey || 'EyeInvisibleOutlined'} />;
     return item;
   });
 
