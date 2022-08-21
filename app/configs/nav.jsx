@@ -1,3 +1,4 @@
+import {message, formatTime} from '@huxy/utils';
 import {langStore, userInfoStore} from '@app/store/stores';
 import {getIntls} from '@app/components/intl';
 
@@ -15,7 +16,22 @@ import defUser from '@app/assets/images/user/2.png';
 import wx from '@app/assets/images/wx.jpg';
 import langList from './langList';
 
+const {version} = require('../../package.json');
+
 const changeLang = ({key}) => langStore.setState(key);
+
+const buildTime = process.env.buildTime ? [
+  {
+    divider: true,
+    key: 'version',
+    type: 'version',
+    name: 'version',
+    icon: 'ico-upload',
+    handle: item => {
+      message.info(`version：${version}，构建时间：${formatTime(process.env.buildTime)}`);
+    },
+  },
+] : [];
 
 export const leftNav = () => {
   const left = getIntls('nav.left', {});
@@ -109,6 +125,7 @@ export const rightNav = () => {
             logout();
           },
         },
+        ...buildTime,
       ],
     },
     {
