@@ -13,8 +13,6 @@ jobs:
   sync:
     runs-on: ubuntu-latest
     steps:
-      - name: 拉取代码
-        uses: actions/checkout@v3
       - name: 同步到 gitee
         uses: wearerequired/git-mirror-action@master
         env:
@@ -22,8 +20,6 @@ jobs:
         with:
           source-repo: git@github.com:ahyiru/huxy-admin.git
           destination-repo: git@gitee.com:yiru/huxy-admin.git
-      - name: 打包
-        run: npm i && npm run build
       - name: 部署到 Gitee Pages
         uses: yanglbme/gitee-pages-action@main
         with:
@@ -31,3 +27,4 @@ jobs:
           gitee-password: ${{ secrets.GITEE_SERVER_PASSWORD }}
           gitee-repo: yiru/huxy-admin
           branch: develop
+          directory: app/build
