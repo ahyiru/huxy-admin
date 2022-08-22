@@ -5,7 +5,7 @@ const app = {
   BUILD_DIR: './build', //'build',
   PUBLIC_DIR: '../public',
   DEV_ROOT_DIR: '/',
-  PRD_ROOT_DIR: '/',
+  PRD_ROOT_DIR: '/huxy-admin',
   PROXY: {
     url: 'http://47.105.94.51:9202',
     prefix: '/api',
