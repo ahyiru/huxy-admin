@@ -124,7 +124,7 @@ const Index = props => {
                 </div>
                 <div className="vertical-item">
                   <label>{getIntls('main.layout.fontSize')}</label>
-                  <Input type="range" min={6} max={16} value={size} onChange={e => changeFont(e)} />
+                  <Input type="range" min={6} max={16} value={size} onChange={e => changeFont(e.target.value)} />
                 </div>
                 <Row className="select-item">
                   {getThemeList(getIntls).map(item => (
@@ -139,7 +139,7 @@ const Index = props => {
               <Panel>
                 <h3>{getIntls('main.layout.sizeDesign')}</h3>
                 {getSizeList(theme.list.sizes).map(({key, value, unit, units, min, max}) => (
-                  <Row key={key} gutter={[10, 16]}>
+                  <Row key={key} gutter={[10, 10]}>
                     <Col span={5}>
                       <span style={labelStyle}>{themeLang[key]}：</span>
                     </Col>
@@ -161,7 +161,7 @@ const Index = props => {
               <Panel className="color-picker-panel">
                 <h3>{getIntls('main.layout.colorDesign')}</h3>
                 {Object.keys(theme.list.colors).map(key => (
-                  <Row key={key} gutter={[10, 16]}>
+                  <Row key={key} gutter={[10, 10]}>
                     <Col span={5}>
                       <span style={labelStyle}>{themeLang[key]}：</span>
                     </Col>
@@ -175,7 +175,6 @@ const Index = props => {
           </Row>
         </Col>
       </Row>
-      {/* <TimeBar lastTime={new Date('2021-09-30 18:00:00')} lastText="放假" /> */}
     </div>
   );
 };

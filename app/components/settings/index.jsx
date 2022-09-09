@@ -132,7 +132,7 @@ const Index = props => {
         </div>
         <div className="vertical-item">
           <label>{i18nCfg.fontSize}</label>
-          <Input type="range" min={6} max={16} value={size} onChange={e => changeFont(e)} />
+          <Input type="range" min={6} max={16} value={size} onChange={e => changeFont(e.target.value)} />
         </div>
         <Row className="select-item">
           {getThemeList(getIntls).map(item => (
@@ -144,7 +144,7 @@ const Index = props => {
       </>
     ),
     color: getSizeList(theme.list.sizes).map(({key, value, unit, units, min, max}) => (
-      <Row key={key} gutter={[10, 16]}>
+      <Row key={key} gutter={[10, 10]}>
         <Col span={5}>
           <span style={labelStyle}>{themeLang[key]}：</span>
         </Col>
@@ -161,7 +161,7 @@ const Index = props => {
       </Row>
     )),
     size: Object.keys(theme.list.colors).map(key => (
-      <Row key={key} gutter={[10, 16]}>
+      <Row key={key} gutter={[10, 10]}>
         <Col span={5}>
           <span style={labelStyle}>{themeLang[key]}：</span>
         </Col>
@@ -178,17 +178,17 @@ const Index = props => {
         <span className="ico-block" />
       </a>
       <Drawer
-        onClose={() => setVisible(false)}
-        visible={visible}
+        close={() => setVisible(false)}
+        open={visible}
         className="configs-drawer"
         width="300px"
         header={
-          <div>
+          <>
             <Button onClick={() => saveConfig()}>{i18nCfg.saveConfig}</Button>
             <Button type="primary" onClick={() => copyConfig()} style={{marginLeft: 12}}>
               {i18nCfg.copyConfig}
             </Button>
-          </div>
+          </>
         }
       >
         <TabHeader flex tabs={tabs(i18nCfg)} switchTab={key => setActive(key)} />

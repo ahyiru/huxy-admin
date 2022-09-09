@@ -7,9 +7,13 @@ const app = {
   DEV_ROOT_DIR: '',
   PRD_ROOT_DIR: '/',
   PROXY: 'http://47.105.94.51:9202',
-  MOCK: 'http://localhost:3502',
+  MOCK: '127.0.0.1:3502',
   SERVER_PORT: 7502,
   appNane: '...',
+  defProject: {
+    name: 'template',
+    _id: '123456',
+  },
 };
 
 module.exports = app;

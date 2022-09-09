@@ -1,4 +1,6 @@
-const apiList = [
+import defProject from '@app/configs/projects';
+
+const apiList = projectId => [
   {
     name: 'login',
     url: '/auth/login',
@@ -24,4 +26,6 @@ const apiList = [
   },
 ];
 
-export default apiList;
+const getApis = () => ({result: {list: apiList(defProject._id)}});
+
+export default getApis;

@@ -10,9 +10,13 @@ const app = {
     url: 'http://47.105.94.51:9202',
     prefix: '/api',
   },
-  MOCK: 'http://localhost:3102',
+  MOCK: '127.0.0.1:3102',
   SERVER_PORT: 3103,
   projectName: '...',
+  defProject: {
+    name: 'template',
+    _id: '123456',
+  },
 };
 
 module.exports = app;

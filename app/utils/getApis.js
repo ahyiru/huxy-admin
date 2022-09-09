@@ -14,10 +14,10 @@ export const getApiFn = async () => {
     apis = await getList();
   } catch (err) {}
   apis.map(api => {
-    const {name, fnName, type, url, isDl, ...rest} = api;
+    const {name, fnName, dataType, url, isDl, ...rest} = api;
     const fetchFn = isDl ? dlApi : fetcher;
     const funcName = fnName ?? `${name}Fn`;
-    const paramsKey = type || (rest.method === 'post' ? 'data' : 'params');
+    const paramsKey = dataType || (rest.method === 'post' ? 'data' : 'params');
     apiList[funcName] = data => fetchFn({...rest, url: typeof url === 'function' ? url(data) : url, [paramsKey]: data});
   });
   return apiList;
