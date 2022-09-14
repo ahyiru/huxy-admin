@@ -16,8 +16,6 @@ const nav = {
     jp: '日语',
     themeList: '主题',
     github: 'github',
-    screenshot: '截屏',
-    screencapture_msg: '页面截屏下载完成！',
   },
 };
 

@@ -16,8 +16,6 @@ const nav = {
     jp: 'jp',
     themeList: 'themeList',
     github: 'github',
-    screenshot: 'screenshot',
-    screencapture_msg: 'page screenshot download completed！',
   },
 };
 
