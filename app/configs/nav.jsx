@@ -52,21 +52,21 @@ export const leftNav = () => {
         {
           key: 'zbxtable',
           name: 'zbxtable',
-          icon: 'ApiOutlined',
+          icon: 'ico-arrow-right',
           type: 'link',
           link: 'https://zbx.cactifans.com/',
         },
         {
           key: 'PhoenixUI',
           name: 'PhoenixUI',
-          icon: 'ApiOutlined',
+          icon: 'ico-arrow-right',
           type: 'link',
           link: 'http://ihuxy.com:8088/',
         },
         {
           key: 'API文档',
           name: left?.apis ?? 'API文档',
-          icon: 'ApiOutlined',
+          icon: 'ico-arrow-right',
           type: 'link',
           link: 'http://ihuxy.com:8010',
         },
@@ -74,7 +74,7 @@ export const leftNav = () => {
     },
     {
       key: 'wechat',
-      icon: 'ico-dmale',
+      icon: 'ico-heart',
       arrowDir: 'lt',
       ChildRender: item => (
         <div className="follow-me">
@@ -85,7 +85,6 @@ export const leftNav = () => {
     },
     {
       key: 'configs',
-      icon: 'ToolOutlined',
       type: 'configs',
       Custom: () => <Settings />,
     },
@@ -105,14 +104,14 @@ export const rightNav = () => {
           key: 'profile',
           name: right?.profile ?? '个人中心',
           type: 'profile',
-          icon: 'UserOutlined',
+          icon: 'ico-history',
           path: '/profile',
         },
         {
           key: 'settings',
           name: right?.settings ?? '设置',
           type: 'setting',
-          icon: 'SettingOutlined',
+          icon: 'ico-circle-outer',
           path: '/profile',
         },
         {
@@ -120,7 +119,7 @@ export const rightNav = () => {
           key: 'logout',
           name: right?.logout ?? '退出',
           type: 'logout',
-          icon: 'PoweroffOutlined',
+          icon: 'ico-stop',
           handle: item => {
             logout();
           },

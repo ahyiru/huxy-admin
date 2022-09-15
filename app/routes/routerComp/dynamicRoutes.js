@@ -30,7 +30,7 @@ export const pageRoutes = {
         {
           path: '/page1-2-1',
           name: '三级菜单1',
-          icon: 'RobotOutlined',
+          icon: 'ico-arrow-right',
           component: Page,
         },
         {

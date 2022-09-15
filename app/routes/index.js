@@ -10,7 +10,7 @@ const routers = Object.keys(restRoutes).map(key => restRoutes[key]);
 const allRoutes = [
   {
     path: '/',
-    component: () => import('@common/layout/layout'),
+    component: () => import('@commons/layout/layout'),
     children: [configRoutes, ...routers],
   },
   ...staticRoutes,

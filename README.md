@@ -331,7 +331,7 @@ const apiList = [
 const allRoutes = [
   {
     path: '/',
-    component: () => import('@common/layout'),
+    component: () => import('@commons/layout'),
     children: dynamicRoutes,
   },
   ...staticRoutes,
