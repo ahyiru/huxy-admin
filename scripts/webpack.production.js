@@ -98,10 +98,6 @@ const plugins = [
       from: path.resolve(publics, 'robots.txt'),
       to: path.resolve(app, `${BUILD_DIR}/robots.txt`),
     },
-    {
-      from: path.resolve(publics, '_config.yml'),
-      to: path.resolve(app, `${BUILD_DIR}/_config.yml`),
-    },
   ]),
   /* new CompressionPlugin({
     test: /\.(js|css)(\?.*)?$/i,
