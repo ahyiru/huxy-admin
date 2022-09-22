@@ -4,6 +4,8 @@ import {storage, message} from '@huxy/utils';
 
 import apiList from '@app/utils/getApis';
 
+import {goPage} from '@app/utils/utils';
+
 import {nameRule, checkVolid} from '@app/utils/rules';
 
 import {useIntls} from '@app/components/intl';
@@ -64,10 +66,10 @@ const Index = props => {
         message.success(msg);
         storage.set('token', token);
         // props.router.push('/');
-        location.href = '/';
+        goPage();
       }
     } catch (err) {
-      location.href = '/';
+      goPage();
     }
     setIsPending(false);
   };

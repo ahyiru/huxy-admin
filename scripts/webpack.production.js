@@ -20,7 +20,7 @@ const {appName, PRD_ROOT_DIR, BUILD_DIR, PUBLIC_DIR} = require('../configs');
 
 const rootDir = ['/', './'].includes(PRD_ROOT_DIR) ? PRD_ROOT_DIR : `${PRD_ROOT_DIR}/`;
 
-const publics = path.resolve(__dirname, PUBLIC_DIR);
+const publics = path.resolve(__dirname, PUBLIC_DIR || '../public');
 const app = path.resolve(__dirname, `../${appName}`);
 const build = path.resolve(app, BUILD_DIR);
 
@@ -74,6 +74,7 @@ const plugins = [
     'process.env': {
       isDev: false,
       buildTime: +new Date(),
+      basepath: JSON.stringify(PRD_ROOT_DIR || ''),
     },
     EMAIL: JSON.stringify('ah.yiru@gmail.com'),
     VERSION: JSON.stringify('1.2.x'),
@@ -88,12 +89,18 @@ const plugins = [
     /* {
       from:path.resolve(publics,'src'),
       to:path.resolve(app,`${BUILD_DIR}/src`),
-    },{
+    },
+    {
       from:path.resolve(publics,'manifest.json'),
       to:path.resolve(app,`${BUILD_DIR}/manifest.json`),
-    }, */ {
+    }, */
+    {
       from: path.resolve(publics, 'robots.txt'),
       to: path.resolve(app, `${BUILD_DIR}/robots.txt`),
+    },
+    {
+      from: path.resolve(publics, '_config.yml'),
+      to: path.resolve(app, `${BUILD_DIR}/_config.yml`),
     },
   ]),
   /* new CompressionPlugin({

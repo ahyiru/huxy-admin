@@ -7,7 +7,7 @@ const OpenBrowserWebpackPlugin = require('@huxy/open-browser-webpack-plugin');
 
 // const {GenerateSW} = require('workbox-webpack-plugin');
 const webpackConfig = require('./webpack.config');
-const {HOST, PORT, appName} = require('../configs');
+const {HOST, PORT, appName, DEV_ROOT_DIR} = require('../configs');
 
 const app = path.resolve(__dirname, `../${appName}`);
 
@@ -146,11 +146,12 @@ const devConfig = merge(webpackConfig, {
     new webpack.DefinePlugin({
       'process.env': {
         isDev: true,
+        basepath: JSON.stringify(DEV_ROOT_DIR || ''),
       },
       EMAIL: JSON.stringify('ah.yiru@gmail.com'),
       VERSION: JSON.stringify('1.2.x'),
     }),
-    new OpenBrowserWebpackPlugin({target: `${HOST}:${PORT}`}),
+    new OpenBrowserWebpackPlugin({target: `${HOST || 'http://localhost'}:${PORT}`}),
     new DeadCodePlugin({
       patterns: [`${app}/**/*.(js|jsx|css|less|json|png|jpg|jpeg)`, '../commons/**/*.(js|jsx|css|less|json|png|jpg|jpeg)'],
       exclude: ['**/node_modules/**', '**/build/**', '**/draft/**'],

@@ -26,7 +26,7 @@ const buildTime = process.env.buildTime ? [
     key: 'version',
     type: 'version',
     name: 'version',
-    icon: 'ico-upload',
+    icon: 'ico-history',
     handle: item => {
       message.info(`version：${version}，构建时间：${formatTime(process.env.buildTime)}`);
     },
