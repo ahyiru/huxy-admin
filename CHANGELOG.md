@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.3.2](https://github.com/ahyiru/huxy-admin/compare/v1.3.1...v1.3.2) (2022-09-27)
+
+
+### Bug Fixes
+
+* fix something ([719128c](https://github.com/ahyiru/huxy-admin/commit/719128c293f9607b76a261dd348d0a45a8e7da16))
+* fix something ([f90315f](https://github.com/ahyiru/huxy-admin/commit/f90315f2f434111fa50528eefa708d8fd9247768))
+* fix something ([988ce45](https://github.com/ahyiru/huxy-admin/commit/988ce4596dd92c030e763738764ec8e788bf800e))
+
 ### [1.3.1](https://github.com/ahyiru/huxy-admin/compare/v1.3.0...v1.3.1) (2022-09-09)
 
 
