@@ -1,5 +1,5 @@
 import Intls from '@app/components/intl';
-import logo from '@app/assets/images/logo.png';
+import {logo} from '../configs';
 import styles from './index.less';
 
 const Index = props => (

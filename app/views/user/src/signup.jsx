@@ -1,10 +1,12 @@
 import {useState} from 'react';
 import {message} from '@huxy/utils';
-import apiList from '@app/utils/getApis';
-import {nameRule, emailRule, passwordRule, confirmRule, checkVolid} from '@app/utils/rules';
 import {useIntls} from '@app/components/intl';
 import Input from '@app/components/base/input';
 import Button from '@app/components/base/button';
+import {goPage} from '@app/utils/utils';
+import {apiList, formRules} from '../configs';
+
+const {nameRule, emailRule, passwordRule, confirmRule, checkVolid} = formRules;
 
 const formItem = {
   position: 'relative',
@@ -33,7 +35,6 @@ const Index = props => {
       message.success(msg);
       setHasSignup(true);
       // props.router.push('/');
-      // location.href='/';
     }
   };
   const nameChange = value => {
@@ -101,7 +102,7 @@ const Index = props => {
       <div>
         <h2>{getIntls('login.signup_msg')}</h2>
         <h4>{getIntls('login.signup_sub_msg')}</h4>
-        <Button className="info" onClick={() => (location.href = '/')}>
+        <Button className="info" onClick={() => goPage()}>
           {getIntls('login.backLogin')}
         </Button>
       </div>

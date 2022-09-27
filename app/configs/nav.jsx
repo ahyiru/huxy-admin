@@ -16,11 +16,13 @@ import defUser from '@app/assets/images/user/2.png';
 import wx from '@app/assets/images/wx.jpg';
 import langList from './langList';
 
+import {buildTime} from '.';
+
 const {version} = require('../../package.json');
 
 const changeLang = ({key}) => langStore.setState(key);
 
-const buildTime = process.env.buildTime ? [
+const buildInfo = buildTime ? [
   {
     divider: true,
     key: 'version',
@@ -28,7 +30,7 @@ const buildTime = process.env.buildTime ? [
     name: 'version',
     icon: 'ico-history',
     handle: item => {
-      message.info(`version：${version}，构建时间：${formatTime(process.env.buildTime)}`);
+      message.info(`version：${version}，构建时间：${formatTime(buildTime)}`);
     },
   },
 ] : [];
@@ -124,7 +126,7 @@ export const rightNav = () => {
             logout();
           },
         },
-        ...buildTime,
+        ...buildInfo,
       ],
     },
     {

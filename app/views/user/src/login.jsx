@@ -1,20 +1,17 @@
-import {useState} from 'react';
+import {useEffect, useState} from 'react';
 import {Spinner} from '@huxy/components';
 import {storage, message} from '@huxy/utils';
-
-import apiList from '@app/utils/getApis';
-
-import {goPage} from '@app/utils/utils';
-
-import {nameRule, checkVolid} from '@app/utils/rules';
-
 import {useIntls} from '@app/components/intl';
-
 import Input from '@app/components/base/input';
 import Button from '@app/components/base/button';
 import GithubIcon from '@app/components/githubIcon';
 
-const {loginFn} = apiList;
+import {isAuthed, goPage} from '@app/utils/utils';
+
+import {apiList, formRules, github_client_id, github_oauth_url} from '../configs';
+
+const {githubFn, loginFn, activeEmailFn} = apiList;
+const {nameRule, checkVolid} = formRules;
 
 const thirdLoginStyle = {
   textAlign: 'center',
@@ -38,7 +35,7 @@ const Index = props => {
   const [name, setName] = useState('');
   const [password, setPassword] = useState('');
   const [nameMes, setNameMes] = useState('');
-  /* useEffect(() => {
+  useEffect(() => {
     const {code, token} = props.params ?? {};
     if (code) {
       githubAuth(code);
@@ -49,9 +46,40 @@ const Index = props => {
       return;
     }
     if (isAuthed()) {
-      props.router.push('/');
+      // props.router.push('/');
+      goPage();
     }
-  }, []); */
+  }, []);
+
+  const githubAuth = async code => {
+    setIsPending(true);
+    try {
+      const {code: msgCode, token} = await githubFn({code});
+      if (msgCode === 200) {
+        storage.set('token', token);
+        // props.router.push('/');
+        goPage();
+      }
+    } catch (err) {
+      goPage();
+    }
+    setIsPending(false);
+  };
+  const activeEmail = async query => {
+    setIsPending(true);
+    try {
+      const {code, token, message: msg} = await activeEmailFn({token: query});
+      if (code === 200) {
+        message.success(msg);
+        storage.set('token', token);
+        // props.router.push('/');
+        goPage();
+      }
+    } catch (err) {
+      goPage();
+    }
+    setIsPending(false);
+  };
 
   const onFinish = async (values, isVistor) => {
     if (!isVistor) {
@@ -69,14 +97,14 @@ const Index = props => {
         goPage();
       }
     } catch (err) {
+      // props.router.push('/');
       goPage();
     }
     setIsPending(false);
   };
 
   const auth = () => {
-    const client_id = '61721ef923095e006d18';
-    location.href = `https://github.com/login/oauth/authorize?client_id=${client_id}`;
+    location.href = `${github_oauth_url}?client_id=${github_client_id}`;
   };
 
   const checkValues = (rule, setState) => {

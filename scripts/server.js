@@ -10,13 +10,15 @@ const path = require('path');
 
 const appProxy = require('./appProxy');
 
+const fixPath = require('./utils');
+
 const {appName, HOST, PRO_PORT, BUILD_DIR, PRD_ROOT_DIR} = require('../configs');
 
 const app = express();
 
 appProxy(app);
 
-const rootDir = ['/', './'].includes(PRD_ROOT_DIR) ? PRD_ROOT_DIR : `${PRD_ROOT_DIR}/`;
+const rootDir = fixPath(`${PRD_ROOT_DIR}/`);
 
 app.set('host', HOST || 'http://localhost');
 app.set('port', PRO_PORT);

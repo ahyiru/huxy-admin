@@ -1,22 +1,7 @@
+import userRoutes from '@app/views/user/routes';
+
 const routes = [
-  {
-    path: '/user',
-    title: '登录注册',
-    hideMenu: true,
-    component: () => import('@app/views/user'),
-    children: [
-      {
-        path: '/signin',
-        name: '登录',
-        component: () => import('@app/views/user/login'),
-      },
-      {
-        path: '/signup',
-        name: '注册',
-        component: () => import('@app/views/user/signup'),
-      },
-    ],
-  },
+  ...userRoutes,
   {
     path: '/404',
     name: '404',

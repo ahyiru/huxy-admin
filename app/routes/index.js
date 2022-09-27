@@ -23,7 +23,7 @@ const routes = (nameList, routerList) =>
       .join('')
       .replace('//', '/');
     item.name = nameList?.[fullPath] ?? item.name;
-    item.id = routerList?.find(route => route.path === fullPath)?._id;
+    item.id = item.id ?? routerList?.find(route => route.path === fullPath)?._id;
     /* if (typeof item.componentPath === 'string') {
       item.component = () => import(`@app/views${item.componentPath}`);
     } */

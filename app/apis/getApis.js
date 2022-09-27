@@ -1,4 +1,4 @@
-import defProject from '@app/configs/projects';
+import {defProject} from '@app/configs';
 
 const apiList = projectId => [
   {
@@ -26,6 +26,6 @@ const apiList = projectId => [
   },
 ];
 
-const getApis = () => ({result: {list: apiList(defProject._id)}});
+const getApis = () => ({result: {list: apiList(defProject?._id)}});
 
 export default getApis;

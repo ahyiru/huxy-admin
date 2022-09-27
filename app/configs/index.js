@@ -1,7 +1,11 @@
-export const browserRouter = !process.env.isDev;
+const {configs} = process.env;
 
-export const basepath = process.env.basepath;
+export const browserRouter = configs.browserRouter;
 
-export const base = ['/', './'].includes(basepath) ? '' : basepath;
+export const basepath = configs.basepath;
 
-export const prefix = browserRouter ? base : `${base}/#`;
+export const PROXY = configs.PROXY;
+
+export const defProject = configs.defProject;
+
+export const buildTime = configs.buildTime;
