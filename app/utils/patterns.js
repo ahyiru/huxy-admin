@@ -1,8 +1,17 @@
-export const required = {
+export const customRequired = {
   pattern: /.+/,
   message: '请输入!',
 };
 
+export const required = {
+  required: true,
+};
+
+// 标题
+export const titlePattern = {
+  pattern: /^[\u4E00-\u9FA5A-Za-z0-9_-]{2,20}$/,
+  message: '长度为2-20不含特殊字符!',
+};
 // 用户名
 export const namePattern = {
   pattern: /^[\u4E00-\u9FA5A-Za-z0-9_]{2,20}$/,
@@ -19,6 +28,11 @@ export const passwordPattern = {
   message: '密码长度为8-20个字符，并且至少包含数字、大小写字母中的两种，不含特殊字符!',
 };
 
+// 链接地址
+export const urlPattern = {
+  pattern: /^https?:\/\/[^\s/?.#]+\.[^\s]+/,
+  message: '请输入正确链接！',
+};
 // 路由地址
 export const pathPattern = {
   pattern: /^(\/[\w#?&=:-]+)+$/,

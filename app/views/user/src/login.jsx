@@ -11,7 +11,7 @@ import {isAuthed, goPage} from '@app/utils/utils';
 import {apiList, formRules, github_client_id, github_oauth_url} from '../configs';
 
 const {githubFn, loginFn, activeEmailFn} = apiList;
-const {nameRule, checkVolid} = formRules;
+const {customNameRule: nameRule, checkVolid} = formRules;
 
 const thirdLoginStyle = {
   textAlign: 'center',
@@ -46,8 +46,7 @@ const Index = props => {
       return;
     }
     if (isAuthed()) {
-      // props.router.push('/');
-      goPage();
+      props.router.push('/');
     }
   }, []);
 
@@ -60,9 +59,7 @@ const Index = props => {
         // props.router.push('/');
         goPage();
       }
-    } catch (err) {
-      goPage();
-    }
+    } catch (err) {}
     setIsPending(false);
   };
   const activeEmail = async query => {
@@ -75,17 +72,13 @@ const Index = props => {
         // props.router.push('/');
         goPage();
       }
-    } catch (err) {
-      goPage();
-    }
+    } catch (err) {}
     setIsPending(false);
   };
 
-  const onFinish = async (values, isVistor) => {
-    if (!isVistor) {
-      if (!checkValues(nameRule, setNameMes)) {
-        return;
-      }
+  const onFinish = async values => {
+    if (!checkValues(nameRule, setNameMes)) {
+      return;
     }
     setIsPending(true);
     try {
@@ -96,10 +89,7 @@ const Index = props => {
         // props.router.push('/');
         goPage();
       }
-    } catch (err) {
-      // props.router.push('/');
-      goPage();
-    }
+    } catch (err) {}
     setIsPending(false);
   };
 
@@ -136,11 +126,6 @@ const Index = props => {
         <div style={formItem}>
           <Button type="button" className="block info" onClick={() => onFinish({name, password})}>
             {getIntls('login.login')}
-          </Button>
-        </div>
-        <div style={formItem}>
-          <Button type="button" className="block" onClick={() => onFinish({name: 'test1', password: 'test1234'}, true)}>
-            {getIntls('login.visitor')}
           </Button>
         </div>
       </form>

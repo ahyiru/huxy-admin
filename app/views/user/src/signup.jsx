@@ -6,7 +6,7 @@ import Button from '@app/components/base/button';
 import {goPage} from '@app/utils/utils';
 import {apiList, formRules} from '../configs';
 
-const {nameRule, emailRule, passwordRule, confirmRule, checkVolid} = formRules;
+const {customNameRule: nameRule, customEmailRule: emailRule, customPasswordRule: passwordRule, confirmRule, checkVolid} = formRules;
 
 const formItem = {
   position: 'relative',
