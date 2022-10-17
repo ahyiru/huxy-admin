@@ -128,6 +128,11 @@ const Index = props => {
             {getIntls('login.login')}
           </Button>
         </div>
+        <div style={formItem}>
+          <Button type="button" className="block" onClick={e => props.router.push('/')}>
+            {getIntls('login.visitor')}
+          </Button>
+        </div>
       </form>
       <div>
         <div style={{overflow: 'hidden'}}>

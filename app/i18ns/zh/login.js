@@ -2,7 +2,7 @@ const login = {
   username: '用户名',
   password: '密码',
   login: '登录',
-  visitor: '游客登录',
+  visitor: '游客',
   signup: '注册',
   forgetPwd: '忘记密码',
   thirdParty: '第三方登录',
