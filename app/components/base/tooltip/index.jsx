@@ -1,5 +1,5 @@
 const Index = ({children, title, placement}) => (
-  <span className={`tooltip-${placement}`} tooltips={title}>
+  <span className={`tooltip-${placement}`} tooltip={title}>
     {children}
   </span>
 );

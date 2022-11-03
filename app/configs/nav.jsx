@@ -6,6 +6,7 @@ import Settings from '@app/components/settings';
 import FullPage from '@app/components/fullScreen';
 import CustomCollapse from '@app/components/customCollapse';
 import Search from '@app/components/search';
+import Icon from '@app/components/icon';
 
 import getLang from '@app/utils/getLang';
 import {logout} from '@app/utils/utils';
@@ -28,7 +29,7 @@ const buildInfo = buildTime ? [
     key: 'version',
     type: 'version',
     name: 'version',
-    icon: 'ico-history',
+    icon: <Icon icon="ico-history" />,
     handle: item => {
       message.info(`version：${version}，构建时间：${formatTime(buildTime)}`);
     },
@@ -54,28 +55,28 @@ export const leftNav = () => {
         {
           key: 'scenedesign',
           name: 'scenes',
-          icon: 'ico-arrow-right',
+          icon: <Icon icon="ico-arrow-right" />,
           type: 'link',
           link: 'http://ihuxy.com:7000',
         },
         {
           key: 'filesystem',
           name: 'filesystem',
-          icon: 'ico-arrow-right',
+          icon: <Icon icon="ico-arrow-right" />,
           type: 'link',
           link: 'http://ihuxy.com:8020',
         },
         {
           key: 'PhoenixUI',
           name: 'PhoenixUI',
-          icon: 'ico-arrow-right',
+          icon: <Icon icon="ico-arrow-right" />,
           type: 'link',
           link: 'http://ihuxy.com:8088/',
         },
         {
           key: 'API文档',
           name: left?.apis ?? 'API文档',
-          icon: 'ico-arrow-right',
+          icon: <Icon icon="ico-arrow-right" />,
           type: 'link',
           link: 'http://ihuxy.com:8010',
         },
@@ -83,7 +84,7 @@ export const leftNav = () => {
     },
     {
       key: 'wechat',
-      icon: 'ico-heart',
+      icon: <Icon icon="ico-heart" />,
       arrowDir: 'lt',
       ChildRender: item => (
         <div className="follow-me">
@@ -113,14 +114,14 @@ export const rightNav = () => {
           key: 'profile',
           name: right?.profile ?? '个人中心',
           type: 'profile',
-          icon: 'ico-history',
+          icon: <Icon icon="ico-history" />,
           path: '/profile',
         },
         {
           key: 'settings',
           name: right?.settings ?? '设置',
           type: 'setting',
-          icon: 'ico-circle-outer',
+          icon: <Icon icon="ico-circle-outer" />,
           path: '/profile',
         },
         {
@@ -128,7 +129,7 @@ export const rightNav = () => {
           key: 'logout',
           name: right?.logout ?? '退出',
           type: 'logout',
-          icon: 'ico-stop',
+          icon: <Icon icon="ico-stop" />,
           handle: item => {
             logout();
           },
