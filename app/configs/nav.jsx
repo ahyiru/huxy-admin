@@ -107,8 +107,8 @@ export const rightNav = () => {
   return [
     {
       key: 'username',
-      name: user?.name ?? right?.user,
-      img: user?.avatar ?? defUser,
+      name: user?.name || right?.user,
+      img: user?.avatar || defUser,
       children: [
         {
           key: 'profile',
