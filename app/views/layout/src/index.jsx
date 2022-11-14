@@ -11,6 +11,7 @@ import Input from '@app/components/base/input';
 import Button from '@app/components/base/button';
 import Radio from '@app/components/base/radio';
 import Select from '@app/components/base/select';
+import report from '@app/apis/report/report';
 
 const delay = 500;
 
@@ -60,31 +61,73 @@ const Index = props => {
     // e.persist();
     theme.list.sizes[key] = `${value || ''}${unit}`;
     changeLayout(theme.list);
+    report({
+      actionType: 'change',
+      category: 'layout',
+      text: `${value || ''}${unit}`,
+      value: key,
+    });
   };
   const changeColors = (e, key) => {
     const {value} = e.target;
     theme.list.colors[key] = value;
     changeLayout(theme.list);
+    report({
+      actionType: 'change',
+      category: 'layout',
+      text: value,
+      value: key,
+    });
   };
   const changeFont = value => {
     setSize(value);
     changeFontSize(`${(value * 100) / 16}%`);
+    report({
+      actionType: 'change',
+      category: 'layout',
+      text: value,
+      value: 'fontSize',
+    });
   };
   const saveConfig = () => {
     changeLayout(theme.list, true);
+    report({
+      actionType: 'click',
+      category: 'layout',
+      text: '保存配置',
+      value: 'saveConfig',
+    });
   };
   const copyConfig = () => {
     copyToClipboard(JSON.stringify(theme.list));
     message.success(getIntls('main.layout.copy_cfg_msg'));
+    report({
+      actionType: 'click',
+      category: 'layout',
+      text: '拷贝配置',
+      value: 'copyConfig',
+    });
   };
   const changeUnit = (key, unit) => {
     const value = unit === 'px' ? 1200 : 100;
     theme.list.sizes[key] = `${value}${unit}`;
     changeLayout(theme.list);
+    report({
+      actionType: 'change',
+      category: 'layout',
+      text: `${value}${unit}`,
+      value: key,
+    });
   };
   const selectTheme = current => {
     storage.set('theme', current);
     setTheme(current);
+    report({
+      actionType: 'click',
+      category: 'layout',
+      text: current.name,
+      value: 'switchTheme',
+    });
   };
   return (
     <div className="layout-setting">
@@ -114,7 +157,15 @@ const Index = props => {
                   <Radio
                     style={{marginTop: '5px'}}
                     value={menuType}
-                    onChange={value => setMenuType(value)}
+                    onChange={value => {
+                      setMenuType(value);
+                      report({
+                        actionType: 'click',
+                        category: 'layout',
+                        text: value,
+                        value: 'switchMenuType',
+                      });
+                    }}
                     options={[
                       {value: 'vertical', label: getIntls('main.layout.vertical')},
                       {value: 'horizontal', label: getIntls('main.layout.horizontal')},
