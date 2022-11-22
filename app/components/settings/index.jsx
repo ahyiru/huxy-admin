@@ -62,7 +62,7 @@ const Index = props => {
   const [menuType, setMenuType] = useMenuTypeStore('vertical');
 
   const [active, setActive] = useState('layout');
-  const [visible, setVisible] = useState(false);
+  const [open, setOpen] = useState(false);
 
   const [size, setSize] = useState(10);
   const changeFontSize = useDebounce(value => document.documentElement.style.setProperty('--rootSize', value), delay);
@@ -81,7 +81,7 @@ const Index = props => {
 
   const saveConfig = () => {
     changeLayout(theme.list, true);
-    setVisible(false);
+    setOpen(false);
     report({
       actionType: 'click',
       category: 'settings',
@@ -91,7 +91,7 @@ const Index = props => {
   };
   const copyConfig = () => {
     copyToClipboard(JSON.stringify(theme.list));
-    setVisible(false);
+    setOpen(false);
     message.success(i18nCfg.copy_cfg_msg);
     report({
       actionType: 'click',
@@ -183,7 +183,9 @@ const Index = props => {
         </div>
         <div className="vertical-item">
           <label>{i18nCfg.fontSize}</label>
-          <Input type="range" min={6} max={16} value={size} onChange={e => changeFont(e.target.value)} />
+          <div>
+            <Input type="range" min={6} max={16} value={size} onChange={e => changeFont(e.target.value)} />
+          </div>
         </div>
         <Row className="select-item">
           {getThemeList(getIntls).map(item => (
@@ -225,12 +227,12 @@ const Index = props => {
 
   return (
     <>
-      <a className={visible ? 'active' : ''} onClick={e => setVisible(true)}>
+      <a className={open ? 'active' : ''} onClick={e => setOpen(true)}>
         <span className="ico-block" />
       </a>
       <Drawer
-        close={() => setVisible(false)}
-        open={visible}
+        close={() => setOpen(false)}
+        open={open}
         className="configs-drawer"
         width="300px"
         header={

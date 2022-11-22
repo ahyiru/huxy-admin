@@ -175,7 +175,9 @@ const Index = props => {
                 </div>
                 <div className="vertical-item">
                   <label>{getIntls('main.layout.fontSize')}</label>
-                  <Input type="range" min={6} max={16} value={size} onChange={e => changeFont(e.target.value)} />
+                  <div>
+                    <Input type="range" min={6} max={16} value={size} onChange={e => changeFont(e.target.value)} />
+                  </div>
                 </div>
                 <Row className="select-item">
                   {getThemeList(getIntls).map(item => (
