@@ -4,7 +4,7 @@ import {storage, message} from '@huxy/utils';
 import {useIntls} from '@app/components/intl';
 import Input from '@app/components/base/input';
 import Button from '@app/components/base/button';
-import GithubIcon from '@app/components/githubIcon';
+import GithubIcon from '@app/components/icons/github';
 
 import {isAuthed, goPage} from '@app/utils/utils';
 

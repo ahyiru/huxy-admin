@@ -6,12 +6,13 @@ import Settings from '@app/components/settings';
 import FullPage from '@app/components/fullScreen';
 import CustomCollapse from '@app/components/customCollapse';
 import Search from '@app/components/search';
+import ThemeModel from '@app/components/themeModel';
 import Icon from '@app/components/icon';
 
 import getLang from '@app/utils/getLang';
 import {logout} from '@app/utils/utils';
 
-import GithubIcon from '@app/components/githubIcon';
+import GithubIcon from '@app/components/icons/github';
 
 import defUser from '@app/assets/images/user/2.png';
 import wx from '@app/assets/images/wx.jpg';
@@ -98,6 +99,11 @@ export const leftNav = () => {
       type: 'configs',
       Custom: () => <Settings />,
     },
+    {
+      key: 'search',
+      title: left?.search ?? '搜索',
+      Custom: () => <Search />,
+    },
   ];
 };
 export const rightNav = () => {
@@ -168,12 +174,11 @@ export const rightNav = () => {
     },
     {
       key: 'fullscreen',
-      Custom: () => <a><FullPage /></a>,
+      Custom: () => <a><span className="node-icon"><FullPage /></span></a>,
     },
     {
-      key: 'search',
-      title: right?.search ?? '搜索',
-      Custom: () => <Search />,
+      key: 'themeModel',
+      Custom: () => <ThemeModel />,
     },
   ];
 };
