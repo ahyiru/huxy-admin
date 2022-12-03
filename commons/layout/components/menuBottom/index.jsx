@@ -11,8 +11,8 @@ const Index = ({collapsed, setCollapsed}) => {
         report({
           actionType: 'click',
           category: 'menuBottom',
-          text: collapsed ? 'close' : 'open',
-          value: 'collapsed',
+          text: 'collapsed',
+          value: collapsed ? 'close' : 'open',
         });
       }}>
         <Anico type={collapsed ? 'right' : ''} />

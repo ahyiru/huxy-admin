@@ -107,8 +107,8 @@ const Index = props => {
     report({
       actionType: 'change',
       category: 'settings',
-      text: value,
-      value: 'fontSize',
+      text: 'fontSize',
+      value,
     });
   };
   const selectTheme = current => {
@@ -117,8 +117,8 @@ const Index = props => {
     report({
       actionType: 'click',
       category: 'settings',
-      text: current.name,
-      value: 'switchTheme',
+      text: 'switchTheme',
+      value: current.name,
     });
   };
 
@@ -129,8 +129,8 @@ const Index = props => {
     report({
       actionType: 'change',
       category: 'settings',
-      text: `${value || ''}${unit}`,
-      value: key,
+      text: key,
+      value: `${value || ''}${unit}`,
     });
   };
   const changeUnit = (key, unit) => {
@@ -140,8 +140,8 @@ const Index = props => {
     report({
       actionType: 'change',
       category: 'settings',
-      text: `${value}${unit}`,
-      value: key,
+      text: key,
+      value: `${value}${unit}`,
     });
   };
 
@@ -152,8 +152,8 @@ const Index = props => {
     report({
       actionType: 'change',
       category: 'settings',
-      text: value,
-      value: key,
+      text: key,
+      value,
     });
   };
 
@@ -170,8 +170,8 @@ const Index = props => {
               report({
                 actionType: 'click',
                 category: 'settings',
-                text: value,
-                value: 'switchMenuType',
+                text: 'switchMenuType',
+                value,
               });
             }}
             options={[
