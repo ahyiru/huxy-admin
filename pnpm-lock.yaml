@@ -20,9 +20,9 @@ specifiers:
   '@babel/runtime': ^7.20.6
   '@commitlint/cli': ^17.3.0
   '@commitlint/config-conventional': ^17.3.0
-  '@huxy/components': ^1.6.8
+  '@huxy/components': ^1.6.9
   '@huxy/copy-file-webpack-plugin': ^0.3.0
-  '@huxy/layout': ^1.6.9
+  '@huxy/layout': ^1.6.10
   '@huxy/materials': ^0.0.9
   '@huxy/open-browser-webpack-plugin': ^0.3.0
   '@huxy/router': ^1.6.3
@@ -71,7 +71,7 @@ specifiers:
   simple-progress-webpack-plugin: ^2.0.0
   standard-version: ^9.5.0
   style-loader: ^3.3.1
-  stylelint: ^14.15.0
+  stylelint: ^14.16.0
   stylelint-config-recommended: ^9.0.0
   stylelint-order: ^5.0.0
   tailwindcss: ^3.2.4
@@ -90,8 +90,8 @@ specifiers:
   workbox-webpack-plugin: ^6.5.4
 
 dependencies:
-  '@huxy/components': 1.6.8_biqbaboplfbrettd7655fr4n2y
-  '@huxy/layout': 1.6.9_react@18.2.0
+  '@huxy/components': 1.6.9_biqbaboplfbrettd7655fr4n2y
+  '@huxy/layout': 1.6.10_react@18.2.0
   '@huxy/materials': 0.0.9_react@18.2.0
   '@huxy/router': 1.6.3_react@18.2.0
   '@huxy/use': 1.6.6_react@18.2.0
@@ -162,9 +162,9 @@ devDependencies:
   simple-progress-webpack-plugin: 2.0.0_webpack@5.75.0
   standard-version: 9.5.0
   style-loader: 3.3.1_webpack@5.75.0
-  stylelint: 14.15.0
-  stylelint-config-recommended: 9.0.0_stylelint@14.15.0
-  stylelint-order: 5.0.0_stylelint@14.15.0
+  stylelint: 14.16.0
+  stylelint-config-recommended: 9.0.0_stylelint@14.16.0
+  stylelint-order: 5.0.0_stylelint@14.16.0
   tailwindcss: 3.2.4_postcss@8.4.19
   terser-webpack-plugin: 5.3.6_webpack@5.75.0
   ts-jest: 29.0.3_6e7mqrelncvn5j57uonhn3ff4i
@@ -1972,6 +1972,17 @@ packages:
       postcss-selector-parser: 6.0.10
     dev: true
 
+  /@csstools/selector-specificity/2.0.2_tbwh2mpcdwdeb2slx6bobindua:
+    resolution: {integrity: sha512-IkpVW/ehM1hWKln4fCA3NzJU8KwD+kIOvPZA4cqxoJHtE21CCzjyp+Kxbu0i5I4tBNOlXPL9mjwnWlL0VEG4Fg==}
+    engines: {node: ^12 || ^14 || >=16}
+    peerDependencies:
+      postcss: ^8.2
+      postcss-selector-parser: ^6.0.10
+    dependencies:
+      postcss: 8.4.19
+      postcss-selector-parser: 6.0.11
+    dev: true
+
   /@discoveryjs/json-ext/0.5.7:
     resolution: {integrity: sha512-dBVuXR082gk3jsFp7Rd/JI4kytwGHecnCoTtXFb7DB6CNHp4rg5k1bhg0nWdLGLnOV71lmDzGQaLMy8iPLY0pw==}
     engines: {node: '>=10.0.0'}
@@ -2019,8 +2030,8 @@ packages:
     engines: {node: '>=6.9.0'}
     dev: true
 
-  /@huxy/components/1.6.8_biqbaboplfbrettd7655fr4n2y:
-    resolution: {integrity: sha512-p+n72srxTJUWg4te6BmwRo6IfY0x/wHn2UJrXRPVDQf/uoJMSlzWsciVLlpPUeJwOrIRDInoP43VJM3ctQ0WZg==}
+  /@huxy/components/1.6.9_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-c7bYuPnAVpo/wWRu0AEJCTp673M9nVtxXuG+Y+sRzrVMbx18Sds7MXupqysbMVRpnWAb2eDdFmQAGR0w8NGGkw==}
     peerDependencies:
       react: '>=17.0.0'
       react-dom: '>=17.0.0'
@@ -2033,8 +2044,8 @@ packages:
     resolution: {integrity: sha512-0HyLY6rdkgb3g/FEJz2+wSV/PuPNbfMXZDANN5M9N1jyL4Q1Tw9Ryaw/+CG522f9MJRD3SFyR9I3CIQ00i19zg==}
     dev: true
 
-  /@huxy/layout/1.6.9_react@18.2.0:
-    resolution: {integrity: sha512-U/0XMt3+esfPSPvWEj0fa4RiDaC0x9iA4TULbV99yqO5bMMZKr7rmVkjmQzC1J0uujBjCjP8pWMYiRq8jzfJSw==}
+  /@huxy/layout/1.6.10_react@18.2.0:
+    resolution: {integrity: sha512-DFZ+13YB0efnNwgdkkZ5evO6MWuKDAubGqVzKnIznCaLurjc3LD/GiOwZAZqHwAviwMXy2jJtjggnvEcX5GuIg==}
     peerDependencies:
       react: '>=17.0.0'
     dependencies:
@@ -5481,7 +5492,7 @@ packages:
       array-union: 2.1.0
       dir-glob: 3.0.1
       fast-glob: 3.2.12
-      ignore: 5.2.0
+      ignore: 5.2.1
       merge2: 1.4.1
       slash: 3.0.0
     dev: true
@@ -5795,6 +5806,11 @@ packages:
 
   /ignore/5.2.0:
     resolution: {integrity: sha512-CmxgYGiEPCLhfLnpPp1MoRmifwEIOgjcHXxOBjv7mY96c+eWScsOP9c112ZyLdWHi0FxHjI+4uVhKYp/gcdRmQ==}
+    engines: {node: '>= 4'}
+    dev: true
+
+  /ignore/5.2.1:
+    resolution: {integrity: sha512-d2qQLzTJ9WxQftPAuEQpSPmKqzxePjzVbpAVv62AQ64NTL+wR4JkrVqR/LqFsFEUsHDAiId52mJteHDFuDkElA==}
     engines: {node: '>= 4'}
     dev: true
 
@@ -8558,6 +8574,14 @@ packages:
       util-deprecate: 1.0.2
     dev: true
 
+  /postcss-selector-parser/6.0.11:
+    resolution: {integrity: sha512-zbARubNdogI9j7WY4nQJBiNqQf3sLS3wCP4WfOidu+p28LofJqDH1tcXypGrcmMHhDk2t9wGhCsYe/+szLTy1g==}
+    engines: {node: '>=4'}
+    dependencies:
+      cssesc: 3.0.0
+      util-deprecate: 1.0.2
+    dev: true
+
   /postcss-sorting/7.0.1_postcss@8.4.19:
     resolution: {integrity: sha512-iLBFYz6VRYyLJEJsBJ8M3TCqNcckVzz4wFounSc5Oez35ogE/X+aoC5fFu103Ot7NyvjU3/xqIXn93Gp3kJk4g==}
     peerDependencies:
@@ -9602,30 +9626,30 @@ packages:
       postcss-selector-parser: 6.0.10
     dev: true
 
-  /stylelint-config-recommended/9.0.0_stylelint@14.15.0:
+  /stylelint-config-recommended/9.0.0_stylelint@14.16.0:
     resolution: {integrity: sha512-9YQSrJq4NvvRuTbzDsWX3rrFOzOlYBmZP+o513BJN/yfEmGSr0AxdvrWs0P/ilSpVV/wisamAHu5XSk8Rcf4CQ==}
     peerDependencies:
       stylelint: ^14.10.0
     dependencies:
-      stylelint: 14.15.0
+      stylelint: 14.16.0
     dev: true
 
-  /stylelint-order/5.0.0_stylelint@14.15.0:
+  /stylelint-order/5.0.0_stylelint@14.16.0:
     resolution: {integrity: sha512-OWQ7pmicXufDw5BlRqzdz3fkGKJPgLyDwD1rFY3AIEfIH/LQY38Vu/85v8/up0I+VPiuGRwbc2Hg3zLAsJaiyw==}
     peerDependencies:
       stylelint: ^14.0.0
     dependencies:
       postcss: 8.4.19
       postcss-sorting: 7.0.1_postcss@8.4.19
-      stylelint: 14.15.0
+      stylelint: 14.16.0
     dev: true
 
-  /stylelint/14.15.0:
-    resolution: {integrity: sha512-JOgDAo5QRsqiOZPZO+B9rKJvBm64S0xasbuRPAbPs6/vQDgDCnZLIiw6XcAS6GQKk9k1sBWR6rmH3Mfj8OknKg==}
+  /stylelint/14.16.0:
+    resolution: {integrity: sha512-X6uTi9DcxjzLV8ZUAjit1vsRtSwcls0nl07c9rqOPzvpA8IvTX/xWEkBRowS0ffevRrqkHa/ThDEu86u73FQDg==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
     hasBin: true
     dependencies:
-      '@csstools/selector-specificity': 2.0.2_45y636a2vqremknoajyxd5nkzy
+      '@csstools/selector-specificity': 2.0.2_tbwh2mpcdwdeb2slx6bobindua
       balanced-match: 2.0.0
       colord: 2.9.3
       cosmiconfig: 7.1.0
@@ -9638,7 +9662,7 @@ packages:
       globby: 11.1.0
       globjoin: 0.1.4
       html-tags: 3.2.0
-      ignore: 5.2.0
+      ignore: 5.2.1
       import-lazy: 4.0.0
       imurmurhash: 0.1.4
       is-plain-object: 5.0.0
@@ -9652,7 +9676,7 @@ packages:
       postcss-media-query-parser: 0.2.3
       postcss-resolve-nested-selector: 0.1.1
       postcss-safe-parser: 6.0.0_postcss@8.4.19
-      postcss-selector-parser: 6.0.10
+      postcss-selector-parser: 6.0.11
       postcss-value-parser: 4.2.0
       resolve-from: 5.0.0
       string-width: 4.2.3
