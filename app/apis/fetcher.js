@@ -35,7 +35,7 @@ const handler = response => {
     })
     .catch(error => {
       message.error(error.message);
-      throw error.message;
+      throw error;
     });
 };
 
