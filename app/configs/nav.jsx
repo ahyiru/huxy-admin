@@ -9,7 +9,6 @@ import Search from '@app/components/search';
 import ThemeModel from '@app/components/themeModel';
 import Icon from '@app/components/icon';
 
-import getLang from '@app/utils/getLang';
 import {logout} from '@app/utils/utils';
 
 import GithubIcon from '@app/components/icons/github';
@@ -106,8 +105,7 @@ export const leftNav = () => {
     },
   ];
 };
-export const rightNav = () => {
-  const language = getLang();
+export const rightNav = language => {
   const user = userInfoStore.getState();
   const right = getIntls('nav.right', {});
   return [
