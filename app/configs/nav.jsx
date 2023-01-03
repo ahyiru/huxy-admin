@@ -84,6 +84,7 @@ export const leftNav = () => {
     },
     {
       key: 'wechat',
+      title: 'wechat',
       icon: <Icon icon="ico-heart" />,
       arrowDir: 'lt',
       ChildRender: item => (
@@ -145,7 +146,7 @@ export const rightNav = language => {
       key: 'language',
       name: right?.[language] ?? '语言',
       Custom: () => (
-        <a>
+        <a title={right?.[language] ?? '语言'}>
           <div className="icon">
             <img src={langList.find(({key}) => key === language)?.icon} alt={language} />
           </div>
@@ -172,7 +173,7 @@ export const rightNav = language => {
     },
     {
       key: 'fullscreen',
-      Custom: () => <a><span className="node-icon"><FullPage /></span></a>,
+      Custom: () => <a title="fullscreen"><span className="node-icon"><FullPage /></span></a>,
     },
     {
       key: 'themeModel',

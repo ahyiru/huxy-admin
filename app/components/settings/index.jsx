@@ -227,7 +227,7 @@ const Index = props => {
 
   return (
     <>
-      <a className={open ? 'active' : ''} onClick={e => setOpen(true)}>
+      <a className={open ? 'active' : ''} onClick={e => setOpen(true)} title="setting">
         <span className="ico-block" />
       </a>
       <Drawer
