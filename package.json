@@ -131,7 +131,7 @@
     "@huxy/materials": "^0.1.1",
     "@huxy/router": "^1.7.1",
     "@huxy/use": "^1.7.1",
-    "@huxy/utils": "^1.7.1",
+    "@huxy/utils": "^1.7.2",
     "@testing-library/react": "^13.4.0",
     "core-js": "^3.27.1",
     "react": "^18.2.0",

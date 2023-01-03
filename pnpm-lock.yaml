@@ -27,7 +27,7 @@ specifiers:
   '@huxy/open-browser-webpack-plugin': ^0.4.0
   '@huxy/router': ^1.7.1
   '@huxy/use': ^1.7.1
-  '@huxy/utils': ^1.7.1
+  '@huxy/utils': ^1.7.2
   '@testing-library/react': ^13.4.0
   autoprefixer: ^10.4.13
   babel-jest: ^29.3.1
@@ -95,7 +95,7 @@ dependencies:
   '@huxy/materials': 0.1.1_react@18.2.0
   '@huxy/router': 1.7.1_react@18.2.0
   '@huxy/use': 1.7.1_react@18.2.0
-  '@huxy/utils': 1.7.1
+  '@huxy/utils': 1.7.2
   '@testing-library/react': 13.4.0_biqbaboplfbrettd7655fr4n2y
   core-js: 3.27.1
   react: 18.2.0
@@ -2000,8 +2000,8 @@ packages:
       react: 18.2.0
     dev: false
 
-  /@huxy/utils/1.7.1:
-    resolution: {integrity: sha512-jdncEsGQ+tz8aM46GU39jmxCSavP5WPN39qPm2fMxOtTQjz8FjEuFCBEnmjCgx3ivWnq2dOAXULwUbKrogEsSA==}
+  /@huxy/utils/1.7.2:
+    resolution: {integrity: sha512-16Dnzrd5pwHTe4+aNZZGMGpxgkzxrPGp2J+8DFwrLiA4Wrrfit/LPvgPLq6TDMgTnHkbOXXW022/eAAhhPe3ag==}
     dev: false
 
   /@istanbuljs/load-nyc-config/1.1.0:
