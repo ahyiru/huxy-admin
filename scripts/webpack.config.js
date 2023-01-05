@@ -1,8 +1,8 @@
-const webpack = require('webpack');
+// const webpack = require('webpack');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const SimpleProgressWebpackPlugin = require('simple-progress-webpack-plugin');
-const NodePolyfillPlugin = require('node-polyfill-webpack-plugin');
+// const SimpleProgressWebpackPlugin = require('simple-progress-webpack-plugin');
+// const NodePolyfillPlugin = require('node-polyfill-webpack-plugin');
 
 // const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPlugin');
 
@@ -50,47 +50,6 @@ const htmlPlugin = () =>
 
 const plugins = [
   htmlPlugin(),
-  new webpack.LoaderOptionsPlugin({
-    minimize: false,
-  }),
-  /* new webpack.optimize.LimitChunkCountPlugin({
-    maxChunks: 5,
-  }), */
-  new webpack.optimize.MinChunkSizePlugin({
-    minChunkSize: 30000,
-  }),
-  new webpack.optimize.ModuleConcatenationPlugin(),
-  // new BundleAnalyzerPlugin(),
-  /* new ModuleFederationPlugin({
-    name:'reactApp',
-    // library:{ type:'var',name:'reactApp'},
-    // filename:'remoteEntry.js',
-    remotes:{
-      useVueApp:'useVueApp',
-    },
-    // exposes:{
-    //   ReactApp:path.resolve(__dirname, '../app'),
-    //   // VueApp:path.resolve(__dirname, '../vue'),
-    // },
-    // shared:['react','react-dom'],
-  }), */
-  /* new webpack.ProgressPlugin({
-    activeModules:false,
-    entries:true,
-    handler:(percentage,message,...args)=>{
-      // console.log(percentage,message,...args);
-    },
-    modules:true,
-    modulesCount:5000,
-    profile:false,
-    dependencies:true,
-    dependenciesCount:10000,
-    percentBy:null,
-  }), */
-  new SimpleProgressWebpackPlugin({
-    format: 'compact',
-  }),
-  new NodePolyfillPlugin(),
 ];
 
 const rules = [
@@ -100,7 +59,7 @@ const rules = [
       fullySpecified: false,
     },
   },
-  {
+  /* {
     test: /\.tsx?$/,
     use: [{loader: 'babel-loader'}, {loader: 'ts-loader'}],
     exclude: [/node_modules/, /draft/],
@@ -111,7 +70,18 @@ const rules = [
     options: {
       cacheDirectory: true,
     },
-    exclude: [/node_modules/ /* ,/draft/ */, path.resolve(__dirname, 'node')],
+    exclude: [/node_modules/, path.resolve(__dirname, 'node')],
+  }, */
+  {
+    test: /\.jsx?$/,
+    loader: 'esbuild-loader',
+    options: {
+      loader: 'jsx',
+      target: 'es2018',
+      jsx: 'automatic',
+      tsconfigRaw: {},
+    },
+    exclude: [/node_modules/, path.resolve(__dirname, 'node')],
   },
   {
     test: /\.(jpe?g|png|gif|psd|bmp|ico|webp|svg|hdr)$/i,
@@ -208,15 +178,6 @@ module.exports = {
     path: path.resolve(app, BUILD_DIR),
     publicPath: rootDir,
     filename: 'js/[name].js',
-    // chunkFilename:'js/[name]_[chunkhash:8].chunk.js',
-    // assetModuleFilename: 'assets/[contenthash][ext]',
-    /* library:{
-      name:`${appName}App`,
-      type:'umd',
-      export:'default',
-    }, */
-    // umdNamedDefine:true,
-    // globalObject:'this',
   },
   optimization: {
     splitChunks: false,
@@ -240,7 +201,7 @@ module.exports = {
       '@configs': path.resolve(app, '../configs'),
       '@commons': path.resolve(app, '../commons'),
     },
-    extensions: ['.jsx', '.js', '.less', '.css', '.scss', '.json', '.ts', '.tsx', '.vue', '.mjs'],
+    extensions: ['.jsx', '.js', '.less', '.css', '.ts', '.tsx'],
     fallback: {
       path: false, //require.resolve('path-browserify'),
       fs: false,

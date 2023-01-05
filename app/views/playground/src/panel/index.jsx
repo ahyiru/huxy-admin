@@ -1,11 +1,11 @@
 import {useState, useEffect} from 'react';
-import Button from '@app/components/base/button';
-import Input from '@app/components/base/input';
 import {ten2Base, base2Ten, rgba2hex, hex2rgba, cacheData} from '@huxy/utils';
 import {Row, Col} from '@app/components/row';
 import Panel from '@app/components/panel';
 import FullPage from '@app/components/fullScreen';
 import MaxSize from '@app/components/maxSize';
+import Input from '@app/components/base/input';
+import Button from '@app/components/base/button';
 
 import './index.less';
 
