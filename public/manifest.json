@@ -5,7 +5,7 @@
   "lang": "cn",
   "display": "standalone",
   "orientation": "any",
-  "start_url": "/huxy-admin/index.html",
+  "start_url": "https://yiru.gitee.io/huxy-admin",
   "theme_color": "#313131",
   "background_color": "#313131",
   "icons": [
