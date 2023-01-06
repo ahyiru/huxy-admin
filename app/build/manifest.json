@@ -5,8 +5,7 @@
   "lang": "cn",
   "display": "standalone",
   "orientation": "any",
-  "scope": "/huxy-admin/",
-  "start_url": ".",
+  "start_url": "./index.html",
   "theme_color": "#313131",
   "background_color": "#313131",
   "icons": [
