@@ -76,14 +76,14 @@ const plugins = [
     skipWaiting: true,
   }),
   new CopyFileWebpackPlugin([
-    // {
-    //   from:path.resolve(publics,'src'),
-    //   to:path.resolve(app,`${BUILD_DIR}/src`),
-    // },
-    // {
-    //   from:path.resolve(publics,'manifest.json'),
-    //   to:path.resolve(app,`${BUILD_DIR}/manifest.json`),
-    // },
+    {
+      from: path.resolve(publics, 'src'),
+      to: path.resolve(app, `${BUILD_DIR}/src`),
+    },
+    {
+      from: path.resolve(publics, 'manifest.json'),
+      to: path.resolve(app, `${BUILD_DIR}/manifest.json`),
+    },
     {
       from: path.resolve(publics, 'robots.txt'),
       to: path.resolve(app, `${BUILD_DIR}/robots.txt`),
