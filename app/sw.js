@@ -1,5 +1,5 @@
 const initSW = () => {
-  if (!process.env.isDev && 'serviceWorker' in navigator) {
+  if (/* !process.env.isDev && */ 'serviceWorker' in navigator) {
     window.addEventListener('load', () => {
       navigator.serviceWorker
         .register('/service-worker.js')
