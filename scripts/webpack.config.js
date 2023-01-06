@@ -19,7 +19,7 @@ const frame = appName === 'vue' ? {uiframe: ['vue']} : {uiframe: ['react', 'reac
 
 const entry = {
   app: [path.resolve(app, 'index.jsx')],
-  ...frame,
+  // ...frame,
 };
 const templ = path.resolve(publics, 'index.html');
 const icon = path.resolve(publics, 'favicon.ico');
