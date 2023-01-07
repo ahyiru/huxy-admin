@@ -74,6 +74,7 @@ const plugins = [
     cacheId: 'huxy-pwa',
     clientsClaim: true,
     skipWaiting: true,
+    cleanupOutdatedCaches: true,
   }),
   new CopyFileWebpackPlugin([
     {
