@@ -8,20 +8,6 @@ const sizes = {
   '--breadHeight': '50px',
   '--menuItemHeight': '48px',
 };
-/* const colors = {
-  '--bannerBgColor': '#293241',
-  '--navBgColor': '#293241ee',
-  '--menuBgColor': '#293241',
-  '--appBgColor': '#0d1b2a',
-  '--pageBgColor': '#0d1b2a',
-  '--panelBgColor': '#293241ee',
-  '--appColor': '#dee2e6',
-  '--linkColor': '#e9ecef',
-  '--pageLinkColor': '#e9ecef',
-  '--linkHoverColor': '#f8f9fa',
-  '--linkActiveColor': '#ffffff',
-  '--borderColor': '#343a40',
-}; */
 const colors = {
   '--bannerBgColor': '#37424c',
   '--navBgColor': '#3c4752',

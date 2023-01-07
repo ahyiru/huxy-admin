@@ -129,7 +129,7 @@
     "@huxy/components": "^1.7.6",
     "@huxy/layout": "^1.7.7",
     "@huxy/materials": "^0.1.6",
-    "@huxy/router": "^1.7.6",
+    "@huxy/router": "^1.7.7",
     "@huxy/use": "^1.7.5",
     "@huxy/utils": "^1.7.5",
     "@testing-library/react": "^13.4.0",

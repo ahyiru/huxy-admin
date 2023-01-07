@@ -1,10 +1,10 @@
 const sizes = {
   '--maxWidth': '100vw',
-  '--menuWidth': '240px',
+  '--menuWidth': '220px',
   '--collapseWidth': '68px',
   '--collapseMenuWidth': '180px',
-  '--headerHeight': '68px',
-  '--footerHeight': '60px',
+  '--headerHeight': '60px',
+  '--footerHeight': '50px',
   '--breadHeight': '50px',
   '--menuItemHeight': '48px',
 };
@@ -16,10 +16,10 @@ const colors = {
   '--pageBgColor': '#f3f4f7',
   '--panelBgColor': '#ffffff',
   '--appColor': '#343a40',
-  '--linkColor': '#4b4b5a',
+  '--linkColor': '#343a40',
   '--pageLinkColor': '#343a40',
-  '--linkHoverColor': '#5369f8',
-  '--linkActiveColor': '#5369f8',
+  '--linkHoverColor': '#0066ff',
+  '--linkActiveColor': '#0066ff',
   '--borderColor': '#ebeef5',
 };
 
