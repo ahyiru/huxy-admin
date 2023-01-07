@@ -1,8 +1,9 @@
 const initSW = () => {
   if (!process.env.isDev && 'serviceWorker' in navigator) {
     window.addEventListener('load', () => {
+      const basepath = `${process.env.basepath}/`.replaceAll('//', '/');
       navigator.serviceWorker
-        .register('/huxy-admin/service-worker.js')
+        .register(`${basepath}service-worker.js`)
         .then(registration => {
           // console.log('SW registered: ',registration);
         })
