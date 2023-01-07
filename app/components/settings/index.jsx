@@ -190,7 +190,7 @@ const Index = props => {
         <Row className="select-item">
           {getThemeList(getIntls).map(item => (
             <Col key={item.key} span={6} onClick={e => selectTheme(item)}>
-              <a className={`item${item.key === theme.key ? ' selected' : ''}`}>{item.name}</a>
+              <span className={`link item${item.key === theme.key ? ' selected' : ''}`}>{item.name}</span>
             </Col>
           ))}
         </Row>
@@ -227,9 +227,9 @@ const Index = props => {
 
   return (
     <>
-      <a className={open ? 'active' : ''} onClick={e => setOpen(true)} title="setting">
+      <span className={`link${open ? ' active' : ''}`} onClick={e => setOpen(true)} title="setting">
         <span className="ico-block" />
-      </a>
+      </span>
       <Drawer
         close={() => setOpen(false)}
         open={open}

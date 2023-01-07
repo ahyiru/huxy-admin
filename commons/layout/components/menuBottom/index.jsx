@@ -6,7 +6,7 @@ import './index.less';
 const Index = ({collapsed, setCollapsed}) => {
   return (
     <div className="menu-collapsed">
-      <a className="collapsed-bar" onClick={() => {
+      <span className="link collapsed-bar" onClick={() => {
         setCollapsed(!collapsed);
         report({
           actionType: 'click',
@@ -16,7 +16,7 @@ const Index = ({collapsed, setCollapsed}) => {
         });
       }} title="collapse">
         <Anico type={collapsed ? 'right' : ''} />
-      </a>
+      </span>
       {!collapsed && (
         <Link to="http://ihuxy.com:8088/" target="_blank" className="link-bar" onClick={() => {
           report({

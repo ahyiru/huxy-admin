@@ -4,7 +4,7 @@ import getTheme from '@app/utils/getTheme';
 import MoonIcon from '@app/components/icons/moon';
 import SunIcon from '@app/components/icons/sun';
 
-const ThemeModel = ({panel}) => {
+const ThemeModel = props => {
   const [theme, setTheme] = useThemeStore();
   const {key} = theme;
 
@@ -15,9 +15,9 @@ const ThemeModel = ({panel}) => {
     setTheme(current);
   };
   
-  return <a onClick={handleClick} title={key}>
+  return <span className="link" onClick={handleClick} title={key}>
     <span className="node-icon">{key === 'light' ? <SunIcon /> : <MoonIcon />}</span>
-  </a>;
+  </span>;
 };
 
 export default ThemeModel;

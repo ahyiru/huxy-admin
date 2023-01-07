@@ -90,10 +90,10 @@ const Index = props => {
       </form>
       <div>
         <div style={{textAlign: 'center'}}>
-          <a onClick={e => props.router.push('/user/signin')}>
+          <span className="link" onClick={e => props.router.push('/user/signin')}>
             <span className="ico-left" style={{paddingRight: 4}} />
             <span style={{verticalAlign: 'bottom'}}>{getIntls('login.backLogin')}</span>
-          </a>
+          </span>
         </div>
       </div>
     </>

@@ -5,7 +5,7 @@ const Index = ({current, Right}) => {
   current = current.filter(v => v.name);
   const name = (
     <li>
-      <a style={{fontSize: '1.6rem'}}>{current.slice(-1)[0]?.name}</a>
+      <span className="link" style={{fontSize: '1.6rem'}}>{current.slice(-1)[0]?.name}</span>
     </li>
   );
   const bread = current.map(({path, name}) => (

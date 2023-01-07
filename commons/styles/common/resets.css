@@ -82,18 +82,23 @@ img {
   vertical-align: middle;
 }
 
-a {
+a,
+.link {
   text-decoration: none;
+  display: inline-block;
   cursor: pointer;
   color: var(--linkColor);
 }
 
 a:active,
-a.active {
+a.active,
+.link:active,
+.link.active {
   color: var(--linkActiveColor);
 }
 
-a:hover {
+a:hover,
+.link:hover {
   color: var(--linkHoverColor);
 }
 
@@ -105,9 +110,9 @@ textarea {
   border-radius: 0;
 }
 
-input::-webkit-input-placeholder,
-textarea::-webkit-input-placeholder {
-  color: #c7c7c7;
+input::placeholder,
+textarea::placeholder {
+  color: var(--appColor);
 }
 
 input[disabled],

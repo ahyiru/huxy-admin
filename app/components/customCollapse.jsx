@@ -9,8 +9,9 @@ const CustomCollapse = props => {
   const {width} = useWinResize();
   const [collapsed, setCollapsed] = useStore('huxy-collapse');
   return width <= 1024 ? (
-    <a
+    <span
       {...props}
+      className="link"
       onClick={e => {
         e.stopPropagation();
         setCollapsed(!collapsed);
@@ -24,7 +25,7 @@ const CustomCollapse = props => {
       title="minscreen-collapse"
     >
       <Anico type={collapsed ? 'right' : ''} />
-    </a>
+    </span>
   ) : null;
 };
 
