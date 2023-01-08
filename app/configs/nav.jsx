@@ -155,7 +155,7 @@ export const rightNav = language => {
       Custom: () => (
         <span className="link" title={right?.[language] ?? '语言'}>
           <div className="icon">
-            <img src={langList.find(({key}) => key === language)?.icon} alt={language} />
+            <img width="1" height="1" src={langList.find(({key}) => key === language)?.icon} alt={language} />
           </div>
         </span>
       ),

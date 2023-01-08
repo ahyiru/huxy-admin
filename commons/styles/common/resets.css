@@ -82,23 +82,19 @@ img {
   vertical-align: middle;
 }
 
-a,
-.link {
+a {
   text-decoration: none;
-  display: inline-block;
   cursor: pointer;
   color: var(--linkColor);
+  background-color: transparent;
+  font-weight: 500;
+  transition: color 0.3s;
 }
-
 a:active,
-a.active,
-.link:active,
-.link.active {
+a.active {
   color: var(--linkActiveColor);
 }
-
-a:hover,
-.link:hover {
+a:hover {
   color: var(--linkHoverColor);
 }
 
