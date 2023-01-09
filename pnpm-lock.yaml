@@ -20,12 +20,12 @@ specifiers:
   '@babel/runtime': ^7.20.7
   '@commitlint/cli': ^17.4.0
   '@commitlint/config-conventional': ^17.4.0
-  '@huxy/components': ^1.7.6
+  '@huxy/components': ^1.7.7
   '@huxy/copy-file-webpack-plugin': ^0.5.0
-  '@huxy/layout': ^1.7.8
+  '@huxy/layout': ^1.7.9
   '@huxy/materials': ^0.1.6
   '@huxy/open-browser-webpack-plugin': ^0.5.0
-  '@huxy/router': ^1.7.8
+  '@huxy/router': ^1.7.9
   '@huxy/use': ^1.7.5
   '@huxy/utils': ^1.7.6
   '@testing-library/react': ^13.4.0
@@ -90,10 +90,10 @@ specifiers:
   workbox-webpack-plugin: ^6.5.4
 
 dependencies:
-  '@huxy/components': 1.7.6_biqbaboplfbrettd7655fr4n2y
-  '@huxy/layout': 1.7.8_react@18.2.0
+  '@huxy/components': 1.7.7_biqbaboplfbrettd7655fr4n2y
+  '@huxy/layout': 1.7.9_react@18.2.0
   '@huxy/materials': 0.1.6_react@18.2.0
-  '@huxy/router': 1.7.8_react@18.2.0
+  '@huxy/router': 1.7.9_react@18.2.0
   '@huxy/use': 1.7.5_react@18.2.0
   '@huxy/utils': 1.7.6
   '@testing-library/react': 13.4.0_biqbaboplfbrettd7655fr4n2y
@@ -1987,8 +1987,8 @@ packages:
     engines: {node: '>=6.9.0'}
     dev: true
 
-  /@huxy/components/1.7.6_biqbaboplfbrettd7655fr4n2y:
-    resolution: {integrity: sha512-xG6j4suYudkn92O4zFfTttPccz4KWfZ2zWRwFsXjDQPkNp0SFlCZo3VRU8x3B/dTzhDwJGOCzI786ijm4rkgvg==}
+  /@huxy/components/1.7.7_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-CbJySfsPlUWLxFvms1S3g8iR+ZEKilb8vdptsxsPLClPk3m5sKIGmDbnpilBN0l33GtJh4V3ifICMXNjd6/5jQ==}
     peerDependencies:
       react: '>=17.0.0'
       react-dom: '>=17.0.0'
@@ -2001,8 +2001,8 @@ packages:
     resolution: {integrity: sha512-ABG1ksxyvioBNwmK9fqLHNVnfTQ6p6LlATrHOuJSLNUh8Nwtu4lgFBs34DvpEulOFO8c1ZeJlQ+pxw5Ql3x5mQ==}
     dev: true
 
-  /@huxy/layout/1.7.8_react@18.2.0:
-    resolution: {integrity: sha512-7EogfixmSx+mpRv3dTOB1w7w4XLStnD8kapU5ORXM3KZj3Dv67WJZ0C45im9JmUvGyutle/RbYgh6jYXrOg3gA==}
+  /@huxy/layout/1.7.9_react@18.2.0:
+    resolution: {integrity: sha512-JWJFShofD6b6yHQs49i7ZASrEq8jVxECLCm8fA3pcxwGtmZ3qwnEAfmxrGtnTmqSymRWNz0AdYdODz3cP/is1w==}
     peerDependencies:
       react: '>=17.0.0'
     dependencies:
@@ -2021,8 +2021,8 @@ packages:
     resolution: {integrity: sha512-9D10U6kAS4nG/O++rHISWA5AYQ2NLlibSfe0+ci+sd7GzncIT4cMnLRSzm4loKEzCtreiIbjLaxAblEcUHyD0g==}
     dev: true
 
-  /@huxy/router/1.7.8_react@18.2.0:
-    resolution: {integrity: sha512-rXnVLsZy246WrFculwHvmGi+MhrYIeRZSdKXgk+bxtHEbMgh2w2XrkxxkehCtk+KKclmTbgbShDeceJnfmSNdA==}
+  /@huxy/router/1.7.9_react@18.2.0:
+    resolution: {integrity: sha512-3Rkd2TpWY7AHc8aSspCbBlcXVtI4T8YAtGb/fUMBs3b39VsmzwutNs7B3Q5CuPPSs++kGbegj56DpskArxEjzw==}
     peerDependencies:
       react: '>=17.0.0'
     dependencies:
