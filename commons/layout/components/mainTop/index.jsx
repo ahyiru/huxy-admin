@@ -10,7 +10,7 @@ const Index = ({current, Right}) => {
   );
   const bread = current.map(({path, name}) => (
     <li key={path}>
-      <Link to={path}>{name}</Link>
+      <Link className="link" to={path}>{name}</Link>
     </li>
   ));
   const isRightBread = current.length > 1;
