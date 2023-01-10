@@ -69,8 +69,8 @@ app.use('*', (req, res, next) => {
 
 /* const ssl = path.resolve(__dirname, './ssl');
 const options = {
-  key: fs.readFileSync(`${ssl}/ihuxy.com.key`),
-  cert: fs.readFileSync(`${ssl}/ihuxy.com.pem`),
+  key: fs.readFileSync(`${ssl}/server.key`),
+  cert: fs.readFileSync(`${ssl}/server.pem`),
   // passphrase: 'YOUR PASSPHRASE HERE',
 };
 const httpsServer = https.createServer(options, app); */

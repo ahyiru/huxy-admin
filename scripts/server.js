@@ -40,8 +40,8 @@ app.get(`${rootDir}*`, function (request, response) {
 
 /* const ssl = path.resolve(__dirname, './ssl');
 const options = {
-  key: fs.readFileSync(`${ssl}/ihuxy.com.key`),
-  cert: fs.readFileSync(`${ssl}/ihuxy.com.pem`),
+  key: fs.readFileSync(`${ssl}/server.key`),
+  cert: fs.readFileSync(`${ssl}/server.pem`),
 };
 const httpsServer = https.createServer(options, app); */
 

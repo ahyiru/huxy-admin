@@ -64,7 +64,7 @@
     "@babel/preset-react": "^7.18.6",
     "@babel/register": "^7.18.9",
     "@babel/runtime": "^7.20.7",
-    "@commitlint/cli": "^17.4.0",
+    "@commitlint/cli": "^17.4.1",
     "@commitlint/config-conventional": "^17.4.0",
     "@huxy/copy-file-webpack-plugin": "^0.5.0",
     "@huxy/open-browser-webpack-plugin": "^0.5.0",
@@ -126,10 +126,10 @@
     "workbox-webpack-plugin": "^6.5.4"
   },
   "dependencies": {
-    "@huxy/components": "^1.7.7",
-    "@huxy/layout": "^1.7.9",
+    "@huxy/components": "^1.7.8",
+    "@huxy/layout": "^1.7.11",
     "@huxy/materials": "^0.1.6",
-    "@huxy/router": "^1.7.9",
+    "@huxy/router": "^1.7.10",
     "@huxy/use": "^1.7.5",
     "@huxy/utils": "^1.7.6",
     "@testing-library/react": "^13.4.0",

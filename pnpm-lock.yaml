@@ -18,14 +18,14 @@ specifiers:
   '@babel/preset-react': ^7.18.6
   '@babel/register': ^7.18.9
   '@babel/runtime': ^7.20.7
-  '@commitlint/cli': ^17.4.0
+  '@commitlint/cli': ^17.4.1
   '@commitlint/config-conventional': ^17.4.0
-  '@huxy/components': ^1.7.7
+  '@huxy/components': ^1.7.8
   '@huxy/copy-file-webpack-plugin': ^0.5.0
-  '@huxy/layout': ^1.7.9
+  '@huxy/layout': ^1.7.11
   '@huxy/materials': ^0.1.6
   '@huxy/open-browser-webpack-plugin': ^0.5.0
-  '@huxy/router': ^1.7.9
+  '@huxy/router': ^1.7.10
   '@huxy/use': ^1.7.5
   '@huxy/utils': ^1.7.6
   '@testing-library/react': ^13.4.0
@@ -90,10 +90,10 @@ specifiers:
   workbox-webpack-plugin: ^6.5.4
 
 dependencies:
-  '@huxy/components': 1.7.7_biqbaboplfbrettd7655fr4n2y
-  '@huxy/layout': 1.7.9_react@18.2.0
+  '@huxy/components': 1.7.8_biqbaboplfbrettd7655fr4n2y
+  '@huxy/layout': 1.7.11_react@18.2.0
   '@huxy/materials': 0.1.6_react@18.2.0
-  '@huxy/router': 1.7.9_react@18.2.0
+  '@huxy/router': 1.7.10_react@18.2.0
   '@huxy/use': 1.7.5_react@18.2.0
   '@huxy/utils': 1.7.6
   '@testing-library/react': 13.4.0_biqbaboplfbrettd7655fr4n2y
@@ -119,7 +119,7 @@ devDependencies:
   '@babel/preset-react': 7.18.6_@babel+core@7.20.12
   '@babel/register': 7.18.9_@babel+core@7.20.12
   '@babel/runtime': 7.20.7
-  '@commitlint/cli': 17.4.0_@types+node@18.11.18
+  '@commitlint/cli': 17.4.1
   '@commitlint/config-conventional': 17.4.0
   '@huxy/copy-file-webpack-plugin': 0.5.0
   '@huxy/open-browser-webpack-plugin': 0.5.0
@@ -1591,14 +1591,14 @@ packages:
     resolution: {integrity: sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==}
     dev: true
 
-  /@commitlint/cli/17.4.0_@types+node@18.11.18:
-    resolution: {integrity: sha512-SEY4sYe8yVlgxPP7X0wJb96DBAGBPsCsy6QbqJt/UECbIAjDeDV5xXBV4jnS7T/qMC10sk6Ub9kDhEX0VWvblw==}
+  /@commitlint/cli/17.4.1:
+    resolution: {integrity: sha512-W8OJwz+izY+fVwyUt1HveCDmABMZNRVZHSVPw/Bh9Y62tp11SmmQaycgbsYLMiMy7JGn4mAJqEGlSHS9Uti9ZQ==}
     engines: {node: '>=v14'}
     hasBin: true
     dependencies:
       '@commitlint/format': 17.4.0
       '@commitlint/lint': 17.4.0
-      '@commitlint/load': 17.4.0_@types+node@18.11.18
+      '@commitlint/load': 17.4.1
       '@commitlint/read': 17.4.0
       '@commitlint/types': 17.4.0
       execa: 5.1.1
@@ -1609,7 +1609,6 @@ packages:
     transitivePeerDependencies:
       - '@swc/core'
       - '@swc/wasm'
-      - '@types/node'
     dev: true
 
   /@commitlint/config-conventional/17.4.0:
@@ -1670,14 +1669,15 @@ packages:
       '@commitlint/types': 17.4.0
     dev: true
 
-  /@commitlint/load/17.4.0_@types+node@18.11.18:
-    resolution: {integrity: sha512-wDKNvAJqukqZqKmhRlf3KNo/12QGo1AQcd80EbV01SxtGvyHOsJ/g+/IbrZpopZv8rvzmEVktcpfDYH6ITepFA==}
+  /@commitlint/load/17.4.1:
+    resolution: {integrity: sha512-6A7/LhIaQpL4ieciIDcVvK2d5z/UI1GBrtDaHm6sQSCL0265clB2/F7XKQNTJHXv9yG4LByT2r+QCpM4GugIfw==}
     engines: {node: '>=v14'}
     dependencies:
       '@commitlint/config-validator': 17.4.0
       '@commitlint/execute-rule': 17.4.0
       '@commitlint/resolve-extends': 17.4.0
       '@commitlint/types': 17.4.0
+      '@types/node': 18.11.18
       chalk: 4.1.2
       cosmiconfig: 8.0.0
       cosmiconfig-typescript-loader: 4.3.0_bxtyj3et3xbsdyxhh3oblnfbj4
@@ -1690,7 +1690,6 @@ packages:
     transitivePeerDependencies:
       - '@swc/core'
       - '@swc/wasm'
-      - '@types/node'
     dev: true
 
   /@commitlint/message/17.4.0:
@@ -1987,8 +1986,8 @@ packages:
     engines: {node: '>=6.9.0'}
     dev: true
 
-  /@huxy/components/1.7.7_biqbaboplfbrettd7655fr4n2y:
-    resolution: {integrity: sha512-CbJySfsPlUWLxFvms1S3g8iR+ZEKilb8vdptsxsPLClPk3m5sKIGmDbnpilBN0l33GtJh4V3ifICMXNjd6/5jQ==}
+  /@huxy/components/1.7.8_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-kHWB0BmtM0ArENFaUKQlOs/9gs2e04L009XQLdmXsSC6QjtzOzZxm70IUY2xgHaLs/O2S+6lcMhAHYv0dvZI0A==}
     peerDependencies:
       react: '>=17.0.0'
       react-dom: '>=17.0.0'
@@ -2001,8 +2000,8 @@ packages:
     resolution: {integrity: sha512-ABG1ksxyvioBNwmK9fqLHNVnfTQ6p6LlATrHOuJSLNUh8Nwtu4lgFBs34DvpEulOFO8c1ZeJlQ+pxw5Ql3x5mQ==}
     dev: true
 
-  /@huxy/layout/1.7.9_react@18.2.0:
-    resolution: {integrity: sha512-JWJFShofD6b6yHQs49i7ZASrEq8jVxECLCm8fA3pcxwGtmZ3qwnEAfmxrGtnTmqSymRWNz0AdYdODz3cP/is1w==}
+  /@huxy/layout/1.7.11_react@18.2.0:
+    resolution: {integrity: sha512-C9QDwrXGbJ0k1XkA5uBOQAOy+AK+MjJddaINfC0PHp37mk/tBXUy7Vl/PP7o6YjLnQD4wqc1gaNYtUiF06uikA==}
     peerDependencies:
       react: '>=17.0.0'
     dependencies:
@@ -2021,8 +2020,8 @@ packages:
     resolution: {integrity: sha512-9D10U6kAS4nG/O++rHISWA5AYQ2NLlibSfe0+ci+sd7GzncIT4cMnLRSzm4loKEzCtreiIbjLaxAblEcUHyD0g==}
     dev: true
 
-  /@huxy/router/1.7.9_react@18.2.0:
-    resolution: {integrity: sha512-3Rkd2TpWY7AHc8aSspCbBlcXVtI4T8YAtGb/fUMBs3b39VsmzwutNs7B3Q5CuPPSs++kGbegj56DpskArxEjzw==}
+  /@huxy/router/1.7.10_react@18.2.0:
+    resolution: {integrity: sha512-PUe9SvFE20wdFGsQtKkjfS22AJjr5h7IY2E/N1FYpdKufHyyHLL2sHdpuAJ82YZhOxvdDN8J6DaAwHoZX9nObw==}
     peerDependencies:
       react: '>=17.0.0'
     dependencies:
