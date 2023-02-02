@@ -2,6 +2,49 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.4.0](https://github.com/ahyiru/huxy-admin/compare/v1.3.3...v1.4.0) (2023-02-02)
+
+
+### Features
+
+* add report ([625b0d7](https://github.com/ahyiru/huxy-admin/commit/625b0d73e704545f3126be0a911a33b9985f07a5))
+* add theme mode ([1eba5c2](https://github.com/ahyiru/huxy-admin/commit/1eba5c25c3322cbf1494bb036d261bf8b1f9ea09))
+* update configs ([ac660c6](https://github.com/ahyiru/huxy-admin/commit/ac660c62dfc290d495fa5b451dd54414f6075d9a))
+
+
+### Bug Fixes
+
+* add build ([d0a0a46](https://github.com/ahyiru/huxy-admin/commit/d0a0a46ee7f47e402d6c08bca45d6f479856bc2c))
+* fix colors ([99b702d](https://github.com/ahyiru/huxy-admin/commit/99b702dda09f97ef10bef2bcf33c70caa0e6e0ae))
+* fix configs ([284ad62](https://github.com/ahyiru/huxy-admin/commit/284ad62fc82513e47e505d2d2cd130e258045fad))
+* fix https ([b3d45fa](https://github.com/ahyiru/huxy-admin/commit/b3d45fa8f09492e8042f1508291ec368327e2fd0))
+* fix Link ([c65f75d](https://github.com/ahyiru/huxy-admin/commit/c65f75dbc26237a372b7b368964858cb7fce3661))
+* fix mainTop ([3170e42](https://github.com/ahyiru/huxy-admin/commit/3170e427f1bbd2263d9a86a30053756ab9a4ac0b))
+* fix pre-commit ([846f43a](https://github.com/ahyiru/huxy-admin/commit/846f43ae717b2ca5ae8e2b3eb503030061b3e907))
+* fix projects links ([62ce2c9](https://github.com/ahyiru/huxy-admin/commit/62ce2c95f89ab9acb78560f214b326579decdd91))
+* fix pwa ([67a1a49](https://github.com/ahyiru/huxy-admin/commit/67a1a49a980286dc60474765655909b91dd4c82c))
+* fix pwa ([7221ee2](https://github.com/ahyiru/huxy-admin/commit/7221ee2b46ad61c589eeedeb96656558827a3688))
+* fix pwa ([1f1cbbb](https://github.com/ahyiru/huxy-admin/commit/1f1cbbb4b1676d657ea6f160135b5e36cb563c87))
+* fix pwa ([b14b572](https://github.com/ahyiru/huxy-admin/commit/b14b5725269d7ea1dd330ec6cc0f95ffb94e6551))
+* fix pwa ([a17f7dc](https://github.com/ahyiru/huxy-admin/commit/a17f7dc9cf9e052f1652d23a6827c7305a768870))
+* fix pwa ([3eb9e0d](https://github.com/ahyiru/huxy-admin/commit/3eb9e0d319c2f1b31dc8c766674ec144735bcbb5))
+* fix pwa ([7777e9b](https://github.com/ahyiru/huxy-admin/commit/7777e9beab7e14dadf95c7fefe50b3ed9001f553))
+* fix pwa ([7380a24](https://github.com/ahyiru/huxy-admin/commit/7380a24c111ed998b6bf43b8432af8aeff46dfe9))
+* fix pwa ([6eaf9b0](https://github.com/ahyiru/huxy-admin/commit/6eaf9b07144e3b44aaa3c9002945755713e8e6ac))
+* fix pwa ([5226155](https://github.com/ahyiru/huxy-admin/commit/522615533b1b7d37c6150f6f183e308b308b1e99))
+* fix pwa ([443cbac](https://github.com/ahyiru/huxy-admin/commit/443cbac21353e03c936bf56d39a324a59d41c182))
+* fix report fetchError ([d4b5b0f](https://github.com/ahyiru/huxy-admin/commit/d4b5b0fc1835d6404675a1ab6f9ee49873b5912c))
+* fix router ([997ba40](https://github.com/ahyiru/huxy-admin/commit/997ba40f805df7ca78ee9f45770f02ce0fb12200))
+* fix something ([97342fe](https://github.com/ahyiru/huxy-admin/commit/97342fe5561ea88ef23d7e40ced17d4216c82a30))
+* fix styles ([63cc316](https://github.com/ahyiru/huxy-admin/commit/63cc316137b8e2f51efc71883b0ec5ca79e2f6b4))
+* fix styles ([31162eb](https://github.com/ahyiru/huxy-admin/commit/31162eb7516a8dad89de2a304cc048dd8c9a844d))
+* fix styles ([d01fa37](https://github.com/ahyiru/huxy-admin/commit/d01fa37062c538dd9e136509c19e1ec44b2ee89a))
+* fix sw basepath ([b6a9736](https://github.com/ahyiru/huxy-admin/commit/b6a9736e650c62df82502edb8376550c741a9011))
+* fix utils fetch ([b27434e](https://github.com/ahyiru/huxy-admin/commit/b27434e48ad3805eaa83328e4421334e3cacecb2))
+* fix workbox ([fa8aa61](https://github.com/ahyiru/huxy-admin/commit/fa8aa61904afbb6c03f6eea92a28ce0ffaa3bebe))
+* fix workbox ([d30eff4](https://github.com/ahyiru/huxy-admin/commit/d30eff48fd117da3b88fa723e8d4b92e24acc299))
+* fix workbox ([8e01dfa](https://github.com/ahyiru/huxy-admin/commit/8e01dfaf42f15773c37d03f0ff11249ececc00a1))
+
 ### [1.3.3](https://github.com/ahyiru/huxy-admin/compare/v1.3.2...v1.3.3) (2022-11-04)
 
 
