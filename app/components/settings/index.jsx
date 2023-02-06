@@ -243,6 +243,9 @@ const Index = props => {
             </Button>
           </>
         }
+        style={{
+          background: 'var(--panelBgColor)',
+        }}
       >
         <TabHeader flex tabs={tabs(i18nCfg)} switchTab={key => setActive(key)} />
         <div className="layout-setting" style={{padding: '15px 0'}}>
