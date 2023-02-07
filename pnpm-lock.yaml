@@ -22,7 +22,7 @@ specifiers:
   '@commitlint/config-conventional': ^17.4.2
   '@huxy/components': ^1.8.2
   '@huxy/copy-file-webpack-plugin': ^0.5.0
-  '@huxy/layout': ^1.8.1
+  '@huxy/layout': ^1.8.2
   '@huxy/materials': ^0.1.9
   '@huxy/open-browser-webpack-plugin': ^0.5.0
   '@huxy/router': ^1.8.0
@@ -91,7 +91,7 @@ specifiers:
 
 dependencies:
   '@huxy/components': 1.8.2_biqbaboplfbrettd7655fr4n2y
-  '@huxy/layout': 1.8.1_react@18.2.0
+  '@huxy/layout': 1.8.2_react@18.2.0
   '@huxy/materials': 0.1.9_react@18.2.0
   '@huxy/router': 1.8.0_react@18.2.0
   '@huxy/use': 1.8.0_react@18.2.0
@@ -2311,8 +2311,8 @@ packages:
     resolution: {integrity: sha512-ABG1ksxyvioBNwmK9fqLHNVnfTQ6p6LlATrHOuJSLNUh8Nwtu4lgFBs34DvpEulOFO8c1ZeJlQ+pxw5Ql3x5mQ==}
     dev: true
 
-  /@huxy/layout/1.8.1_react@18.2.0:
-    resolution: {integrity: sha512-/w40ozQKQubhQYVdTAqIIJaIkueV30ke+lgsRwjaRC/J55YqRNIGXqd6YSx+GDisOZzd94ZRK79b7N2zXzZQJw==}
+  /@huxy/layout/1.8.2_react@18.2.0:
+    resolution: {integrity: sha512-PYgfSO67HKhQ4fgVe5708wvt10xN2QwuEEos+i4jToYCrAMLXUQklACOJAewwJ0385oe8L0h6l8+avOtE9mhZQ==}
     peerDependencies:
       react: '>=17.0.0'
     dependencies:

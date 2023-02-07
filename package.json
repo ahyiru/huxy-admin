@@ -127,7 +127,7 @@
   },
   "dependencies": {
     "@huxy/components": "^1.8.2",
-    "@huxy/layout": "^1.8.1",
+    "@huxy/layout": "^1.8.2",
     "@huxy/materials": "^0.1.9",
     "@huxy/router": "^1.8.0",
     "@huxy/use": "^1.8.0",

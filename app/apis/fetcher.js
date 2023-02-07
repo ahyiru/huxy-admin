@@ -63,7 +63,7 @@ const dlHandler = response => {
     });
 };
 
-const fetchApi = fetcher(handler);
+export const fetchApi = fetcher(handler);
 
 const dlFile = fetcher(dlHandler);
 
