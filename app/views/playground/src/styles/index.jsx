@@ -1,8 +1,7 @@
 import {useState} from 'react';
-import {Spinner, Anico, LoadError, HandleError} from '@huxy/components';
+import {Spinner, Anico, LoadError, HandleError, Ellipsis} from '@huxy/components';
 import {Row, Col} from '@app/components/row';
 import Panel from '@app/components/panel';
-import Ellipsis from '@app/components/ellipsis';
 import Button from '@app/components/base/button';
 import Menu from '@app/components/base/menu';
 import {typeList, data} from './config';

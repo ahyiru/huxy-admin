@@ -73,7 +73,7 @@ const app = {
   DEV_ROOT_DIR: '/', // dev basepath
   PRD_ROOT_DIR: '/', // prod basepath
   PROXY: {
-    url: 'http://47.105.94.51:9202', // 服务代理
+    url: 'http://api.ihuxy.com', // 服务代理
     prefix: '/api', // 代理前缀
   },
   MOCK: 'http://localhost:9502', // mock 地址
