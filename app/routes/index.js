@@ -8,7 +8,7 @@ import dynamicRoutes from './routerComp/dynamicRoutes';
 const allRoutes = [
   {
     path: '/',
-    component: () => import('@commons/layout/layout'),
+    component: () => import('@app/commons/layout/layout'),
     children: dynamicRoutes,
   },
   ...staticRoutes,

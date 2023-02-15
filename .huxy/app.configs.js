@@ -1,14 +1,14 @@
 const app = {
   // HOST: 'http://localhost',
-  PORT: 8080,
-  PROD_PORT: 8081,
-  PUBLIC_DIR: 'public',
+  PORT: 3000,
+  PROD_PORT: 3001,
+  PUBLIC_DIR: 'app/public',
   BUILD_DIR: 'build',
   DEV_ROOT_DIR: '/',
-  PROD_ROOT_DIR: '/',
-  projectName: 'XX平台',
+  PROD_ROOT_DIR: '/huxy-admin',
+  projectName: '...',
   /* PROXY: {
-    url: 'http://127.0.0.1:9000',
+    url: 'http://api.ihuxy.com',
     prefix: '/api',
   }, */
   defProject: {
@@ -18,4 +18,16 @@ const app = {
   },
 };
 
-module.exports = {app};
+module.exports = {
+  app,
+  webpack: {
+    prod: {
+      copy: [
+        {
+          from: 'app/public/.spa',
+          to: 'build/.spa',
+        },
+      ],
+    },
+  },
+};
