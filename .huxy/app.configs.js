@@ -11,8 +11,8 @@ const app = {
     url: 'http://api.ihuxy.com',
     prefix: '/api',
   }, */
-  defProject: {
-    // 项目全局配置
+  envConfigs: {
+    // 全局环境变量
     name: '项目名',
     _id: '其它属性',
   },
