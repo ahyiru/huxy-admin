@@ -12,6 +12,7 @@ import Input from '@app/components/base/input';
 import Button from '@app/components/base/button';
 import Radio from '@app/components/base/radio';
 import Select from '@app/components/base/select';
+import Checkbox from '@app/components/base/checkbox';
 import report from '@app/apis/report/report';
 
 const delay = 500;
@@ -59,7 +60,10 @@ const Index = props => {
   const themeLang = getIntls('theme', {});
   const i18nCfg = getIntls('main.layout', {});
   const [theme, setTheme] = useThemeStore();
-  const [menuType, setMenuType] = useMenuTypeStore('vertical');
+  const [menuType, setMenuType] = useMenuTypeStore({
+    menu: 'vertical',
+    header: '',
+  });
 
   const [active, setActive] = useState('layout');
   const [open, setOpen] = useState(false);
@@ -161,12 +165,30 @@ const Index = props => {
     layout: (
       <>
         <div className="vertical-item">
+          <label>是否隐藏头部</label>
+          <div>
+            <Checkbox
+              value={menuType.header}
+              onChange={value => setMenuType({
+                header: value.includes('noHeader') ? 'noHeader' : '',
+                menu: menuType.menu,
+              })}
+              options={[
+                {value: 'noHeader', label: '隐藏'},
+              ]}
+            />
+          </div>
+        </div>
+        <div className="vertical-item">
           <label>{i18nCfg.menuType}</label>
           <Radio
             style={{marginTop: '5px'}}
-            value={menuType}
+            value={menuType.menu}
             onChange={value => {
-              setMenuType(value);
+              setMenuType({
+                header: menuType.header,
+                menu: value,
+              });
               report({
                 actionType: 'click',
                 category: 'settings',

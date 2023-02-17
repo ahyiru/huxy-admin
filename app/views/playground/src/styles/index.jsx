@@ -17,7 +17,7 @@ const Index = props => {
       <Col span={6}>
         <Panel>
           <div style={{width: 200}}>
-            <Ellipsis>12233345657688967i8ijhfgrtrrfgthtgryhhyt</Ellipsis>
+            <Ellipsis placement="bottomRight">12233345657688967i8ijhfgrtrrfgthtgryhhyt</Ellipsis>
           </div>
           <div style={{width: 200}}>
             <Ellipsis>33333</Ellipsis>

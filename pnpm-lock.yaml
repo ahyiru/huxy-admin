@@ -1,10 +1,10 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@huxy/components': ^1.9.1
-  '@huxy/layout': ^1.9.1
+  '@huxy/components': ^1.9.3
+  '@huxy/layout': ^1.9.3
   '@huxy/materials': ^0.2.1
-  '@huxy/pack': ^0.2.5
+  '@huxy/pack': ^0.2.9
   '@huxy/router': ^1.9.1
   '@huxy/use': ^1.9.1
   '@huxy/utils': ^1.9.1
@@ -13,8 +13,8 @@ specifiers:
   react-dom: ^18.2.0
 
 dependencies:
-  '@huxy/components': 1.9.1_biqbaboplfbrettd7655fr4n2y
-  '@huxy/layout': 1.9.1_react@18.2.0
+  '@huxy/components': 1.9.3_biqbaboplfbrettd7655fr4n2y
+  '@huxy/layout': 1.9.3_react@18.2.0
   '@huxy/materials': 0.2.1_react@18.2.0
   '@huxy/router': 1.9.1_react@18.2.0
   '@huxy/use': 1.9.1_react@18.2.0
@@ -23,7 +23,7 @@ dependencies:
   react-dom: 18.2.0_react@18.2.0
 
 devDependencies:
-  '@huxy/pack': 0.2.5
+  '@huxy/pack': 0.2.9
   husky: 8.0.3
 
 packages:
@@ -1997,8 +1997,8 @@ packages:
     engines: {node: '>=6.9.0'}
     dev: true
 
-  /@huxy/components/1.9.1_biqbaboplfbrettd7655fr4n2y:
-    resolution: {integrity: sha512-essjjXp3uJ97r52v77SuDuL8wllMOXQwPh3LCsGchqQF95Wj8Z+3TlgtDP1tvR2xHXkJXVHVaKI/vbfjv0siaA==}
+  /@huxy/components/1.9.3_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-Utv71ToYdd9Z6iaGl8kF9qRy4ovbGcfEiMEs1EO9UFiZWqpWhdst6BE57H0QwLzHB6DFg/0L61CbtUgJ1gc9ig==}
     peerDependencies:
       react: '>=17.0.0'
       react-dom: '>=17.0.0'
@@ -2014,8 +2014,8 @@ packages:
       fs-extra: 11.1.0
     dev: true
 
-  /@huxy/layout/1.9.1_react@18.2.0:
-    resolution: {integrity: sha512-zqWosMAAj0eCL0PV2haqE2Nfh7bwR64A/dIK4+5TevYhzo1z1T0bMUvVZt6WOoceGnBpV/X/Su4zMNL1XLi+CA==}
+  /@huxy/layout/1.9.3_react@18.2.0:
+    resolution: {integrity: sha512-pKLemr6GT1GAz43OaqksMZV5PmSz7G4uLsiZv/eQAd+CuKk/vLp4Gp4c2QKIq/re0Pgpzd2lqE8i/mDDQaD2NA==}
     peerDependencies:
       react: '>=17.0.0'
     dependencies:
@@ -2035,8 +2035,8 @@ packages:
     engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
     dev: true
 
-  /@huxy/pack/0.2.5:
-    resolution: {integrity: sha512-EhFNFb0t/7MM45yy8OWknIIVjXZJ3Q/kipImJOshuwcTjCAXQ1K2IN/+Q6VsZBbFx1dMvlbLknFUmF7SYWYjeA==}
+  /@huxy/pack/0.2.9:
+    resolution: {integrity: sha512-nLTFa5rAMDzFPx+S3j1d1Xoot4PK+HwpvYkh2eGVkt/1yHTiKp9oK/HBFXs267u+Q8oFZH2jQCT01tn7x35wXQ==}
     engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
     hasBin: true
     dependencies:
