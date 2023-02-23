@@ -34,12 +34,12 @@
     "analyze": "pack run analyze",
     "server": "pack run server",
     "test": "pack run test",
+    "release": "pack run release",
     "eslint": "eslint 'app/**/*.{js,jsx}'",
     "stylelint": "stylelint 'app/**/*.{css,less}'",
     "lint": "npm run eslint && npm run stylelint",
     "lint-fix": "eslint --fix 'app/**/*.{js,jsx}' && stylelint --fix 'app/**/*.{css,less}'",
-    "prettier": "prettier 'app/**/*' --write --ignore-unknown && npm run lint-fix",
-    "release": "pack run release"
+    "prettier": "prettier 'app/**/*' --write --ignore-unknown && npm run lint-fix"
   },
   "repository": {
     "type": "git",
@@ -47,16 +47,16 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "@huxy/pack": "^0.2.9",
+    "@huxy/pack": "^0.3.5",
     "husky": "^8.0.3"
   },
   "dependencies": {
-    "@huxy/components": "^1.9.3",
-    "@huxy/layout": "^1.9.3",
+    "@huxy/components": "^1.9.5",
+    "@huxy/layout": "^1.9.4",
     "@huxy/materials": "^0.2.1",
     "@huxy/router": "^1.9.1",
     "@huxy/use": "^1.9.1",
-    "@huxy/utils": "^1.9.1",
+    "@huxy/utils": "^1.9.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   }
