@@ -21,4 +21,4 @@ jobs:
           gitee-password: ${{ secrets.GITEE_SERVER_PASSWORD }}
           gitee-repo: yiru/huxy-admin
           branch: develop
-          directory: build
+          directory: app/build
