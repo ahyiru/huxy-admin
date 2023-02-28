@@ -25,7 +25,7 @@ module.exports = {
       copy: [
         {
           from: 'app/public/.spa',
-          to: 'build/.spa',
+          to: 'app/build/.spa',
         },
       ],
     },
