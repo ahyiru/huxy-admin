@@ -18,7 +18,7 @@ const app = {
   },
 };
 
-module.exports = {
+export default {
   app,
   webpack: {
     prod: {
