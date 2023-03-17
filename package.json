@@ -49,16 +49,16 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "@huxy/pack": "^1.0.6",
+    "@huxy/pack": "^1.0.8",
     "husky": "^8.0.3"
   },
   "dependencies": {
-    "@huxy/components": "^2.0.2",
+    "@huxy/components": "^2.0.3",
     "@huxy/layout": "^2.0.1",
     "@huxy/materials": "^1.0.1",
     "@huxy/router": "^2.0.1",
     "@huxy/use": "^2.0.1",
-    "@huxy/utils": "^2.0.2",
+    "@huxy/utils": "^2.0.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   }
