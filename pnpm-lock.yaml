@@ -1,9 +1,9 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@huxy/components': ^2.0.3
+  '@huxy/components': ^2.0.4
   '@huxy/layout': ^2.0.1
-  '@huxy/materials': ^1.0.1
+  '@huxy/materials': ^1.0.2
   '@huxy/pack': ^1.0.8
   '@huxy/router': ^2.0.1
   '@huxy/use': ^2.0.1
@@ -13,9 +13,9 @@ specifiers:
   react-dom: ^18.2.0
 
 dependencies:
-  '@huxy/components': 2.0.3_biqbaboplfbrettd7655fr4n2y
+  '@huxy/components': 2.0.4_biqbaboplfbrettd7655fr4n2y
   '@huxy/layout': 2.0.1_react@18.2.0
-  '@huxy/materials': 1.0.1_react@18.2.0
+  '@huxy/materials': 1.0.2_react@18.2.0
   '@huxy/router': 2.0.1_react@18.2.0
   '@huxy/use': 2.0.1_react@18.2.0
   '@huxy/utils': 2.0.3
@@ -2031,8 +2031,8 @@ packages:
     engines: {node: '>=6.9.0'}
     dev: true
 
-  /@huxy/components/2.0.3_biqbaboplfbrettd7655fr4n2y:
-    resolution: {integrity: sha512-bSVT8rKCQ9OTeX63V90/Zn7C8iGtbltud1dwaIBjOYHYCpTNlobO9eVu1ZwJoz6SN1Xx5odyCzRhOMfszuFiag==}
+  /@huxy/components/2.0.4_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-FKUKiVY9da55e/f88Oa218QRrkr4kurEvAiSXNgOU4ZV2Mtc58T0YEiaL4+xUREhmMUFw3QWHtBrEpAOOEnj9A==}
     peerDependencies:
       react: '>=17.0.0'
       react-dom: '>=17.0.0'
@@ -2056,8 +2056,8 @@ packages:
       react: 18.2.0
     dev: false
 
-  /@huxy/materials/1.0.1_react@18.2.0:
-    resolution: {integrity: sha512-+5B+fgijcEpY3MNTUDo6fRSPej30W8I7WHejwflrkRp3rDb8jkl35xC+rHnISfqNzgR9LjnmCr70G6cHmuX/JQ==}
+  /@huxy/materials/1.0.2_react@18.2.0:
+    resolution: {integrity: sha512-VSPqvjAkMUm8I1fUIxCfbZeGGteL3/tdfDKfn1iPHl0qdmcT0U3cCSwX8jKMc7q5SMfxyK4W2XU0zpha/wcjvg==}
     peerDependencies:
       react: '>=17.0.0'
     dependencies:
