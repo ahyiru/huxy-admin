@@ -4,10 +4,10 @@ specifiers:
   '@huxy/components': ^2.0.4
   '@huxy/layout': ^2.0.1
   '@huxy/materials': ^1.0.2
-  '@huxy/pack': ^1.1.1
+  '@huxy/pack': ^1.1.2
   '@huxy/router': ^2.0.1
   '@huxy/use': ^2.0.1
-  '@huxy/utils': ^2.0.3
+  '@huxy/utils': ^2.0.4
   husky: ^8.0.3
   react: ^18.2.0
   react-dom: ^18.2.0
@@ -18,12 +18,12 @@ dependencies:
   '@huxy/materials': 1.0.2_react@18.2.0
   '@huxy/router': 2.0.1_react@18.2.0
   '@huxy/use': 2.0.1_react@18.2.0
-  '@huxy/utils': 2.0.3
+  '@huxy/utils': 2.0.4
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
 
 devDependencies:
-  '@huxy/pack': 1.1.1
+  '@huxy/pack': 1.1.2
   husky: 8.0.3
 
 packages:
@@ -2069,8 +2069,8 @@ packages:
     engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
     dev: true
 
-  /@huxy/pack/1.1.1:
-    resolution: {integrity: sha512-3OZZe69DRLbdcj47UcOVUg0Bb1xS3ZxPdxOJrCH+Iibx4YM7BVcwM+XZ4oEn+9fEsuKApXn7SMM1jUkYN6lQag==}
+  /@huxy/pack/1.1.2:
+    resolution: {integrity: sha512-Xp7FzQUyW2XSesoXcLZFORJvrWSsaTd52BWlsAD0w0bzsDnW5Y8yI13zplm8j+4Go7i0aCnflxd6K8d5gj9A9g==}
     engines: {node: '>=19.0.0'}
     hasBin: true
     dependencies:
@@ -2162,8 +2162,8 @@ packages:
       react: 18.2.0
     dev: false
 
-  /@huxy/utils/2.0.3:
-    resolution: {integrity: sha512-7HxSFZxLBMFGZZS0hY1XJlDmmNyrIOlQztYhRhmGjIHN8b17WwHqB9KSKWniugjUcxpzwUsA2zkAjl7OpN4bdg==}
+  /@huxy/utils/2.0.4:
+    resolution: {integrity: sha512-tBQh25UELJ7a54r5zHuY61mGtcKPLaU+Fcnj6q136aAE83M+oO6tDen95gwl03J7l27vIEgrLNqHxWM9PtBBeA==}
     dev: false
 
   /@istanbuljs/load-nyc-config/1.1.0:

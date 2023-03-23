@@ -2,7 +2,7 @@
   "name": "huxy-admin",
   "version": "1.5.0",
   "type": "module",
-  "description": "Admin dashboard template. Built with React18, Webpack5, useRouter, useStore, eslint, prettier, husky, commitlint, etc.",
+  "description": "Customizable admin dashboard template based on React18.",
   "keywords": [
     "react",
     "low-code",
@@ -50,7 +50,7 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "@huxy/pack": "^1.1.1",
+    "@huxy/pack": "^1.1.2",
     "husky": "^8.0.3"
   },
   "dependencies": {
@@ -59,7 +59,7 @@
     "@huxy/materials": "^1.0.2",
     "@huxy/router": "^2.0.1",
     "@huxy/use": "^2.0.1",
-    "@huxy/utils": "^2.0.3",
+    "@huxy/utils": "^2.0.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   }

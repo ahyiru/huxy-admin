@@ -1,8 +1,10 @@
-## React Admin Template
+## Huxy Admin
 
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/ahyiru/ihuxy/blob/develop/LICENSE)
 [![npm version](https://img.shields.io/npm/v/@huxy/router.svg)](https://www.npmjs.com/package/@huxy/router)
 [![](https://img.shields.io/badge/blog-ihuxy-blue.svg)](http://ihuxy.com/)
+
+Huxy Admin is a customizable admin dashboard template based on React18. Built with  Webpack5, [@huxy/pack](https://www.npmjs.com/package/@huxy/pack), [useRouter](https://www.npmjs.com/package/@huxy/router), [useStore](https://www.npmjs.com/package/@huxy/use), etc.
 
 ### 运行
 
