@@ -1,6 +1,6 @@
 {
   "name": "huxy-admin",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "type": "module",
   "description": "Admin dashboard template. Built with React18, Webpack5, useRouter, useStore, eslint, prettier, husky, commitlint, etc.",
   "keywords": [

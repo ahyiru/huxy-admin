@@ -2,6 +2,46 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.5.0](https://github.com/ahyiru/huxy-admin/compare/v1.4.0...v1.5.0) (2023-03-23)
+
+
+### 🚀 Chore | 构建/工程依赖/工具
+
+* 使用@huxy/pack构建项目 ([439f1c1](https://github.com/ahyiru/huxy-admin/commit/439f1c12508b66c2467042f53719398c876001e6))
+* 修改@huxy/pack构建配置 ([ac02c51](https://github.com/ahyiru/huxy-admin/commit/ac02c515d5a9bdaad383d986fe88035f4e2c561a))
+* fix server ([7147276](https://github.com/ahyiru/huxy-admin/commit/71472768433914ec8631dfa8244082a598cee551))
+
+
+### ✨ Features | 新功能
+
+* add module type ([450e75a](https://github.com/ahyiru/huxy-admin/commit/450e75ad8e5b263b830a3ecf8449a8563f364101))
+
+
+### 🐛 Bug Fixes | Bug 修复
+
+* add themes ([c3a1ba4](https://github.com/ahyiru/huxy-admin/commit/c3a1ba462de590b12156359f657879b2b6aa811a))
+* fix @huxy/pack ([5ec0a0e](https://github.com/ahyiru/huxy-admin/commit/5ec0a0eaee87949a9bc19fae6a512974bce45c4d))
+* fix bugs ([a9f40ed](https://github.com/ahyiru/huxy-admin/commit/a9f40edabadd7685f2153bbf25d2ff8a3bea908c))
+* fix bugs ([50f083f](https://github.com/ahyiru/huxy-admin/commit/50f083f137fcb7d33c5e725bca4f4303cab37490))
+* fix components ([a26b8a0](https://github.com/ahyiru/huxy-admin/commit/a26b8a08603f44ff2886cb5a358b7644cfd6614a))
+* fix drawer bgcolor ([962d300](https://github.com/ahyiru/huxy-admin/commit/962d3003d94549f0d3fd3bb442a6d92c223676da))
+* fix ellipsis ([ff0c0de](https://github.com/ahyiru/huxy-admin/commit/ff0c0de8fe9d8b5a66b650bfb56a57baf750bcef))
+* fix getRouter ([06b918e](https://github.com/ahyiru/huxy-admin/commit/06b918e0fad918a496daec7f7e8e569464e67167))
+* fix gitignore ([fd262a3](https://github.com/ahyiru/huxy-admin/commit/fd262a3e7869a21ccfb07d63408d954c71d26ae6))
+* fix pwd ([cfff735](https://github.com/ahyiru/huxy-admin/commit/cfff735e709f84e613c2244002fa1b1ab6d2c0be))
+* fix regx rules ([a83c014](https://github.com/ahyiru/huxy-admin/commit/a83c014c5813f4d48c476b84013d66cdbb19a962))
+* fix style ([839a37a](https://github.com/ahyiru/huxy-admin/commit/839a37a46c35ad51d4ff25ee95627e87f3396692))
+* fix styles ([57cfdf2](https://github.com/ahyiru/huxy-admin/commit/57cfdf22f834cc9b4d9f721301f38146335161ba))
+* fix styles ([22a9f00](https://github.com/ahyiru/huxy-admin/commit/22a9f00d5886b1bf3bcdabb99eca980df73adc36))
+* fix styles ([fee1b0a](https://github.com/ahyiru/huxy-admin/commit/fee1b0a9774414b333b88f2bedbcd119bd650d57))
+* update ([9b29e10](https://github.com/ahyiru/huxy-admin/commit/9b29e10516a04bc74f0f3e16041db52b7fa1c754))
+* update build ([2b95326](https://github.com/ahyiru/huxy-admin/commit/2b953268cdbf602ce38a31a25123f432b4e935f6))
+
+
+### 💄 Styles | 风格
+
+* fix style ([26dfc1f](https://github.com/ahyiru/huxy-admin/commit/26dfc1ffa9d2c46ead4fac5e4c31845827501522))
+
 ## [1.4.0](https://github.com/ahyiru/huxy-admin/compare/v1.3.3...v1.4.0) (2023-02-02)
 
 
