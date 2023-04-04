@@ -43,6 +43,7 @@ export const leftNav = () => {
       key: 'collapse',
       name: left?.collapse ?? 'collapse',
       type: 'collapse',
+      smShow: true,
       Custom: () => <CustomCollapse />,
     },
     {
@@ -104,6 +105,7 @@ export const leftNav = () => {
     {
       key: 'configs',
       type: 'configs',
+      smShow: true,
       Custom: () => <Settings />,
     },
     {
@@ -120,6 +122,7 @@ export const rightNav = language => {
     {
       key: 'username',
       name: user?.name || right?.user,
+      smShow: true,
       img: user?.avatar || defUser,
       children: [
         {
@@ -184,6 +187,7 @@ export const rightNav = language => {
     },
     {
       key: 'themeModel',
+      smShow: true,
       Custom: () => <ThemeModel />,
     },
   ];
