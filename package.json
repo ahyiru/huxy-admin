@@ -54,8 +54,8 @@
     "husky": "^8.0.3"
   },
   "dependencies": {
-    "@huxy/components": "^2.0.4",
-    "@huxy/layout": "^2.0.3",
+    "@huxy/components": "^2.0.5",
+    "@huxy/layout": "^2.0.5",
     "@huxy/materials": "^1.0.2",
     "@huxy/router": "^2.0.2",
     "@huxy/use": "^2.0.1",

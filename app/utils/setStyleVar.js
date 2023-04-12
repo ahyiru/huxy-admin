@@ -19,6 +19,7 @@ const setStyleVar = (theme, ele = document.documentElement) => {
   styleVars['--appLinkColor'] = styleVars['--linkColor'];
   styleVars['--appLinkActiveColor'] = styleVars['--linkActiveColor'];
   styleVars['--appLinkHoverColor'] = styleVars['--linkHoverColor'];
+  styleVars['--containerHeight'] = `${ele.clientHeight}px`;
   setStyle(ele, styleVars, true);
 };
 

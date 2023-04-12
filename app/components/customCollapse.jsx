@@ -1,17 +1,19 @@
 import {useRoute} from '@huxy/router';
-import {useWinResize} from '@huxy/use';
+import {useWinResize, useUpdateEffect} from '@huxy/use';
 import {Anico} from '@huxy/components';
 
 import report from '@app/apis/report/report';
 
-const CustomCollapse = props => {
+const CustomCollapse = ({item, ...rest}) => {
   const {useStore} = useRoute();
-  const {width} = useWinResize();
+  const {width, height} = useWinResize();
   const [collapsed, setCollapsed] = useStore('huxy-collapse');
+  useUpdateEffect(() => {
+    document.documentElement.style.setProperty('--containerHeight', `${height}px`);
+  }, [height]);
   return width <= 1024 ? (
     <span
-      {...props}
-      className="link"
+      {...rest}
       onClick={e => {
         e.stopPropagation();
         setCollapsed(!collapsed);

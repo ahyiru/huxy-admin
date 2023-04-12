@@ -2,11 +2,11 @@ lockfileVersion: '6.0'
 
 dependencies:
   '@huxy/components':
-    specifier: ^2.0.4
-    version: 2.0.4(react-dom@18.2.0)(react@18.2.0)
+    specifier: ^2.0.5
+    version: 2.0.5(react-dom@18.2.0)(react@18.2.0)
   '@huxy/layout':
-    specifier: ^2.0.3
-    version: 2.0.3(react@18.2.0)
+    specifier: ^2.0.5
+    version: 2.0.5(react@18.2.0)
   '@huxy/materials':
     specifier: ^1.0.2
     version: 1.0.2(react@18.2.0)
@@ -2098,8 +2098,8 @@ packages:
     engines: {node: '>=6.9.0'}
     dev: true
 
-  /@huxy/components@2.0.4(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-FKUKiVY9da55e/f88Oa218QRrkr4kurEvAiSXNgOU4ZV2Mtc58T0YEiaL4+xUREhmMUFw3QWHtBrEpAOOEnj9A==}
+  /@huxy/components@2.0.5(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-0E4CMi4KZayaeBKq0RvGuQp/+msgSzV2/B9zt0HI/EUzz0rvFrE5vO5lNKklPxSY+aGIqO3DoBs8Sxbxr0/05Q==}
     peerDependencies:
       react: '>=17.0.0'
       react-dom: '>=17.0.0'
@@ -2115,8 +2115,8 @@ packages:
       fs-extra: 11.1.1
     dev: true
 
-  /@huxy/layout@2.0.3(react@18.2.0):
-    resolution: {integrity: sha512-waavEeMk5JZm+O/AlaVtFHX6B748jQ2ZbjE9YJiXEf5oM4IGLPVMwj6TuIFR8OIRfOlPp/30xRbMlqMkE7x9VQ==}
+  /@huxy/layout@2.0.5(react@18.2.0):
+    resolution: {integrity: sha512-REy/m1AZpLwg42fwhRaSqARzGlXdrqtk6iFv8+UJGyQUyuZn/etmLOClZHpg0/qyUdFwFIoJLmeEU1VjITV/Zg==}
     peerDependencies:
       react: '>=17.0.0'
     dependencies:

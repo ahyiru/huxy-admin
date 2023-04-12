@@ -2,7 +2,7 @@
   .page {
     position: relative;
     width: 100%;
-    min-height: 100vh;
+    min-height: var(--containerHeight);
     padding-bottom: 60px;
     display: flex;
     /*align-items:center;*/
@@ -80,7 +80,17 @@
           }
         }
         &.copy {
-          color: #bbb;
+          color: #ccc;
+        }
+        &.right {
+          color: #eee;
+        }
+        &:active,
+        &.active {
+          color: var(--blue1);
+        }
+        &:hover {
+          color: var(--blue2);
         }
       }
     }
