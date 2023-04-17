@@ -15,14 +15,14 @@ Huxy Admin is a customizable admin dashboard template based on React18. Built wi
 可自行配置运行项目，如运行 `template` 项目：
 
 ```js
-npm start ---dirname=template
+npm start --dirname=template
 
 ```
 
 运行 `blog` 目录下的 `router` 项目：
 
 ```js
-npm start ---dirname=blog/router
+npm start --dirname=blog/router
 
 ```
 
