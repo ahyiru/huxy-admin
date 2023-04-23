@@ -1,16 +1,16 @@
-name: test
+name: Lint CI
 on:
   push:
     branches:
-      - master
+      - develop
     paths:
-      - '.github/**'
+      - '__tests__/**'
 jobs:
-  test:
+  lint:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
-    - name: npm ci
+    - name: Install
       run: npm ci
-    - name: npm test
+    - name: Lint
       run: npm run lint && npm run test
