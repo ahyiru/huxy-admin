@@ -3,8 +3,6 @@ on:
   push:
     branches:
       - develop
-    paths:
-      - '__tests__/**'
 jobs:
   lint:
     runs-on: ubuntu-latest
