@@ -20,14 +20,14 @@ const app = {
 
 export default {
   app,
-  webpack: {
+  webpack: (rootPath, appPath) => ({
     prod: {
       copy: [
         {
-          from: 'app/public/.spa',
-          to: 'app/build/.spa',
+          from: `${appPath}/public/.spa`,
+          to: `${appPath}/build/.spa`,
         },
       ],
     },
-  },
+  }),
 };
