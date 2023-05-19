@@ -50,11 +50,11 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "@huxy/pack": "^1.2.2",
+    "@huxy/pack": "^1.2.3",
     "husky": "^8.0.3"
   },
   "dependencies": {
-    "@huxy/components": "^2.0.7",
+    "@huxy/components": "^2.0.8",
     "@huxy/layout": "^2.0.7",
     "@huxy/materials": "^1.0.2",
     "@huxy/router": "^2.0.3",
