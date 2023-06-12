@@ -7,6 +7,24 @@
 
 Huxy Admin is a customizable admin dashboard template based on React18. Built with  Webpack5, [@huxy/pack](https://www.npmjs.com/package/@huxy/pack), [useRouter](https://www.npmjs.com/package/@huxy/router), [useStore](https://www.npmjs.com/package/@huxy/use), etc.
 
+### [系统功能](./doc/functions.md)
+
+1. 主题配置 ✅
+2. i18n配置 ✅
+3. 路由配置 ✅
+4. 权限管理 ✅
+5. API管理 ✅
+6. 项目管理 ✅
+7. 角色管理 ✅
+8. 监控管理 ✅
+9. 会员管理 ✅
+10. 订单管理 ✅
+11. 消息管理 ✅
+12. 邮件管理 ✅
+13. 页面管理 ✅
+14. 文件管理 ✅
+15. 文档管理 ✅
+
 ### 运行
 
 #### 依赖安装：`pnpm i`
