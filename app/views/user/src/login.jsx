@@ -1,44 +1,53 @@
-import {useEffect, useState} from 'react';
-import {Spinner} from '@huxy/components';
-import {storage, message} from '@huxy/utils';
-import {useIntls} from '@app/components/intl';
-import Input from '@app/components/base/input';
-import Button from '@app/components/base/button';
-import GithubIcon from '@app/components/icons/github';
+import {useEffect, useState, useRef} from 'react';
+import {Form, Input, Button} from 'antd';
+import {UserOutlined, LockOutlined, GithubOutlined, WechatOutlined} from '@ant-design/icons';
+import QRCode from 'qrcode';
+import {Spinner, Mask} from '@huxy/components';
+import {useUpdate} from '@huxy/use';
+import {storage, params2str, isWechat, sleep, uuidv4, message} from '@huxy/utils';
 
 import {isAuthed, goPage} from '@app/utils/utils';
 
-import {apiList, formRules, github_client_id, github_oauth_url} from '../configs';
+import {useIntls} from '@app/components/intl';
 
-const {githubFn, loginFn, activeEmailFn} = apiList;
-const {customNameRule: nameRule, checkVolid} = formRules;
+import {apiList, formRules, githubConfigs, wechatConfigs} from '../configs';
+
+const {activeEmailFn, githubFn, wechatFn, loginFn/* , qrTicketFn */, qrStatusFn} = apiList;
+const {emailRule} = formRules;
 
 const thirdLoginStyle = {
   textAlign: 'center',
   fontSize: '3.6rem',
 };
 
-const formItem = {
-  position: 'relative',
-  paddingBottom: '25px',
-};
-const errorMessage = {
-  position: 'absolute',
-  color: 'var(--red2)',
-  top: '35px',
+const scanLoginStyle = {
+  position: 'fixed',
   left: 0,
+  top: 0,
+  bottom: 0,
+  right: 0,
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  fontSize: '2.8rem',
+  background: '#fcfcfc',
+  color: '#43a047',
+  fontWeight: 500,
+  zIndex: 3,
 };
+
+let fetchQrStatusCount = 0;
 
 const Index = props => {
   const getIntls = useIntls();
-  const [isPending, setIsPending] = useState(false);
-  const [name, setName] = useState('');
-  const [password, setPassword] = useState('');
-  const [nameMes, setNameMes] = useState('');
+  const [pending, setPending] = useState(false);
+  const qrRef = useRef();
+  const rerender = useUpdate();
+  const {state, code, token} = props.params ?? {};
+  const isScan = state?.indexOf('scan0') === 0;
   useEffect(() => {
-    const {code, token} = props.params ?? {};
     if (code) {
-      githubAuth(code);
+      handleAuth(code, state);
       return;
     }
     if (token) {
@@ -49,21 +58,72 @@ const Index = props => {
       props.router.push('/');
     }
   }, []);
-
-  const githubAuth = async code => {
-    setIsPending(true);
+  const setScan = data => {
+    qrRef.current = data;
+    fetchQrStatusCount = 0;
+    rerender();
+  };
+  const getQrStatus = async status => {
+    if (!qrRef.current) {
+      return;
+    }
+    if (fetchQrStatusCount > 40) {
+      setScan();
+      message.error('请稍后再试！');
+      fetchQrStatusCount = 0;
+      return;
+    }
+    const result = await qrStatusFn({status});
+    if (result.status) {
+      setScan();
+      if (result.status === 'error') {
+        message.error('登录失败！');
+        return;
+      }
+      message.success('登录成功！');
+      storage.set('token', result.status);
+      goPage();
+    } else {
+      fetchQrStatusCount++;
+      await sleep(1200);
+      getQrStatus(status);
+    }
+  };
+  const generateQR = async state => {
+    const {wechat_oauth_url, ...rest} = wechatConfigs;
+    const url = `${wechat_oauth_url}${params2str({...rest, state})}#wechat_redirect`;
     try {
-      const {code: msgCode, token} = await githubFn({code});
-      if (msgCode === 200) {
+      const qr = await QRCode.toDataURL(url);
+      setScan(qr);
+    } catch (err) {
+      console.error(err);
+    }
+  };
+  const getQr = async () => {
+    const qrUuid = `scan0${uuidv4().replaceAll('-', '0')}`;
+    // const result = await qrTicketFn();
+    await generateQR(qrUuid);
+    getQrStatus(qrUuid);
+  };
+  const handleAuth = async (code, state) => {
+    setPending(true);
+    const authFn = !state ? githubFn : wechatFn;
+    try {
+      const {token} = await authFn({code, state});
+      if (token) {
         storage.set('token', token);
         // props.router.push('/');
         goPage();
+      } else {
+        setPending(false);
+        /* eslint-disable */
+        setTimeout(() => WeixinJSBridge.call('closeWindow'), 1000);
       }
     } catch (err) {}
-    setIsPending(false);
+    setPending(false);
   };
   const activeEmail = async query => {
-    setIsPending(true);
+    setPending(true);
     try {
       const {code, token, message: msg} = await activeEmailFn({token: query});
       if (code === 200) {
@@ -73,14 +133,11 @@ const Index = props => {
         goPage();
       }
     } catch (err) {}
-    setIsPending(false);
+    setPending(false);
   };
 
   const onFinish = async values => {
-    if (!checkValues(nameRule, setNameMes)) {
-      return;
-    }
-    setIsPending(true);
+    setPending(true);
     try {
       const {code, token, message: msg} = await loginFn(values);
       if (code === 200) {
@@ -89,57 +146,52 @@ const Index = props => {
         // props.router.push('/');
         goPage();
       }
-    } catch (err) {}
-    setIsPending(false);
+    } catch (err) {
+      goPage();
+    }
+    setPending(false);
   };
 
-  const auth = () => {
+  const githubCode = () => {
+    const {github_oauth_url, github_client_id} = githubConfigs;
     location.href = `${github_oauth_url}?client_id=${github_client_id}`;
   };
 
-  const checkValues = (rule, setState) => {
-    const mes = checkVolid(rule, name);
-    if (mes) {
-      setState(mes);
-      return false;
-    }
-    return true;
+  const wechatCode = () => {
+    const {wechat_oauth_url, ...rest} = wechatConfigs;
+    location.href = `${wechat_oauth_url}${params2str(rest)}#wechat_redirect`;
   };
 
-  const nameChange = e => {
-    const val = e.target.value;
-    setName(val);
-    const mes = checkVolid(nameRule, val);
-    setNameMes(mes ?? '');
-  };
+  if (isScan) {
+    return <div style={scanLoginStyle}>{pending ? '正在登录...' : '登录成功！'}</div>;
+  }
 
   return (
     <>
-      <form name="login" autoComplete="off">
-        <div style={formItem}>
-          <Input placeholder={getIntls('login.username')} value={name} onChange={nameChange} />
-          {nameMes ? <span style={errorMessage}>{nameMes}</span> : null}
-        </div>
-        <div style={formItem}>
-          <Input type="password" value={password} onChange={e => setPassword(e.target.value)} placeholder={getIntls('login.password')} autoComplete="new-password" />
-        </div>
-        <div style={formItem}>
-          <Button type="button" className="block info" onClick={() => onFinish({name, password})}>
+      <Form name="login" initialValues={{}} onFinish={onFinish} autoComplete="off">
+        <Form.Item name="email" rules={emailRule}>
+          <Input prefix={<UserOutlined style={{marginRight: '7px', color: '#999'}} />} placeholder={getIntls('login.email')} />
+        </Form.Item>
+        <Form.Item name="password" /* rules={passwordRule} */>
+          <Input.Password prefix={<LockOutlined style={{marginRight: '7px', color: '#999'}} />} type="password" placeholder={getIntls('login.password')} autoComplete="new-password" />
+        </Form.Item>
+        <Form.Item>
+          <Button block type="primary" htmlType="submit">
             {getIntls('login.login')}
           </Button>
-        </div>
-        <div style={formItem}>
-          <Button type="button" className="block" onClick={e => props.router.push('/')}>
+        </Form.Item>
+        <Form.Item>
+          <Button block onClick={() => onFinish({email: 'test1@zys.com', password: 'test1234'})}>
             {getIntls('login.visitor')}
           </Button>
-        </div>
-      </form>
+        </Form.Item>
+      </Form>
       <div>
         <div style={{overflow: 'hidden'}}>
           <span className="link" style={{float: 'right'}} onClick={e => props.router.push('/user/signup')}>
             {getIntls('login.signup')}
           </span>
-          <span className="link" style={{float: 'left'}} onClick={e => props.router.push('/user/signup')}>
+          <span className="link" style={{float: 'left'}} onClick={e => props.router.push('/user/verifyEmail')}>
             {getIntls('login.forgetPwd')}
           </span>
         </div>
@@ -148,11 +200,23 @@ const Index = props => {
         </div>
         <div style={thirdLoginStyle}>
           <span className="link">
-            <GithubIcon onClick={() => auth()}/>
+            <GithubOutlined onClick={() => githubCode()} />
+          </span>
+          <span className="link" style={{marginLeft: '3rem', color: '#8ae14d'}}>
+            <WechatOutlined onClick={() => isWechat() ? wechatCode() : getQr()} />
           </span>
         </div>
+        <Mask open={qrRef.current} close={e => setScan()}>
+          {
+            qrRef.current ? <div style={{width: '85%', maxWidth: '35rem', textAlign: 'center', background: '#333', padding: '15px 20px', color: '#fff', fontWeight: 500}}>
+              <h2 style={{margin: 0,}}>微信登录</h2>
+              <div style={{padding: '20px'}}><img width="100%" src={qrRef.current} alt="qr" /></div>
+              <p style={{margin: '0 20px', marginBottom: 0, height: '32px', lineHeight: '32px', background: '#232323', borderRadius: '16px'}}>请使用微信扫描二维码登录</p>
+            </div> : <div style={{color: '#43a047', fontWeight: 500, fontSize: '3rem'}}>登录中...</div>
+          }
+        </Mask>
       </div>
-      {isPending && <Spinner global />}
+      {pending && <Spinner global />}
     </>
   );
 };

@@ -4,7 +4,7 @@ import theme from './theme';
 import main from './main';
 import login from './login';
 
-const title = '项目模板';
+const title = 'Huxy-Admin';
 
 export default {
   title,

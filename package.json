@@ -17,13 +17,12 @@
     "webgl",
     "hooks",
     "webpack",
-    "eslint",
-    "prettier",
-    "husky",
-    "commitlint",
+    "full-stack",
+    "MERN",
+    "customizable",
+    "responsive",
     "admin",
-    "template",
-    "dashboard"
+    "template"
   ],
   "sideEffects": [
     "*.css",
@@ -32,7 +31,6 @@
   "scripts": {
     "postinstall": "husky install",
     "start": "pack start",
-    "start1": "npm run start --dirname='app1'",
     "build": "pack run build",
     "analyze": "pack run analyze",
     "server": "pack run server",
@@ -42,7 +40,9 @@
     "stylelint": "stylelint 'app/**/*.{css,less}'",
     "lint": "npm run eslint && npm run stylelint",
     "lint-fix": "eslint --fix 'app/**/*.{js,jsx}' && stylelint --fix 'app/**/*.{css,less}'",
-    "prettier": "prettier 'app/**/*' --write --ignore-unknown && npm run lint-fix"
+    "prettier": "prettier 'app/**/*' --write --ignore-unknown && npm run lint-fix",
+    "server-fix": "eslint --fix 'server/**/*.{js,jsx,mjs}'",
+    "server-pre": "prettier 'server/**/*' --write --ignore-unknown && npm run server-fix"
   },
   "repository": {
     "type": "git",
@@ -54,12 +54,15 @@
     "husky": "^8.0.3"
   },
   "dependencies": {
+    "@ant-design/icons": "^5.1.4",
     "@huxy/components": "^2.0.10",
     "@huxy/layout": "^2.0.8",
     "@huxy/materials": "^1.0.3",
     "@huxy/router": "^2.0.5",
     "@huxy/use": "^2.0.3",
     "@huxy/utils": "^2.0.10",
+    "antd": "^5.6.4",
+    "qrcode": "^1.5.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   }

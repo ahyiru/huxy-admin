@@ -46,3 +46,9 @@ Thumbs.db
 __snapshots__
 
 cert
+
+# dist
+dist
+
+# dead code
+deadcode.json

@@ -1,21 +1,23 @@
-import {message, formatTime} from '@huxy/utils';
+import {formatTime, message} from '@huxy/utils';
+
 import {langStore, userInfoStore} from '@app/store/stores';
 import {getIntls} from '@app/components/intl';
 
 import Settings from '@app/components/settings';
-import FullPage from '@app/components/fullScreen';
 import CustomCollapse from '@app/components/customCollapse';
+import Notify from '@app/components/notify';
 import Search from '@app/components/search';
 import ThemeModel from '@app/components/themeModel';
 import Icon from '@app/components/icon';
 
 import {logout} from '@app/utils/utils';
 
-import GithubIcon from '@app/components/icons/github';
-
 import defUser from '@app/assets/images/user/2.png';
 import wx from '@app/assets/images/wx.jpg';
 import langList from './langList';
+import ProjectList from './project';
+import AppTools from './appTools';
+import getMemberLink from './getMemberLink';
 
 import {buildTime} from '.';
 
@@ -23,17 +25,20 @@ import pkg from '../../package.json';
 
 const changeLang = ({key}) => langStore.setState(key);
 
-const buildInfo = buildTime ? [
-  {
-    key: 'version',
-    type: 'version',
-    name: 'version',
-    icon: <Icon icon="ico-history" />,
-    handle: item => {
-      message.info(`version：${pkg.version}，构建时间：${formatTime(buildTime)}`);
+const buildInfo = buildTime
+  ? [
+    {
+      // divider: true,
+      key: 'version',
+      type: 'version',
+      name: 'version',
+      icon: <Icon icon="EyeOutlined" />,
+      handle: item => {
+        message.info(`version：${pkg.version}，构建时间：${formatTime(buildTime)}`);
+      },
     },
-  },
-] : [];
+  ]
+  : [];
 
 export const leftNav = () => {
   const left = getIntls('nav.left', {});
@@ -43,7 +48,7 @@ export const leftNav = () => {
       name: left?.collapse ?? 'collapse',
       type: 'collapse',
       smShow: true,
-      Custom: () => <CustomCollapse />,
+      Custom: props => <CustomCollapse {...props} />,
     },
     {
       key: 'projectList',
@@ -51,66 +56,27 @@ export const leftNav = () => {
       type: 'projectList',
       arrowDir: 'lt',
       Ricon: true,
-      children: [
-        {
-          key: 'scenedesign',
-          name: 'scenes',
-          icon: <Icon icon="ico-arrow-right" />,
-          type: 'link',
-          link: 'http://ihuxy.com:7000',
-        },
-        {
-          key: 'webgl',
-          name: 'webgl',
-          icon: <Icon icon="ico-arrow-right" />,
-          type: 'link',
-          link: 'http://ihuxy.com:8081',
-        },
-        {
-          key: 'filesystem',
-          name: 'filesystem',
-          icon: <Icon icon="ico-arrow-right" />,
-          type: 'link',
-          link: 'https://ihuxy.com/files',
-        },
-        {
-          key: 'PhoenixUI',
-          name: 'PhoenixUI',
-          icon: <Icon icon="ico-arrow-right" />,
-          type: 'link',
-          link: 'http://ihuxy.com:8088',
-        },
-        {
-          key: 'API文档',
-          name: left?.apis ?? 'API文档',
-          icon: <Icon icon="ico-arrow-right" />,
-          type: 'link',
-          link: 'https://ihuxy.com/md2html',
-        },
-      ],
+      smShow: true,
+      ChildRender: props => <ProjectList {...props} i18ns={left ?? {}} />,
     },
     {
       key: 'wechat',
       title: 'wechat',
-      icon: <Icon icon="ico-heart" />,
+      icon: <Icon icon="WechatOutlined" />,
       arrowDir: 'lt',
       ChildRender: item => (
         <div className="follow-me">
           <img src={wx} alt="wechat" />
-          <p>{left?.followMe ?? 'followMe'}：yiru_js</p>
+          <p>前端道萌</p>
+          {/* <p>{left?.followMe ?? 'followMe'}：yiru_js</p> */}
         </div>
       ),
     },
     {
-      key: 'configs',
-      type: 'configs',
+      ...getMemberLink(),
       smShow: true,
-      Custom: () => <Settings />,
-    },
-    {
-      key: 'search',
-      title: left?.search ?? '搜索',
-      Custom: () => <Search />,
+      name: undefined,
+      title: left?.chatbot ?? 'AI助手',
     },
   ];
 };
@@ -118,6 +84,13 @@ export const rightNav = language => {
   const user = userInfoStore.getState();
   const right = getIntls('nav.right', {});
   return [
+    {
+      key: 'configs',
+      icon: <Icon icon="ToolOutlined" />,
+      type: 'configs',
+      smShow: true,
+      Custom: props => <Settings {...props} />,
+    },
     {
       key: 'username',
       name: user?.name || right?.user,
@@ -128,14 +101,21 @@ export const rightNav = language => {
           key: 'profile',
           name: right?.profile ?? '个人中心',
           type: 'profile',
-          icon: <Icon icon="ico-history" />,
+          icon: <Icon icon="UserOutlined" />,
           path: '/profile',
+        },
+        {
+          key: 'order',
+          name: right?.orders ?? '我的订单',
+          type: 'order',
+          icon: <Icon icon="ShoppingCartOutlined" />,
+          path: '/payer/count/order',
         },
         {
           key: 'settings',
           name: right?.settings ?? '设置',
           type: 'setting',
-          icon: <Icon icon="ico-circle-outer" />,
+          icon: <Icon icon="SettingOutlined" />,
           path: '/profile',
         },
         {
@@ -143,7 +123,7 @@ export const rightNav = language => {
           key: 'logout',
           name: right?.logout ?? '退出',
           type: 'logout',
-          icon: <Icon icon="ico-stop" />,
+          icon: <Icon icon="PoweroffOutlined" />,
           handle: item => {
             logout();
           },
@@ -152,9 +132,19 @@ export const rightNav = language => {
       ],
     },
     {
+      key: 'notify',
+      title: right?.notify ?? '消息',
+      Custom: props => <Notify {...props} />,
+    },
+    {
+      key: 'themeModel',
+      smShow: true,
+      Custom: props => <ThemeModel {...props} />,
+    },
+    {
       key: 'language',
       name: right?.[language] ?? '语言',
-      Custom: () => (
+      Custom: props => (
         <span className="link" title={right?.[language] ?? '语言'}>
           <div className="icon">
             <img width="1" height="1" src={langList.find(({key}) => key === language)?.icon} alt={language} />
@@ -165,29 +155,21 @@ export const rightNav = language => {
         key,
         name: right?.[key] ?? name,
         type: 'language',
-        icon: (
-          <div key={key} className="img">
-            <img src={icon} alt={key} />
-          </div>
-        ),
+        icon: <img src={icon} alt={key} />,
         handle: changeLang,
       })),
     },
     {
-      key: 'github',
-      title: right?.github ?? 'Github',
-      icon: <GithubIcon />,
-      type: 'link',
-      link: 'https://github.com/ahyiru/web-design',
+      key: 'apps',
+      title: 'apps',
+      icon: <Icon icon="AppstoreAddOutlined" />,
+      arrowDir: 'rt',
+      ChildRender: props => <AppTools />,
     },
     {
-      key: 'fullscreen',
-      Custom: () => <span className="link" title="fullscreen"><span className="node-icon"><FullPage /></span></span>,
-    },
-    {
-      key: 'themeModel',
-      smShow: true,
-      Custom: () => <ThemeModel />,
+      key: 'search',
+      title: right?.search ?? '搜索',
+      Custom: props => <Search {...props} />,
     },
   ];
 };

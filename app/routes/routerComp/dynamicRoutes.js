@@ -1,5 +1,6 @@
 import layoutRoutes from '@app/views/layout/routes';
-import pageRoutes from '@app/views/page/routes';
+import payerRoutes from '@app/views/payer/routes';
+import messageRoutes from '@app/views/message/routes';
 import playgroundRoutes from '@app/views/playground/routes';
 
 const profileRoutes = {
@@ -7,7 +8,7 @@ const profileRoutes = {
   name: '个人中心',
   title: '个人中心',
   hideMenu: true,
-  component: props => <h1>{<h1>{props.inputPath} is comming...</h1>}</h1>,
+  component: () => import('@app/views/user/src/profile'),
 };
 
-export default [layoutRoutes, pageRoutes, playgroundRoutes, profileRoutes];
+export default [layoutRoutes, payerRoutes, playgroundRoutes, ...messageRoutes, profileRoutes];

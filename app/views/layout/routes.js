@@ -1,7 +1,7 @@
 const routes = {
   path: '/layout',
   name: '框架配置',
-  icon: 'ico-flag',
+  icon: 'LayoutOutlined',
   component: () => import('./src'),
 };
 

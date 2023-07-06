@@ -8,12 +8,23 @@ const routes = [
       {
         path: '/signin',
         name: '登录',
+        title: '登录',
         component: () => import('./src/login'),
       },
       {
         path: '/signup',
         name: '注册',
         component: () => import('./src/signup'),
+      },
+      {
+        path: '/verifyEmail',
+        name: '验证邮箱',
+        component: () => import('./src/verifyEmail'),
+      },
+      {
+        path: '/setNewPwd',
+        name: '重置密码',
+        component: () => import('./src/setNewPwd'),
       },
     ],
   },

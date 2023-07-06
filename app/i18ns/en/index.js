@@ -4,7 +4,7 @@ import theme from './theme';
 import main from './main';
 import login from './login';
 
-const title = 'admin template';
+const title = 'Huxy-Admin';
 
 export default {
   title,

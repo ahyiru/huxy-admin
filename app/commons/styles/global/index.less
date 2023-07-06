@@ -1,14 +1,5 @@
 /* global style*/
 
-.node-style {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  display: inline-block;
-  user-select: none;
-  vertical-align: middle;
-}
-
 .link {
   text-decoration: none;
   cursor: pointer;
@@ -30,8 +21,14 @@
 }
 .link[disabled]:active,
 .link[disabled].active,
-.link[disabled]:hover, {
+.link[disabled]:hover {
   color: var(--linkColor);
+}
+
+@media screen and (max-width: 1024px) {
+  .sm-hide {
+    display: none;
+  }
 }
 
 /*li {

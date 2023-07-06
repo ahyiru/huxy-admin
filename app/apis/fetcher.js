@@ -4,7 +4,7 @@ import {PROXY} from '@app/configs';
 
 import {logout} from '@app/utils/utils';
 
-const TARGET = PROXY?.prefix ?? '/api';
+const TARGET = Array.isArray(PROXY) ? PROXY[0]?.prefix : PROXY?.prefix ?? '/api';
 
 const success_code = [200, 10000];
 
@@ -39,6 +39,24 @@ const handler = response => {
     });
 };
 
+const handleStream = async response => {
+  if (response.status !== 200) {
+    let msg;
+    const reader = await response.body.getReader();
+    const {value} = await reader.read();
+    const decoder = new TextDecoder('utf8');
+    const dataString = decoder.decode(value);
+    try {
+      msg = JSON.parse(dataString).message;
+    } catch (err) {
+      msg = response.statusText;
+    }
+    msgAlert.error(msg);
+    throw {message: msg, code: response.status};
+  }
+  return response.body;
+};
+
 const dlHandler = response => {
   if (response.status !== 200) {
     msgAlert.error(response.statusText);
@@ -69,11 +87,13 @@ const dlFile = fetcher(dlHandler);
 
 const getToken = () => ({Authorization: `yiru ${storage.get('token') || ''}`});
 
-const fetch = ({method, url, prefix, ...opt}) => fetchApi(method)(`${prefix ?? TARGET}${url}`, {headers: getToken(), credentials: 'omit', ...opt});
+const fetch = ({method, url, prefix, headers, ...opt}) => fetchApi(method)(`${prefix ?? TARGET}${url}`, {headers: {...getToken(), ...headers}, credentials: 'omit', ...opt});
 
-export const suspense = ({method, url, prefix, ...opt}) => wrapPromise(fetchApi(method)(`${prefix ?? TARGET}${url}`, {headers: getToken(), ...opt}));
+export const suspense = ({method, url, prefix, headers, ...opt}) => wrapPromise(fetchApi(method)(`${prefix ?? TARGET}${url}`, {headers: {...getToken(), ...headers}, ...opt}));
 
 export const dlApi = ({method, url, prefix, ...opt}) => dlFile(method)(`${prefix ?? TARGET}${url}`, {headers: getToken(), ...opt});
+
+export const fetchStream = ({method, url, prefix, headers, ...opt}) => fetcher(handleStream)(method)(`${prefix ?? TARGET}${url}`, {headers: {...getToken(), ...headers}, ...opt});
 
 export const testFetcher = ({method, url, prefix, ...opt}) => fetcher()(method)(`${prefix ?? TARGET}${url}`, {headers: getToken(), credentials: 'omit', ...opt});
 
