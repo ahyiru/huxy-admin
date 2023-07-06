@@ -1,15 +1,19 @@
 ## Huxy Admin
 
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/ahyiru/ihuxy/blob/develop/LICENSE)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/ahyiru/huxy-admin/blob/develop/LICENSE)
 [![npm version](https://img.shields.io/npm/v/@huxy/router.svg)](https://www.npmjs.com/package/@huxy/router)
 [![GitHub Workflow Status (with branch)](https://img.shields.io/github/actions/workflow/status/ahyiru/huxy-admin/lint-ci.yml?branch=develop)](https://github.com/ahyiru/huxy-admin/actions/workflows/lint-ci.yml)
 [![](https://img.shields.io/badge/blog-ihuxy-blue.svg)](http://ihuxy.com/)
 
 Huxy Admin is a customizable admin dashboard template based on React18. Built with  Webpack5, [@huxy/pack](https://www.npmjs.com/package/@huxy/pack), [useRouter](https://www.npmjs.com/package/@huxy/router), [useStore](https://www.npmjs.com/package/@huxy/use), etc.
 
-Huxy Admin 是一个可定制的后台管理模版，用于高效、便捷地开发可维护性和可扩展性强的系统，提供定制化软件设计与开发服务。
+Huxy Admin is a customizable admin template for efficient and convenient development of maintainable and scalable systems, providing customized software design and development.
 
-### [系统功能](./doc/functions.md)
+Huxy Admin uses MERN full-stack technology to quickly develop responsive web applications.
+
+Huxy Admin 是一个可定制的后台管理模版，用于高效、便捷地开发可维护性和可扩展性强的系统，提供定制化软件设计与开发。Huxy Admin 使用 MERN 全栈技术，可快速开发响应式 Web 应用。
+
+### [系统功能](https://github.com/ahyiru/huxy-admin/blob/develop/doc/functions.md)
 
 1. 主题配置 ✅
 2. i18n配置 ✅
