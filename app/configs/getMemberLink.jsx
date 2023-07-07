@@ -6,7 +6,7 @@ const getMemberLink = (i18ns = {}) => ({
   name: i18ns.chatbot ?? 'AI助手',
   icon: <Icon icon="RobotOutlined" />,
   type: 'link',
-  link: `http://chat.ihuxy.com`,
+  link: `https://ihuxy.com/paychat`,
 });
 
 export default getMemberLink;
