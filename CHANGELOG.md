@@ -2,6 +2,52 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.6.0](https://github.com/ahyiru/huxy-admin/compare/v1.5.0...v1.6.0) (2023-07-07)
+
+
+### ✨ Features | 新功能
+
+* add pack ([f2c90e1](https://github.com/ahyiru/huxy-admin/commit/f2c90e1b169f379ada4db92a200f4adc0ca2bfdb))
+* nav bar small screen show config ([84299da](https://github.com/ahyiru/huxy-admin/commit/84299dab5738d6291c141293f2651410947ca650))
+* update pack ([634f4be](https://github.com/ahyiru/huxy-admin/commit/634f4be64e8ac54740a2f947c5424270ee74f018))
+
+
+### 📦‍ Build System | 打包构建
+
+* update packages ([1c71696](https://github.com/ahyiru/huxy-admin/commit/1c71696fb92cfa95909f0fd0388fe4c9bf2f6c1b))
+* update packages ([4d37e18](https://github.com/ahyiru/huxy-admin/commit/4d37e1818d846dfb9cca7103da90d70055643563))
+* update packages ([ddb3c07](https://github.com/ahyiru/huxy-admin/commit/ddb3c0700c5ab6b5e5accd9b6a7193b6e50e901a))
+* update packages ([3c9f8d9](https://github.com/ahyiru/huxy-admin/commit/3c9f8d962553f88fe847656badb3987d6924676d))
+* update packages ([530c4ff](https://github.com/ahyiru/huxy-admin/commit/530c4ff684ef6e9d37bbca1ae73e64f413d85587))
+
+
+### ♻️ Code Refactoring | 代码重构
+
+* 代码重构 ([1ec15ae](https://github.com/ahyiru/huxy-admin/commit/1ec15ae41aebf84a6ba6cef6de002c5762282ac2))
+
+
+### 🐛 Bug Fixes | Bug 修复
+
+* fix auth routes ([e9593c6](https://github.com/ahyiru/huxy-admin/commit/e9593c6d803f56c8a702677a1e7fc91f08df3aea))
+* fix default theme ([954924c](https://github.com/ahyiru/huxy-admin/commit/954924c2a6c5d7e9fc0fe0ad8d66818137d32c48))
+* fix doc ([50fa9f7](https://github.com/ahyiru/huxy-admin/commit/50fa9f772c470e648cfb7ca369c0f359a4b31c0a))
+* fix doc ([34e6683](https://github.com/ahyiru/huxy-admin/commit/34e6683c8c5ef6fb10b5e71ed8100e40ce6a69df))
+* fix doc ([0ae69ca](https://github.com/ahyiru/huxy-admin/commit/0ae69cae5bc518b132d67a75820836067b9227bf))
+* fix doc ([2456e9f](https://github.com/ahyiru/huxy-admin/commit/2456e9fa90df29c4ab91a7259e633c0037c439ff))
+* fix doc ([fd0d7b9](https://github.com/ahyiru/huxy-admin/commit/fd0d7b9ffcf0a22eb5c9ded2f234b6b6c09a2241))
+* fix doc ([dbc9db8](https://github.com/ahyiru/huxy-admin/commit/dbc9db85357676ca03ab54ec2018ca20456c08c7))
+* fix playground ([2d6a515](https://github.com/ahyiru/huxy-admin/commit/2d6a51573b68d990b1f489985151376dd6f95542))
+* fix small screen menu bottom ([88e9572](https://github.com/ahyiru/huxy-admin/commit/88e9572586b696c17997292b5f57f9ef72207245))
+* fix styles ([df14892](https://github.com/ahyiru/huxy-admin/commit/df14892db6aa4a2dbb4c2809e8b638721b10517f))
+* fix styles ([7a380e1](https://github.com/ahyiru/huxy-admin/commit/7a380e1a5b110ff902fbec8577e9d336671b0ff7))
+* fix styles ([5f1b30b](https://github.com/ahyiru/huxy-admin/commit/5f1b30bafe7e6fd7178839c3c9d867228158d489))
+* fix styles ([7315447](https://github.com/ahyiru/huxy-admin/commit/73154475f535f5bbaa1e559fa763fab544c098d4))
+* fix workflows ([140a8db](https://github.com/ahyiru/huxy-admin/commit/140a8db3bfd78f3b28364ca97d3cd47daf17e011))
+* fix workflows ([69aa9f2](https://github.com/ahyiru/huxy-admin/commit/69aa9f2d3f3dc74442dedc2a240190662dc4da40))
+* fix workflows ([466a6fb](https://github.com/ahyiru/huxy-admin/commit/466a6fb37714f701115d5d6efe1c681f127ea27e))
+* fix workflows test ([b2fe11b](https://github.com/ahyiru/huxy-admin/commit/b2fe11be21203a21be3f538a5a0923de46cb3a3e))
+* update packages ([630eae1](https://github.com/ahyiru/huxy-admin/commit/630eae1a276b81f81fa6b3ce1e5fdef981571052))
+
 ## [1.5.0](https://github.com/ahyiru/huxy-admin/compare/v1.4.0...v1.5.0) (2023-03-23)
 
 
