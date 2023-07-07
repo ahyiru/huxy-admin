@@ -208,13 +208,13 @@ const Index = props => {
               handler={
                 <Space size="small">
                   {
-                    payCount ? <Button loading={pending} onClick={() => props.router.push('https://ihuxy.com/paychat')} type="primary">
+                    payCount ? <Button loading={pending} onClick={() => props.router.push('https://ihuxy.com/chatbot')} type="primary">
                       去聊天
                     </Button> : <Button loading={pending} onClick={() => props.router.push('/payer/count/member')} type="primary">
                       开通会员
                     </Button>
                   }
-                  <Button loading={pending} onClick={() => props.router.push('/chatbot')}>
+                  <Button loading={pending} onClick={() => props.router.push('https://ihuxy.com/chatbot')}>
                     去试用
                   </Button>
                 </Space>
