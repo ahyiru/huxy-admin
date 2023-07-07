@@ -1,10 +1,12 @@
 import pageRoutes from './src/page/routes';
+import configListRoutes from './src/configList/routes';
 
 const routes = {
   path: '/playground',
   name: 'Playground',
   icon: 'ToolOutlined',
   children: [
+    ...configListRoutes,
     {
       path: '/suspense',
       name: 'suspense',

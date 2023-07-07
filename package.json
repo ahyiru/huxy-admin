@@ -2,7 +2,7 @@
   "name": "huxy-admin",
   "version": "1.5.0",
   "type": "module",
-  "description": "Customizable admin dashboard template based on React18.",
+  "description": "Customizable admin template for efficient and convenient development of maintainable and scalable systems, providing customized software design and development.",
   "keywords": [
     "react",
     "low-code",
@@ -60,10 +60,13 @@
     "@huxy/materials": "^1.0.3",
     "@huxy/router": "^2.0.5",
     "@huxy/use": "^2.0.3",
-    "@huxy/utils": "^2.0.10",
+    "@huxy/utils": "^2.0.11",
     "antd": "^5.6.4",
     "qrcode": "^1.5.3",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-virtualized-auto-sizer": "^1.0.20",
+    "react-window": "^1.8.9",
+    "react-window-infinite-loader": "^1.0.9"
   }
 }
