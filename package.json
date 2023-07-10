@@ -56,7 +56,7 @@
   "dependencies": {
     "@ant-design/icons": "^5.1.4",
     "@huxy/components": "^2.1.0",
-    "@huxy/layout": "^2.1.0",
+    "@huxy/layout": "^2.1.1",
     "@huxy/materials": "^1.1.0",
     "@huxy/router": "^2.1.0",
     "@huxy/use": "^2.1.0",
