@@ -9,8 +9,8 @@ dependencies:
     specifier: ^5.2.6
     version: 5.2.6(react-dom@18.2.0)(react@18.2.0)
   '@huxy/components':
-    specifier: ^2.1.2
-    version: 2.1.2(react-dom@18.2.0)(react@18.2.0)
+    specifier: ^2.1.3
+    version: 2.1.3(react-dom@18.2.0)(react@18.2.0)
   '@huxy/layout':
     specifier: ^2.1.2
     version: 2.1.2(react@18.2.0)
@@ -21,11 +21,11 @@ dependencies:
     specifier: ^2.1.0
     version: 2.1.0(react@18.2.0)
   '@huxy/use':
-    specifier: ^2.1.1
-    version: 2.1.1(react@18.2.0)
+    specifier: ^2.1.2
+    version: 2.1.2(react@18.2.0)
   '@huxy/utils':
-    specifier: ^2.1.8
-    version: 2.1.8
+    specifier: ^2.1.9
+    version: 2.1.9
   antd:
     specifier: ^5.11.0
     version: 5.11.0(react-dom@18.2.0)(react@18.2.0)
@@ -50,8 +50,8 @@ dependencies:
 
 devDependencies:
   '@huxy/pack':
-    specifier: ^1.4.3
-    version: 1.4.3(@types/node@18.18.8)(typescript@5.2.2)
+    specifier: ^1.4.6
+    version: 1.4.6(@types/node@18.18.8)(typescript@5.2.2)
   husky:
     specifier: ^8.0.3
     version: 8.0.3
@@ -2244,8 +2244,8 @@ packages:
     engines: {node: '>=6.9.0'}
     dev: true
 
-  /@huxy/components@2.1.2(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-E1/WxDnlAjvWlrVTpcmiJpSutQNWBrfhJfEymX6vZCLukmo1qfJYZx/Nqq6YK3EH3fRbBQWa63l6Ph45VR9iYw==}
+  /@huxy/components@2.1.3(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-kP/cctcCM4dM+EiGxFc1FJpB5yYOcAcleleANvcZ9JnfDng45CbXVJwFuq+Xng4CVMappj7M7bYTZC2NLpSNsQ==}
     peerDependencies:
       react: '>=17.0.0'
       react-dom: '>=17.0.0'
@@ -2282,8 +2282,8 @@ packages:
     engines: {node: '>=18.0.0'}
     dev: true
 
-  /@huxy/pack@1.4.3(@types/node@18.18.8)(typescript@5.2.2):
-    resolution: {integrity: sha512-4tDvnVhXLWhcl68McATG/fS8eRCoh6tspQ2hmNRO1wHaJf5Z0Xpz5PBLtHMp3uRpvCiedfH+a3t6PvtKtKSMhQ==}
+  /@huxy/pack@1.4.6(@types/node@18.18.8)(typescript@5.2.2):
+    resolution: {integrity: sha512-GGFC9mXtX1UxWGgzfeWYSm57cFKUVuBGbgzM/UD8ee0Cxz7ayvbt3+/Qy18YYEHQtRmodYF8TJjRYyWgVCjm0Q==}
     engines: {node: '>=19.0.0'}
     hasBin: true
     dependencies:
@@ -2297,6 +2297,7 @@ packages:
       '@commitlint/config-conventional': 18.1.0
       '@huxy/copy-file-webpack-plugin': 1.1.0
       '@huxy/open-browser-webpack-plugin': 1.1.0
+      '@huxy/utils': 2.1.9
       autoprefixer: 10.4.16(postcss@8.4.31)
       babel-jest: 29.7.0(@babel/core@7.23.2)
       babel-loader: 9.1.3(@babel/core@7.23.2)(webpack@5.89.0)
@@ -2368,17 +2369,16 @@ packages:
       react: 18.2.0
     dev: false
 
-  /@huxy/use@2.1.1(react@18.2.0):
-    resolution: {integrity: sha512-LmodJMsRJEeNPfdMVUbHzqygCRlkmWMOy0b6J7oRBIu7LSwzQTsc7Y7U8iOn7qgNM7lW/5iTS4DniZOv9FIfHw==}
+  /@huxy/use@2.1.2(react@18.2.0):
+    resolution: {integrity: sha512-XAwYOQIsWbi7nNmbJT60sCnPqqI7IC6NUVK2WLzoVoQwzV3j2c+jjNH9N+s+rvWspgkIeQmrbAJLVQE4BSh8+Q==}
     peerDependencies:
       react: '>=17.0.0'
     dependencies:
       react: 18.2.0
     dev: false
 
-  /@huxy/utils@2.1.8:
-    resolution: {integrity: sha512-D+qJB1g4r5e9n+hK25HcahZbaoPLzL//hJLy9V1wORvfR6UaerFb/HqkurrxsQRP8KQxCtIgZPWSys015ifSUw==}
-    dev: false
+  /@huxy/utils@2.1.9:
+    resolution: {integrity: sha512-xctplWvG6ZMWyS94mhlGaL/q8dsKTQ6xwbtVUiMla9siNN95plDnBSsSiFfZ4b9GQ/lOIAnP55scU/zERlzaIg==}
 
   /@istanbuljs/load-nyc-config@1.1.0:
     resolution: {integrity: sha512-VjeHSlIzpv/NyD3N0YuHfXOPDIixcA1q2ZV98wsMqcYlPmv2n3Yb2lYP9XMElnaFVXg5A7YLTeLu6V84uQDjmQ==}
