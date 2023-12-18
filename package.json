@@ -49,7 +49,7 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "@huxy/pack": "^1.4.6",
+    "@huxy/pack": "^1.4.8",
     "husky": "^8.0.3",
     "webpack-deadcode-plugin": "^0.1.17"
   },
@@ -61,12 +61,12 @@
     "@huxy/router": "^2.1.0",
     "@huxy/use": "^2.1.2",
     "@huxy/utils": "^2.1.9",
-    "antd": "^5.11.0",
+    "antd": "^5.12.2",
     "qrcode": "^1.5.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-virtualized-auto-sizer": "^1.0.20",
-    "react-window": "^1.8.9",
+    "react-window": "^1.8.10",
     "react-window-infinite-loader": "^1.0.9"
   }
 }
