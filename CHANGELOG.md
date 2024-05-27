@@ -1,6 +1,19 @@
 # Changelog
 
-All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
+
+## [1.6.1](https://github.com/ahyiru/huxy-admin/compare/v1.6.0...v1.6.1) (2024-05-27)
+
+
+### Bug Fixes
+
+* fix chatbot link ([7b469fe](https://github.com/ahyiru/huxy-admin/commit/7b469fe66b0d4a96331c5d1383f346c0200c03d4))
+* fix configs ([140eb5d](https://github.com/ahyiru/huxy-admin/commit/140eb5d8dc92cf0d54b7949c33d75bac50a50b4b))
+* fix legacy-peer-deps ([f325939](https://github.com/ahyiru/huxy-admin/commit/f325939b26e686f71658a2097b601eb70bd64d27))
+* fix pack ([4b061bc](https://github.com/ahyiru/huxy-admin/commit/4b061bcc44332cb8ec003ab5c7f4813d044ca355))
+* fix seo ([668cc5a](https://github.com/ahyiru/huxy-admin/commit/668cc5a85440b38d9d4ef03ddfb95861eb37987c))
+* fix styles ([61be150](https://github.com/ahyiru/huxy-admin/commit/61be1502156ff761cf7e3c8e7f40a9e67fafb6ce))
+* login ([f56a034](https://github.com/ahyiru/huxy-admin/commit/f56a034d9646e4d2383b2476b359d0806c253553))
 
 ## [1.6.0](https://github.com/ahyiru/huxy-admin/compare/v1.5.0...v1.6.0) (2023-07-07)
 
