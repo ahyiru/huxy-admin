@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [1.7.0](https://github.com/ahyiru/huxy-admin/compare/v1.6.2...v1.7.0) (2024-06-26)
+
+
+### Features
+
+* add react compiler ([c267ebb](https://github.com/ahyiru/huxy-admin/commit/c267ebbc296a46b54b16b9813dc6a8d568825074))
+
 ## [1.6.2](https://github.com/ahyiru/huxy-admin/compare/v1.6.1...v1.6.2) (2024-06-26)
 
 ## [1.6.1](https://github.com/ahyiru/huxy-admin/compare/v1.6.0...v1.6.1) (2024-05-27)
