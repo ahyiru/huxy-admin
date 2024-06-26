@@ -1,6 +1,6 @@
 {
   "name": "huxy-admin",
-  "version": "1.6.1",
+  "version": "1.6.2",
   "type": "module",
   "description": "Customizable admin template for efficient and convenient development of maintainable and scalable systems, providing customized software design and development.",
   "keywords": [
@@ -33,15 +33,15 @@
     "build": "pack run build",
     "analyze": "pack run analyze",
     "server": "pack run server",
-    "test": "pack run test",
-    "release": "pack run release",
-    "eslint": "eslint 'app/**/*.{js,jsx}'",
-    "stylelint": "stylelint 'app/**/*.{css,less}'",
+    "test": "pack test",
+    "release": "pack release",
+    "eslint": "pack eslint 'app/**/*.{js,jsx}'",
+    "stylelint": "pack stylelint 'app/**/*.{css,less}'",
     "lint": "npm run eslint && npm run stylelint",
-    "lint-fix": "eslint --fix 'app/**/*.{js,jsx}' && stylelint --fix 'app/**/*.{css,less}'",
-    "prettier": "prettier 'app/**/*' --write --ignore-unknown && npm run lint-fix",
-    "server-fix": "eslint --fix 'server/**/*.{js,jsx,mjs}'",
-    "server-pre": "prettier 'server/**/*' --write --ignore-unknown && npm run server-fix"
+    "lint-fix": "pack eslint --fix 'app/**/*.{js,jsx}' && pack stylelint --fix 'app/**/*.{css,less}'",
+    "prettier": "pack prettier 'app/**/*' --write --ignore-unknown && npm run lint-fix",
+    "server-fix": "pack eslint --fix 'server/**/*.{js,jsx,mjs}'",
+    "server-pre": "pack prettier 'server/**/*' --write --ignore-unknown && npm run server-fix"
   },
   "repository": {
     "type": "git",
@@ -49,22 +49,22 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "@huxy/pack": "^1.6.2",
+    "@huxy/pack": "^1.6.5",
     "husky": "^9.0.11",
     "webpack-deadcode-plugin": "^0.1.17"
   },
   "dependencies": {
     "@ant-design/icons": "^5.3.7",
-    "@huxy/components": "^2.1.10",
-    "@huxy/layout": "^2.1.6",
+    "@huxy/components": "^2.1.11",
+    "@huxy/layout": "^2.1.7",
     "@huxy/materials": "^1.1.4",
-    "@huxy/router": "^2.1.7",
-    "@huxy/use": "^2.1.5",
-    "@huxy/utils": "^2.1.12",
-    "antd": "^5.17.3",
+    "@huxy/router": "^2.1.8",
+    "@huxy/use": "^2.1.6",
+    "@huxy/utils": "^2.1.13",
+    "antd": "^5.18.3",
     "qrcode": "^1.5.3",
-    "react": "19.0.0-rc-935180c7e0-20240524",
-    "react-dom": "19.0.0-rc-935180c7e0-20240524",
+    "react": "19.0.0-rc-8971381549-20240625",
+    "react-dom": "19.0.0-rc-8971381549-20240625",
     "react-virtualized-auto-sizer": "^1.0.24",
     "react-window": "^1.8.10",
     "react-window-infinite-loader": "^1.0.9"
