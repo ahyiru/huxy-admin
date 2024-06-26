@@ -5,7 +5,7 @@
 [![GitHub Workflow Status (with branch)](https://img.shields.io/github/actions/workflow/status/ahyiru/huxy-admin/lint-ci.yml?branch=develop)](https://github.com/ahyiru/huxy-admin/actions/workflows/lint-ci.yml)
 [![](https://img.shields.io/badge/blog-ihuxy-blue.svg)](http://ihuxy.com/)
 
-Huxy Admin is a customizable admin dashboard template based on React18. Built with  Webpack5, [@huxy/pack](https://www.npmjs.com/package/@huxy/pack), [useRouter](https://www.npmjs.com/package/@huxy/router), [useStore](https://www.npmjs.com/package/@huxy/use), etc.
+Huxy Admin is a customizable admin dashboard template based on React19. Built with  Webpack5, [@huxy/pack](https://www.npmjs.com/package/@huxy/pack), [useRouter](https://www.npmjs.com/package/@huxy/router), [useStore](https://www.npmjs.com/package/@huxy/use), etc.
 
 Huxy Admin is a customizable admin template for efficient and convenient development of maintainable and scalable systems, providing customized software design and development.
 
