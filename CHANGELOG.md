@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [commit-and-tag-version](https://github.com/absolute-version/commit-and-tag-version) for commit guidelines.
 
+## [1.7.1](https://github.com/ahyiru/huxy-admin/compare/v1.7.0...v1.7.1) (2024-09-06)
+
+
+### Bug Fixes
+
+* fix fetchList ([e5e40c4](https://github.com/ahyiru/huxy-admin/commit/e5e40c496f14a850803e149b9108106a482c20eb))
+* fix husky hooks ([72f1485](https://github.com/ahyiru/huxy-admin/commit/72f1485e36c7436a09b3c812b2c7bf567df8c3f3))
+* fix infos ([6a9a100](https://github.com/ahyiru/huxy-admin/commit/6a9a100b1585a87a6229e198a2ac51a76bcf49cf))
+* fix render ref value ([9356584](https://github.com/ahyiru/huxy-admin/commit/9356584b1369e5468a37737e0a2ff0c8631caaeb))
+* remove StrictMode ([344f23c](https://github.com/ahyiru/huxy-admin/commit/344f23cdaa44476885874ee15c87a88d033b9fa6))
+
 ## [1.7.0](https://github.com/ahyiru/huxy-admin/compare/v1.6.2...v1.7.0) (2024-06-26)
 
 
