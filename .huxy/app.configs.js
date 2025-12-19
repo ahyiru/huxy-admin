@@ -10,7 +10,7 @@ const app = {
   PROD_ROOT_DIR: '/huxy-admin',
   projectName: '...',
   /* PROXY: {
-    url: 'http://api.ihuxy.com',
+    target: 'http://api.ihuxy.com',
     prefix: '/api',
   }, */
   envConfigs: {
