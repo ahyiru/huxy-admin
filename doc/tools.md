@@ -33,7 +33,7 @@ const app = {
   }, */
   envConfigs: { // 全局环境变量
     name: '项目名',
-    _id: '其它属性',
+    id: '其它属性',
   },
 };
 
@@ -203,7 +203,7 @@ export const fetch = ({method, url, prefix, headers, ...opt}) => fetcher(handler
 例如：
 
 ```javascript
-const getApis = () => fetcher({url: '/api/list', params: {projectId: defProject._id, current: 1, size: 100}});
+const getApis = () => fetcher({url: '/api/list', params: {projectId: defProject.id, current: 1, size: 100}});
 ```
 
 ### JWT

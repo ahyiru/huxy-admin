@@ -234,7 +234,7 @@ const {output, loading, updateRouter} = useRouter(routerCfgs);
 #### 获取API
 
 ```javascript
-const getApis = () => fetcher({url: '/api/list', params: {projectId: defProject?._id, current: 1, size: 100}});
+const getApis = () => fetcher({url: '/api/list', params: {projectId: defProject?.id, current: 1, size: 100}});
 ```
 
 #### 根据API信息构建请求函数
