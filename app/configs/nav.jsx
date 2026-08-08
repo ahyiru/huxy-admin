@@ -18,7 +18,7 @@ import langList from './langList';
 import ProjectList from './project';
 import AppTools from './appTools';
 
-import {buildTime} from '.';
+import {buildTime, VERSION} from '.';
 
 import pkg from '../../package.json';
 
@@ -33,7 +33,7 @@ const buildInfo = buildTime
         name: 'version',
         icon: <Icon icon="EyeOutlined" />,
         handle: item => {
-          message.info(`version：${pkg.version}，构建时间：${formatTime(buildTime)}`);
+          message.info(`version：${VERSION}，构建时间：${formatTime(buildTime)}`);
         },
       },
     ]

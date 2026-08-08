@@ -8,7 +8,7 @@ const app = {
   BUILD_DIR: 'build',
   DEV_ROOT_DIR: '/',
   PROD_ROOT_DIR: '/huxy-admin',
-  projectName: '...',
+  projectName: 'huxy',
   /* PROXY: {
     target: 'http://api.ihuxy.com',
     prefix: '/api',
