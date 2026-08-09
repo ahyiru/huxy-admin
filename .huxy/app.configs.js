@@ -1,7 +1,6 @@
 import DeadCodePlugin from 'webpack-deadcode-plugin';
 
 const app = {
-  // HOST: 'http://localhost',
   PORT: 3000,
   PROD_PORT: 3001,
   PUBLIC_DIR: 'public',
