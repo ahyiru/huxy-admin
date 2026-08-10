@@ -31,4 +31,6 @@ const apiList = projectId => [
 
 const getApis = () => ({result: {list: apiList(defProject?.id)}});
 
-export default getApis;
+const apis = (await getApis()).result?.list ?? [];
+
+export default apis;
