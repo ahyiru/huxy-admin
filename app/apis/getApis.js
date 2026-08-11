@@ -31,6 +31,11 @@ const apiList = projectId => [
 
 const getApis = () => ({result: {list: apiList(defProject?.id)}});
 
-const apis = (await getApis()).result?.list ?? [];
+let apis = [];
+try {
+  apis = (await getApis()).result?.list ?? [];
+} catch (err) {
+  console.error(err.message);
+}
 
 export default apis;
