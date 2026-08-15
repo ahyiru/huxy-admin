@@ -48,18 +48,18 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "@huxy/pack": "2.3.0",
+    "@huxy/pack": "2.3.1",
     "husky": "^9.1.7",
     "webpack-deadcode-plugin": "^0.1.17"
   },
   "dependencies": {
     "@ant-design/icons": "^6.3.2",
-    "@huxy/components": "^2.1.29",
+    "@huxy/components": "^2.1.30",
     "@huxy/layout": "^2.1.19",
     "@huxy/materials": "^1.1.11",
-    "@huxy/router": "^2.1.22",
+    "@huxy/router": "^2.1.23",
     "@huxy/use": "^2.1.19",
-    "@huxy/utils": "^2.1.21",
+    "@huxy/utils": "^2.1.23",
     "antd": "^6.6.0",
     "qrcode": "^1.5.4",
     "react": "19.2.8",
